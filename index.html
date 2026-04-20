@@ -10,8 +10,7 @@ body{margin:0;font-family:Poppins,Arial;background:#f4f6fb;}
 
 /* HERO */
 .hero{
-background:
-linear-gradient(rgba(15,23,42,0.7), rgba(15,23,42,0.7)),
+background:linear-gradient(rgba(15,23,42,0.7), rgba(15,23,42,0.7)),
 url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c');
 background-size:cover;
 background-position:center;
@@ -20,18 +19,9 @@ text-align:center;
 padding:140px 20px;
 }
 
-.hero h1{
-font-size:44px;
-font-weight:700;
-letter-spacing:1px;
-}
-
-.hero p{
-font-size:18px;
-opacity:0.9;
-}
-.hero h1{font-size:42px;margin-bottom:10px;}
+.hero h1{font-size:42px;}
 .hero p{font-size:18px;}
+
 .btn{
 background:#00c853;
 color:white;
@@ -44,6 +34,7 @@ margin-top:15px;
 
 /* SECTION */
 .section{padding:60px 20px;text-align:center;}
+
 .grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
@@ -52,20 +43,18 @@ max-width:1100px;
 margin:auto;
 }
 
-/* CARD */
 .card{
 background:white;
 border-radius:12px;
 overflow:hidden;
 box-shadow:0 5px 15px rgba(0,0,0,0.1);
 }
+
 .card img{
 width:100%;
 height:180px;
 object-fit:cover;
 }
-.card h3{margin:15px 0;}
-.card p{padding:0 10px 15px;}
 
 /* FORM */
 .form-box{
@@ -76,6 +65,7 @@ max-width:400px;
 margin:auto;
 box-shadow:0 3px 10px rgba(0,0,0,0.1);
 }
+
 input{
 width:100%;
 padding:10px;
@@ -105,6 +95,7 @@ background:rgba(0,0,0,0.6);
 justify-content:center;
 align-items:center;
 }
+
 .popup-content{
 background:white;
 padding:25px;
@@ -114,6 +105,7 @@ max-width:350px;
 text-align:center;
 position:relative;
 }
+
 .close{
 position:absolute;
 top:10px;
@@ -133,69 +125,32 @@ cursor:pointer;
 <button class="btn" onclick="openPopup()">Get Free Consultation</button>
 </div>
 
-<!-- FEATURES -->
-<div class="section">
-<h2>Why Choose UAE?</h2>
-<div class="grid">
-<div class="card"><img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a"><h3>0% Income Tax</h3></div>
-<div class="card"><img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf"><h3>Full Ownership</h3></div>
-<div class="card"><img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7"><h3>Quick Setup</h3></div>
-<div class="card"><img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d"><h3>Global Business</h3></div>
-</div>
-</div>
-
 <!-- SERVICES -->
 <div class="section">
 <h2>Our Services</h2>
-
 <div class="grid">
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1556740749-887f6717d7e4">
-<h3>Freezone License</h3>
+<div class="card"><img src="https://images.unsplash.com/photo-1556740749-887f6717d7e4"><h3>Freezone License</h3></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1588776814546-ec7e8a1d4a09"><h3>Visa Services</h3></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1565514158740-064f34bd6f66"><h3>Bank Account Setup</h3></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1559526324-593bc073d938"><h3>Business Consulting</h3></div>
 </div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1588776814546-ec7e8a1d4a09">
-<h3>Visa Services</h3>
 </div>
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1565514158740-064f34bd6f66">
-<h3>Bank Account Setup</h3>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1559526324-593bc073d938">
-<h3>Business Consulting</h3>
-</div>
-
-</div>
-</div>
-<!-- PACKAGES -->
+<!-- FORM -->
 <div class="section">
-<h2>Our Packages</h2>
-<div class="grid">
-<div class="card"><img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f"><h3>Starter</h3><p>AED 5,999</p></div>
-<div class="card"><img src="https://images.unsplash.com/photo-1526304640581-d334cdbbf45e"><h3>Business</h3><p>AED 9,999</p></div>
-<div class="card"><img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df"><h3>Premium</h3><p>AED 14,999</p></div>
-</div>
-</div>
-
+<h2>Get Free Consultation</h2>
+<div class="form-box">
 <form id="leadForm">
 
 <input type="text" name="name" placeholder="Your Name" required>
-<br><br>
-
 <input type="tel" name="phone" placeholder="Phone Number" required>
-<br><br>
-
 <input type="email" name="email" placeholder="Email Address" required>
-<br><br>
 
 <button class="btn" type="submit">Submit</button>
 
 </form>
+</div>
+</div>
 
 <!-- CONTACT -->
 <div class="section">
@@ -207,16 +162,18 @@ cursor:pointer;
 <!-- WHATSAPP -->
 <a class="whatsapp" href="https://wa.me/971XXXXXXXXX">💬</a>
 
+<!-- POPUP -->
+<div class="popup" id="popup">
 <div class="popup-content">
 <span class="close" onclick="closePopup()">✖</span>
 
 <h3>Get Free Consultation</h3>
-
 <input type="text" placeholder="Name">
 <input type="tel" placeholder="Phone">
 <input type="email" placeholder="Email">
 
 <button class="btn">Submit</button>
+</div>
 </div>
 
 <script>
@@ -228,21 +185,22 @@ document.getElementById("popup").style.display="flex";
 function closePopup(){
 document.getElementById("popup").style.display="none";
 }
+
+document.getElementById("leadForm").addEventListener("submit", function(e){
+e.preventDefault();
+
+fetch("PASTE_YOUR_WEBAPP_URL_HERE", {
+method: "POST",
+body: JSON.stringify({
+name: this.name.value,
+phone: this.phone.value,
+email: this.email.value
+})
+});
+
+alert("Thanks! We will contact you soon.");
+});
 </script>
 
 </body>
 </html>
-document.getElementById("leadForm").addEventListener("submit", function(e){
-  e.preventDefault();
-
-  fetch("PASTE_YOUR_WEBAPP_URL_HERE", {
-    method: "POST",
-    body: JSON.stringify({
-      name: this.name.value,
-      phone: this.phone.value,
-      email: this.email.value
-    })
-  });
-
-  alert("Thanks! We will contact you soon.");
-});
