@@ -39,29 +39,36 @@ nav a:hover { color: var(--uae-green); }
 .hero h1 { font-size: 50px; font-weight: 800; text-transform: uppercase; }
 .hero .badge { background: var(--uae-red); color: white; padding: 12px 25px; border-radius: 5px; display: inline-block; margin-top: 20px; font-weight: 700; }
 
-/* --- MAIN SERVICES SECTION --- */
+/* --- SECTION STYLE --- */
 .section { padding: 80px 20px; text-align: center; max-width: 1200px; margin: auto; }
 .section-title { font-size: 36px; font-weight: 800; margin-bottom: 50px; position: relative; padding-bottom: 15px; text-transform: uppercase; }
 .section-title::after { content: ''; width: 80px; height: 5px; background: var(--uae-red); position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); }
 
-.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-.card { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border: 1px solid #eee; transition: 0.3s; }
+/* --- CARD GRID (VISA STYLE) --- */
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
+.card { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.08); border: 1px solid #eee; transition: 0.3s; position: relative; }
 .card:hover { transform: translateY(-10px); border-color: var(--uae-green); }
-.card img { width: 100%; height: 220px; object-fit: cover; }
+.card img { width: 100%; height: 230px; object-fit: cover; }
 .card-body { padding: 30px; text-align: left; }
+.card-body h3 { font-size: 22px; font-weight: 800; margin-bottom: 10px; color: var(--uae-black); }
+.card-body p { font-size: 14px; color: #666; margin-bottom: 20px; min-height: 45px; }
 
-.price-box { margin: 15px 0; }
-.price-now { font-size: 26px; font-weight: 800; color: var(--uae-black); }
-.price-old { text-decoration: line-through; color: #888; margin-right: 10px; font-size: 15px; }
+/* --- PRICING STYLE --- */
+.price-box { margin-bottom: 20px; }
+.price-now { font-size: 28px; font-weight: 800; color: var(--uae-black); }
+.price-old { text-decoration: line-through; color: #999; margin-right: 10px; font-size: 16px; }
+.discount-tag { position: absolute; top: 15px; right: 15px; background: var(--uae-green); color: white; padding: 6px 12px; border-radius: 5px; font-weight: 700; font-size: 12px; z-index: 10; }
+
+/* --- BUTTONS --- */
+.btn-submit { background: var(--uae-red); color: white; padding: 15px; border: none; border-radius: 8px; width: 100%; font-weight: 800; cursor: pointer; font-size: 16px; transition: 0.3s; }
+.btn-submit:hover { background: var(--uae-black); }
 
 /* --- CONTACT FORM --- */
 .contact-wrapper { background: #f1f1f1; padding: 100px 20px; }
 .contact-container { background: white; max-width: 1100px; margin: auto; display: flex; border-radius: 20px; overflow: hidden; box-shadow: 0 20px 50px rgba(0,0,0,0.1); }
-.contact-img { width: 45%; background: url('https://images.unsplash.com/photo-1549923746-c502d488b3ea?auto=format&fit=crop&w=800') center/cover; }
+.contact-img { width: 45%; background: url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800') center/cover; }
 .contact-form { width: 55%; padding: 60px; }
 input { width: 100%; padding: 15px; margin: 10px 0 20px; border: 1px solid #ddd; border-radius: 8px; }
-.btn-submit { background: var(--uae-red); color: white; padding: 18px; border: none; border-radius: 8px; width: 100%; font-weight: 800; cursor: pointer; font-size: 18px; transition: 0.3s; }
-.btn-submit:hover { background: var(--uae-black); }
 
 /* --- FOOTER --- */
 footer { background: #111; color: #999; padding: 80px 50px 30px; border-top: 5px solid var(--uae-green); }
@@ -69,14 +76,14 @@ footer { background: #111; color: #999; padding: 80px 50px 30px; border-top: 5px
 .footer-col h4 { color: white; margin-bottom: 25px; text-transform: uppercase; }
 .footer-col ul { list-style: none; }
 .footer-col ul li { margin-bottom: 12px; cursor: pointer; transition: 0.3s; }
-.footer-col ul li:hover { color: var(--uae-red); transform: translateX(5px); }
+.footer-col ul li:hover { color: var(--uae-red); }
 
 /* --- MODAL --- */
 .modal { display: none; position: fixed; z-index: 2000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); align-items: center; justify-content: center; }
 .modal-content { background: white; padding: 40px; border-radius: 15px; width: 90%; max-width: 450px; position: relative; border-top: 10px solid var(--uae-red); text-align: center; }
 .close { position: absolute; top: 15px; right: 20px; font-size: 30px; cursor: pointer; }
 
-@media (max-width: 900px) { .contact-container { flex-direction: column; } .contact-img, .contact-form { width: 100%; } .footer-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 900px) { .contact-container { flex-direction: column; } .contact-img, .contact-form { width: 100%; } .hero h1 { font-size: 35px; } }
 </style>
 </head>
 <body>
@@ -85,7 +92,7 @@ footer { background: #111; color: #999; padding: 80px 50px 30px; border-top: 5px
     <div class="logo"><strong>UAE FREEZONE</strong></div>
     <nav>
         <a href="#services">Our Services</a>
-        <a href="#mainland">Mainland</a>
+        <a href="#setup-options">Setup Options</a>
         <a onclick="openModal('Visa Pricing Request')">Visa Charges</a>
         <a href="#contact">Contact Us</a>
     </nav>
@@ -93,69 +100,93 @@ footer { background: #111; color: #999; padding: 80px 50px 30px; border-top: 5px
 
 <div class="hero">
     <h1>PREMIUM BUSINESS SETUP</h1>
-    <p>100% Transparency | 100% Ownership</p>
+    <p>100% Transparency | Professional Guidance</p>
     <div class="badge">10% INSTANT DISCOUNT IF SETUP IS COMPLETED WITHIN 60 MINUTES</div>
 </div>
 
 <section class="section" id="services">
-    <h2 class="section-title">Professional Services</h2>
+    <h2 class="section-title">Our Specialized Services</h2>
     <div class="grid">
+        
         <div class="card">
-            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=500">
+            <div class="discount-tag">BEST SELLER</div>
+            <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=600" alt="Mainland License">
             <div class="card-body">
                 <h3>Mainland License</h3>
-                <p>Register your LLC with 100% ownership. No local sponsor required for most activities.</p>
+                <p>Full market access with 100% foreign ownership and no local sponsor needed.</p>
                 <div class="price-box">
                     <span class="price-old">AED 18,500</span>
                     <span class="price-now">AED 13,999</span>
                 </div>
-                <button class="btn-submit" onclick="openModal('Mainland License Request')">ENQUIRE NOW</button>
+                <button class="btn-submit" onclick="openModal('Mainland License AED 13,999')">BOOK NOW</button>
             </div>
         </div>
 
         <div class="card">
-            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=500">
+            <div class="discount-tag">EXPRESS SETUP</div>
+            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=600" alt="Freezone Company">
             <div class="card-body">
-                <h3>Freezone Company</h3>
-                <p>Fastest setup in SPC, IFZA, or Dubai South. Best for international trade.</p>
+                <h3>Freezone Setup</h3>
+                <p>Tax-free zones with world-class infrastructure. Setup in Sharjah or Dubai.</p>
                 <div class="price-box">
-                    <span class="price-old">AED 12,500</span>
+                    <span class="price-old">AED 12,000</span>
                     <span class="price-now">AED 8,500</span>
                 </div>
-                <button class="btn-submit" style="background:var(--uae-green)" onclick="openModal('Freezone Setup Request')">ENQUIRE NOW</button>
+                <button class="btn-submit" style="background:var(--uae-green)" onclick="openModal('Freezone Setup AED 8,500')">BOOK NOW</button>
             </div>
         </div>
 
         <div class="card">
-            <img src="https://images.unsplash.com/photo-1554415707-6e8cfc93fe23?auto=format&fit=crop&w=500">
+            <div class="discount-tag">VIP SERVICE</div>
+            <img src="https://images.unsplash.com/photo-1554415707-6e8cfc93fe23?auto=format&fit=crop&w=600" alt="Golden Visa">
             <div class="card-body">
                 <h3>Golden Visa (10-Yr)</h3>
-                <p>Premium 10-year residency for investors and professionals with family benefits.</p>
+                <p>Long-term residency for investors and talented professionals with family benefits.</p>
                 <div class="price-box">
                     <span class="price-old">AED 25,500</span>
                     <span class="price-now">AED 22,999</span>
                 </div>
-                <button class="btn-submit" style="background:var(--uae-black)" onclick="openModal('Golden Visa Application')">APPLY NOW</button>
+                <button class="btn-submit" style="background:var(--uae-black)" onclick="openModal('Golden Visa AED 22,999')">APPLY NOW</button>
             </div>
         </div>
-    </div>
-</section>
 
-<section class="section" id="mainland" style="background:white; border-top:1px solid #eee;">
-    <h2 class="section-title">Why Choose Us?</h2>
-    <div class="grid" style="text-align: left;">
-        <div style="padding:15px;">
-            <h4 style="color:var(--uae-red);"><i class="fas fa-bolt"></i> 60-Min Processing</h4>
-            <p>Our expert team ensures document submission happens in record time.</p>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=600" alt="PRO Services">
+            <div class="card-body">
+                <h3>PRO Services</h3>
+                <p>Government liaison, document clearing, and medical/ID assistance.</p>
+                <div class="price-box">
+                    <span class="price-old">AED 5,000</span>
+                    <span class="price-now">AED 2,999</span>
+                </div>
+                <button class="btn-submit" onclick="openModal('PRO Services Inquiry')">ENQUIRE NOW</button>
+            </div>
         </div>
-        <div style="padding:15px;">
-            <h4 style="color:var(--uae-red);"><i class="fas fa-university"></i> Bank Assistance</h4>
-            <p>We help you open corporate bank accounts with leading UAE banks.</p>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1501167786227-4cba60f6d58f?auto=format&fit=crop&w=600" alt="Bank Account">
+            <div class="card-body">
+                <h3>Banking Assistance</h3>
+                <p>Corporate bank account opening assistance with top UAE banks.</p>
+                <div class="price-box">
+                    <span class="price-now">FREE CONSULTATION</span>
+                </div>
+                <button class="btn-submit" style="background:var(--uae-green)" onclick="openModal('Bank Account Assistance')">GET HELP</button>
+            </div>
         </div>
-        <div style="padding:15px;">
-            <h4 style="color:var(--uae-red);"><i class="fas fa-file-invoice"></i> PRO Services</h4>
-            <p>End-to-end government liaison and document clearing services.</p>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=600" alt="Office Setup">
+            <div class="card-body">
+                <h3>Office Solutions</h3>
+                <p>Flexi-desks, physical offices, and premium warehouse spaces.</p>
+                <div class="price-box">
+                    <span class="price-now">STARTING @ AED 500</span>
+                </div>
+                <button class="btn-submit" style="background:var(--uae-black)" onclick="openModal('Office Setup Request')">LEARN MORE</button>
+            </div>
         </div>
+
     </div>
 </section>
 
@@ -163,14 +194,14 @@ footer { background: #111; color: #999; padding: 80px 50px 30px; border-top: 5px
     <div class="contact-container">
         <div class="contact-img"></div>
         <div class="contact-form">
-            <h2>Contact Our Experts</h2>
-            <p style="margin-bottom:20px;">Claim your 10% discount by submitting now.</p>
+            <h2 style="font-weight:800; margin-bottom:10px;">Instant Setup Claim</h2>
+            <p>Submit details to claim your 10% instant discount.</p>
             <form id="mainContactForm">
-                <input type="hidden" name="type" value="Main Contact Form">
+                <input type="hidden" name="type" value="Home Page Form">
                 <input type="text" name="name" placeholder="Full Name" required>
                 <input type="email" name="email" placeholder="Email Address" required>
                 <input type="tel" name="phone" placeholder="WhatsApp Number" required>
-                <button type="submit" class="btn-submit">SEND MY REQUEST</button>
+                <button type="submit" class="btn-submit">SUBMIT & CLAIM DISCOUNT</button>
             </form>
         </div>
     </div>
@@ -179,40 +210,31 @@ footer { background: #111; color: #999; padding: 80px 50px 30px; border-top: 5px
 <footer>
     <div class="footer-grid">
         <div class="footer-col">
-            <h3 style="color:white; font-size:22px; margin-bottom:15px;">UAE BUSINESS HUB</h3>
-            <p>Your trusted partner for Mainland and Freezone company formation in the United Arab Emirates.</p>
+            <h3 style="color:white; font-size:24px; margin-bottom:15px;">UAE <span style="font-weight:400">BUSINESS SETUP</span></h3>
+            <p>Leading consultancy for company formation and visa services in the UAE.</p>
             <div style="display:flex; gap:15px; margin-top:20px; font-size:20px; color:white;">
-                <i class="fab fa-facebook"></i><i class="fab fa-instagram"></i><i class="fab fa-whatsapp"></i>
+                <i class="fab fa-facebook-f"></i><i class="fab fa-instagram"></i><i class="fab fa-whatsapp"></i>
             </div>
         </div>
         <div class="footer-col">
             <h4>Quick Links</h4>
             <ul>
-                <li>About UAE Setup</li>
-                <li>Mainland Licenses</li>
-                <li>Freezone Options</li>
+                <li>Mainland Company</li>
+                <li>Freezone Company</li>
                 <li>PRO Services</li>
+                <li>Golden Visa</li>
             </ul>
         </div>
         <div class="footer-col">
-            <h4>Support</h4>
+            <h4>Legal</h4>
             <ul>
-                <li onclick="openModal('Contact Footer')">Contact Us</li>
                 <li>Privacy Policy</li>
                 <li>Terms of Service</li>
-            </ul>
-        </div>
-        <div class="footer-col">
-            <h4>Visa Types</h4>
-            <ul>
-                <li>Investor Visa</li>
-                <li>Partner Visa</li>
-                <li>Family Visa</li>
-                <li>Employment Visa</li>
+                <li>Contact Us</li>
             </ul>
         </div>
     </div>
-    <div style="text-align:center; margin-top:50px; border-top:1px solid #333; padding-top:20px; font-size:12px;">
+    <div style="text-align:center; margin-top:50px; padding-top:20px; border-top:1px solid #333; font-size:12px;">
         &copy; 2026 UAE Business Setup Workspace. All Rights Reserved.
     </div>
 </footer>
@@ -220,13 +242,13 @@ footer { background: #111; color: #999; padding: 80px 50px 30px; border-top: 5px
 <div class="modal" id="popupModal">
     <div class="modal-content">
         <span class="close" onclick="closeModal()">&times;</span>
-        <h2 id="modalTitle" style="color:var(--uae-red)">Enquiry Form</h2>
+        <h2 id="modalTitle" style="color:var(--uae-red)">Enquiry</h2>
         <form id="popupForm">
-            <input type="hidden" name="name_of_service" id="modalSubject">
-            <input type="text" name="name" placeholder="Full Name" required>
+            <input type="hidden" name="type" id="modalSubject">
+            <input type="text" name="name" placeholder="Name" required>
             <input type="email" name="email" placeholder="Email" required>
             <input type="tel" name="phone" placeholder="WhatsApp Number" required>
-            <button type="submit" class="btn-submit" style="background:var(--uae-green); margin-top:10px;">SUBMIT NOW</button>
+            <button type="submit" class="btn-submit" style="background:var(--uae-green); margin-top:10px;">SEND REQUEST</button>
         </form>
     </div>
 </div>
@@ -234,8 +256,8 @@ footer { background: #111; color: #999; padding: 80px 50px 30px; border-top: 5px
 <script>
     const scriptURL = 'https://script.google.com/macros/s/AKfycbx6Zeu2stbgAN_pS1MEUO66SiCp1X_fLq1-eIeqbxsbvwZHGSJt9FBSeXtJPxmWF-aoqw/exec';
 
-    function setupForm(formId) {
-        const form = document.getElementById(formId);
+    function initForm(id) {
+        const form = document.getElementById(id);
         form.addEventListener('submit', e => {
             e.preventDefault();
             const btn = form.querySelector('button');
@@ -247,20 +269,20 @@ footer { background: #111; color: #999; padding: 80px 50px 30px; border-top: 5px
                 body: new FormData(form)
             })
             .then(() => {
-                alert("Mubarak Ho! Your data is saved in Google Sheets. We will call you within 60 minutes.");
+                alert("Success! Your 60-minute setup process request is received.");
                 btn.disabled = false; btn.innerHTML = "SUBMITTED";
                 form.reset();
                 closeModal();
             })
             .catch(() => {
-                alert("Success! Request Sent.");
+                alert("Error connecting to server.");
                 btn.disabled = false;
             });
         });
     }
 
-    setupForm('mainContactForm');
-    setupForm('popupForm');
+    initForm('mainContactForm');
+    initForm('popupForm');
 
     function openModal(title) {
         document.getElementById('popupModal').style.display = 'flex';
