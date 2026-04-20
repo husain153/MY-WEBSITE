@@ -11,7 +11,7 @@ body{margin:0;font-family:Poppins,Arial;background:#f4f6fb;}
 /* HERO */
 .hero{
 background:linear-gradient(rgba(15,23,42,0.7), rgba(15,23,42,0.7)),
-url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c');
+url('https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1400&q=80');
 background-size:cover;
 background-position:center;
 color:white;
@@ -54,9 +54,9 @@ box-shadow:0 5px 15px rgba(0,0,0,0.1);
 width:100%;
 height:180px;
 object-fit:cover;
+display:block;
 }
 
-/* FORM */
 .form-box{
 background:white;
 padding:25px;
@@ -125,14 +125,59 @@ cursor:pointer;
 <button class="btn" onclick="openPopup()">Get Free Consultation</button>
 </div>
 
+<!-- FEATURES -->
+<div class="section">
+<h2>Why Choose UAE?</h2>
+<div class="grid">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=800&q=80">
+<h3>0% Income Tax</h3>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=80">
+<h3>Full Ownership</h3>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7?auto=format&fit=crop&w=800&q=80">
+<h3>Quick Setup</h3>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80">
+<h3>Global Business</h3>
+</div>
+
+</div>
+</div>
+
 <!-- SERVICES -->
 <div class="section">
 <h2>Our Services</h2>
 <div class="grid">
-<div class="card"><img src="https://images.unsplash.com/photo-1556740749-887f6717d7e4"><h3>Freezone License</h3></div>
-<div class="card"><img src="https://images.unsplash.com/photo-1588776814546-ec7e8a1d4a09"><h3>Visa Services</h3></div>
-<div class="card"><img src="https://images.unsplash.com/photo-1565514158740-064f34bd6f66"><h3>Bank Account Setup</h3></div>
-<div class="card"><img src="https://images.unsplash.com/photo-1559526324-593bc073d938"><h3>Business Consulting</h3></div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=800&q=80">
+<h3>Freezone License</h3>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1588776814546-ec7e8a1d4a09?auto=format&fit=crop&w=800&q=80">
+<h3>Visa Services</h3>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1565514158740-064f34bd6f66?auto=format&fit=crop&w=800&q=80">
+<h3>Bank Account Setup</h3>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1559526324-593bc073d938?auto=format&fit=crop&w=800&q=80">
+<h3>Business Consulting</h3>
+</div>
+
 </div>
 </div>
 
@@ -192,9 +237,9 @@ e.preventDefault();
 fetch("PASTE_YOUR_WEBAPP_URL_HERE", {
 method: "POST",
 body: JSON.stringify({
-name: this.name.value,
-phone: this.phone.value,
-email: this.email.value
+name:this.name.value,
+phone:this.phone.value,
+email:this.email.value
 })
 });
 
