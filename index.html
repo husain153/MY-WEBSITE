@@ -71,7 +71,7 @@ nav a:hover { color: var(--uae-green); }
 .price-now { font-size: 22px; font-weight: 800; color: var(--uae-black); display: block; margin-bottom: 15px; border-left: 4px solid var(--uae-green); padding-left: 10px; }
 .btn-card { background: var(--uae-red); color: white; padding: 12px; border: none; border-radius: 5px; width: 100%; font-weight: 700; cursor: pointer; transition: 0.3s; text-transform: uppercase; }
 
-/* --- FEEDBACK SECTION (10 REVIEWS) --- */
+/* --- FEEDBACK SECTION (10 REVIEWS - INDIAN NAMES) --- */
 .feedback-section { background: var(--uae-gray); padding: 80px 20px; text-align: center; }
 .feedback-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; max-width: 1200px; margin: 40px auto; }
 .feedback-card { background: white; padding: 25px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); text-align: left; border-top: 5px solid var(--uae-green); }
@@ -85,12 +85,16 @@ nav a:hover { color: var(--uae-green); }
 .faq-question { padding: 20px; background: var(--uae-black); color: white; cursor: pointer; font-weight: 700; display: flex; justify-content: space-between; }
 .faq-answer { padding: 25px; color: #444; line-height: 1.8; display: none; background: #fafafa; border-top: 2px solid var(--uae-red); }
 
-/* --- CONTACT --- */
-.contact-wrapper { padding: 80px 20px; }
-.contact-container { background: white; max-width: 1000px; margin: auto; display: flex; border-radius: 20px; overflow: hidden; box-shadow: 0 15px 40px rgba(0,0,0,0.1); }
+/* --- CONTACT (FIXED BACKGROUND IMAGE) --- */
+.contact-wrapper { 
+    padding: 100px 20px;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+    url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1600') center/cover no-repeat;
+}
+.contact-container { background: white; max-width: 1000px; margin: auto; display: flex; border-radius: 20px; overflow: hidden; box-shadow: 0 15px 40px rgba(0,0,0,0.3); }
 .contact-img { width: 40%; background: url('https://images.unsplash.com/photo-1523213139764-67243956461c?auto=format&fit=crop&w=800') center/cover; }
 .contact-form { width: 60%; padding: 50px; }
-input, textarea { width: 100%; padding: 14px; margin: 10px 0 20px; border: 2px solid #eee; border-radius: 8px; }
+input, textarea { width: 100%; padding: 14px; margin: 10px 0 20px; border: 2px solid #eee; border-radius: 8px; font-size: 16px; }
 
 footer { background: var(--uae-black); color: #bbb; padding: 40px; border-top: 5px solid var(--uae-green); text-align: center; }
 
