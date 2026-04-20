@@ -11,65 +11,76 @@
 :root {
   --uae-red: #FF0000;
   --uae-green: #00732F;
-  --uae-black: #1a1a1a;
+  --uae-black: #000000;
   --uae-blue: #0052FF;
+  --bg-light: #f4f7fa;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; scroll-behavior: smooth; }
-body { font-family: 'Montserrat', sans-serif; background: #f4f7fa; color: #333; line-height: 1.6; }
+body { font-family: 'Montserrat', sans-serif; background: var(--bg-light); color: #333; line-height: 1.6; }
 
-/* HEADER */
+/* --- HEADER --- */
 header {
     display: flex; justify-content: space-between; align-items: center;
-    padding: 15px 50px; background: #000; border-top: 5px solid var(--uae-red); color: white;
+    padding: 15px 50px; background: var(--uae-black); border-top: 5px solid var(--uae-red); color: white;
     position: sticky; top: 0; z-index: 1000;
 }
-.logo strong { font-size: 18px; letter-spacing: 1px; }
-nav a { color: white; margin-left: 20px; text-decoration: none; font-weight: 600; font-size: 13px; cursor: pointer; transition: 0.3s; }
+.logo strong { font-size: 20px; letter-spacing: 1px; }
+nav a { color: white; margin-left: 20px; text-decoration: none; font-weight: 600; font-size: 14px; cursor: pointer; transition: 0.3s; }
 nav a:hover { color: var(--uae-green); }
 
-/* HERO */
+/* --- HERO --- */
 .hero {
     background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
     url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1600');
     background-size: cover; background-position: center;
-    color: white; text-align: center; padding: 100px 20px;
+    color: white; text-align: center; padding: 120px 20px;
 }
-.arabic-title { font-family: 'Cairo', sans-serif; font-size: 28px; margin-top: 10px; }
+.hero h1 { font-size: clamp(30px, 5vw, 55px); text-transform: uppercase; margin-bottom: 10px; }
+.arabic-title { font-family: 'Cairo', sans-serif; font-size: 32px; font-weight: 700; margin-top: 10px; }
 
-/* SECTIONS */
-.section { padding: 70px 20px; text-align: center; max-width: 1200px; margin: auto; }
-.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 30px; }
+/* --- SECTIONS --- */
+.section { padding: 80px 20px; text-align: center; max-width: 1200px; margin: auto; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; margin-top: 40px; }
+h2 { font-size: 36px; margin-bottom: 10px; font-weight: 800; text-transform: uppercase; }
 
-/* CARDS */
-.card { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 20px rgba(0,0,0,0.05); transition: 0.3s; }
+/* --- CARDS --- */
+.card { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 25px rgba(0,0,0,0.08); transition: 0.3s; }
+.card:hover { transform: translateY(-10px); }
+.card img { width: 100%; height: 220px; object-fit: cover; }
 .card-content { padding: 25px; }
-.price-tag { background: #000; color: white; padding: 5px 15px; border-radius: 5px; font-weight: 800; display: inline-block; margin-top: 10px; }
+.price-tag { background: var(--uae-black); color: white; padding: 8px 18px; border-radius: 5px; font-weight: 800; display: inline-block; margin-top: 15px; }
 
-/* TESTIMONIALS / FEEDBACK */
-.t-card { background: #fff; padding: 25px; border-radius: 15px; text-align: left; border-bottom: 4px solid var(--uae-green); box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
-.u-info { display: flex; align-items: center; gap: 12px; margin-bottom: 15px; }
-.u-info img { width: 50px; height: 50px; border-radius: 50%; border: 2px solid var(--uae-green); }
+/* --- TESTIMONIALS (IMPACTFUL) --- */
+.t-card { background: #fff; padding: 30px; border-radius: 15px; text-align: left; border-left: 6px solid var(--uae-green); box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+.u-info { display: flex; align-items: center; gap: 15px; margin-bottom: 15px; }
+.u-info img { width: 60px; height: 60px; border-radius: 50%; border: 2px solid var(--uae-green); }
+.stars { color: #FFD700; font-size: 14px; margin-top: 5px; }
 
-/* CONTACT CONTAINER */
-.contact-container { background: white; border-radius: 20px; max-width: 1100px; margin: 40px auto; display: flex; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); text-align: left; }
+/* --- CONTACT SECTION (IMAGE STYLE) --- */
+.contact-container { background: white; border-radius: 20px; max-width: 1100px; margin: 40px auto; display: flex; overflow: hidden; box-shadow: 0 15px 40px rgba(0,0,0,0.1); text-align: left; }
 .contact-image { width: 45%; background: url('https://images.unsplash.com/photo-1549923746-c502d488b3ea?auto=format&fit=crop&w=800') center/cover; }
-.contact-form-side { width: 55%; padding: 40px; }
-input { width: 100%; padding: 12px; margin: 8px 0 15px; border: 1px solid #ddd; border-radius: 8px; }
-.btn-blue { background: var(--uae-blue); color: white; padding: 15px; border: none; border-radius: 10px; width: 100%; font-weight: 700; cursor: pointer; font-size: 16px; }
+.contact-form-side { width: 55%; padding: 50px; }
+input { width: 100%; padding: 15px; margin: 10px 0 20px; border: 1px solid #ddd; border-radius: 10px; font-size: 16px; }
+.btn-submit { background: var(--uae-blue); color: white; padding: 18px; border: none; border-radius: 10px; width: 100%; font-weight: 800; cursor: pointer; font-size: 18px; transition: 0.3s; }
+.btn-submit:hover { background: #003ccb; }
 
-/* FOOTER */
-footer { background: var(--uae-black); color: #bbb; padding: 60px 50px 20px; font-size: 13px; }
-.footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1.2fr 1fr; gap: 30px; max-width: 1300px; margin: auto; }
-.footer-col h4 { color: #fff; margin-bottom: 15px; font-size: 14px; }
+/* --- FOOTER --- */
+footer { background: var(--uae-black); color: #bbb; padding: 80px 50px 30px; font-size: 14px; }
+.footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1.2fr 1fr; gap: 40px; max-width: 1300px; margin: auto; }
+.footer-col h4 { color: #fff; margin-bottom: 20px; font-size: 16px; font-weight: 700; }
 .footer-col ul { list-style: none; }
-.footer-col ul li { margin-bottom: 8px; cursor: pointer; transition: 0.2s; }
-.footer-col ul li:hover { color: #fff; }
+.footer-col ul li { margin-bottom: 12px; cursor: pointer; transition: 0.3s; }
+.footer-col ul li:hover { color: #fff; padding-left: 5px; }
+.social-icons { display: flex; gap: 15px; margin-top: 20px; }
+.social-icons i { background: #222; color: #fff; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 5px; font-size: 20px; }
 
-/* MODAL */
-.modal { display: none; position: fixed; z-index: 9999; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); align-items: center; justify-content: center; }
-.modal-content { background: white; padding: 40px; border-radius: 20px; width: 90%; max-width: 450px; position: relative; border-top: 8px solid var(--uae-red); text-align: center;}
-.close { position: absolute; top: 15px; right: 20px; font-size: 25px; cursor: pointer; }
+/* --- MODAL POPUP --- */
+.modal { display: none; position: fixed; z-index: 2000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); align-items: center; justify-content: center; }
+.modal-content { background: white; padding: 45px; border-radius: 20px; width: 90%; max-width: 450px; position: relative; border-top: 10px solid var(--uae-red); text-align: center; }
+.close { position: absolute; top: 15px; right: 20px; font-size: 30px; cursor: pointer; color: #aaa; }
+
+@media (max-width: 992px) { .footer-grid { grid-template-columns: repeat(2, 1fr); } .contact-container { flex-direction: column; } .contact-image, .contact-form-side { width: 100%; height: auto; } }
 </style>
 </head>
 <body>
@@ -79,63 +90,63 @@ footer { background: var(--uae-black); color: #bbb; padding: 60px 50px 20px; fon
     <nav>
         <a href="#mainland">Mainland</a>
         <a href="#freezone">Freezone</a>
-        <a onclick="openModal('Visa Renewal & Services')">Visa Charges</a>
-        <a onclick="openModal('Contact Us')">Contact Us</a>
+        <a onclick="openModal('Visa Renewal & Pricing Inquiry')">Visa Charges</a>
+        <a onclick="openModal('General Contact Request')">Contact Us</a>
     </nav>
 </header>
 
 <div class="hero">
-    <h1>MAINLAND & <span class="txt-red">FREEZONE</span> SETUP</h1>
-    <div class="arabic-title"><span class="txt-green">مساحة</span> عمل <span class="txt-red">المنطقة الحرة</span></div>
-    <p>Premium Business Setup | 100% Ownership</p>
+    <h1><span style="color:var(--uae-green)">UAE</span> BUSINESS <span style="color:var(--uae-red)">SETUP</span></h1>
+    <div class="arabic-title"><span style="color:var(--uae-green)">مساحة</span> عمل <span style="color:var(--uae-red)">المنطقة الحرة</span></div>
+    <p>Premium Solutions for Modern Entrepreneurs</p>
 </div>
 
 <section class="section" id="mainland">
-    <h2>Mainland & <span class="txt-red">Visa Services</span></h2>
+    <h2>Mainland & <span style="color:var(--uae-red)">Visa Services</span></h2>
     <div class="grid">
         <div class="card">
             <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=500">
             <div class="card-content">
                 <h3>LLC Formation</h3>
-                <p>Full local market access.</p>
-                <div class="price-tag">AED 15,500*</div>
-            </div>
-        </div>
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1582555172866-f73bb12a2ab3?auto=format&fit=crop&w=500">
-            <div class="card-content">
-                <h3>Investor Visa</h3>
-                <p>3-Year residency visa.</p>
-                <div class="price-tag">AED 4,500*</div>
+                <p>Full local market access & 100% ownership.</p>
+                <div class="price-tag">Starting AED 15,500</div>
             </div>
         </div>
         <div class="card">
             <img src="https://images.unsplash.com/photo-1554415707-6e8cfc93fe23?auto=format&fit=crop&w=500">
             <div class="card-content">
+                <h3>Investor Visa</h3>
+                <p>3-Year residency visa with family sponsorship.</p>
+                <div class="price-tag">Starting AED 4,500</div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=500">
+            <div class="card-content">
                 <h3>PRO Services</h3>
-                <p>Visa & government liaison.</p>
-                <div class="price-tag">AED 3,000*</div>
+                <p>Expert government liaison & document clearing.</p>
+                <div class="price-tag">Starting AED 3,000</div>
             </div>
         </div>
     </div>
 </section>
 
-<section class="section" style="background: #fdfdfd;">
-    <h2>What Our <span class="txt-green">Clients</span> Say</h2>
+<section class="section" style="background: #fff;">
+    <h2>Client <span style="color:var(--uae-green)">Feedback</span></h2>
     <div class="grid">
         <div class="t-card">
             <div class="u-info">
-                <img src="https://i.pravatar.cc/150?u=1">
-                <div><h4>Ahmed Al-Mansoori</h4><p>⭐⭐⭐⭐⭐</p></div>
+                <img src="https://i.pravatar.cc/150?u=11">
+                <div><h4>Ahmed Al-Mansoori</h4><div class="stars">⭐⭐⭐⭐⭐</div></div>
             </div>
-            <p>"Excellent service! Got my license in 2 days."</p>
+            <p>"Outstanding experience! My business was set up in just 48 hours. The most reliable team in Sharjah."</p>
         </div>
         <div class="t-card">
             <div class="u-info">
-                <img src="https://i.pravatar.cc/150?u=44">
-                <div><h4>Sarah Jenkins</h4><p>⭐⭐⭐⭐⭐</p></div>
+                <img src="https://i.pravatar.cc/150?u=22">
+                <div><h4>Sarah Jenkins</h4><div class="stars">⭐⭐⭐⭐⭐</div></div>
             </div>
-            <p>"The pricing is very transparent. Highly recommended!"</p>
+            <p>"Transparent pricing and very helpful staff. They made the visa process incredibly smooth for my family."</p>
         </div>
     </div>
 </section>
@@ -144,14 +155,14 @@ footer { background: var(--uae-black); color: #bbb; padding: 60px 50px 20px; fon
     <div class="contact-container">
         <div class="contact-image"></div>
         <div class="contact-form-side">
-            <h3>Get a Fast Quote</h3>
-            <p>Your details will be saved to our Google Sheet.</p>
-            <form id="mainContactForm">
-                <input type="hidden" name="type" value="Main Page Contact Form">
-                <input type="text" name="name" placeholder="Name" required>
-                <input type="email" name="email" placeholder="Email" required>
+            <h2>Contact Us</h2>
+            <p style="color:#666; margin-bottom:20px;">Fill this form and receive a call within 60 seconds.</p>
+            <form id="mainSheetForm">
+                <input type="hidden" name="type" value="Main Website Contact">
+                <input type="text" name="name" placeholder="Full Name" required>
+                <input type="email" name="email" placeholder="Email Address" required>
                 <input type="tel" name="phone" placeholder="WhatsApp Number" required>
-                <button type="submit" class="btn-blue">SUBMIT NOW</button>
+                <button type="submit" class="btn-submit">SUBMIT REQUEST</button>
             </form>
         </div>
     </div>
@@ -160,20 +171,28 @@ footer { background: var(--uae-black); color: #bbb; padding: 60px 50px 20px; fon
 <footer>
     <div class="footer-grid">
         <div class="footer-col">
-            <h3 style="color:#fff;">SPC | <span style="font-weight:400">Free Zone</span></h3>
-            <p>WHERE MORE IS POSSIBLE</p>
-            <div style="display:flex; gap:10px; margin-top:15px; font-size:18px;">
-                <i class="fab fa-instagram"></i><i class="fab fa-facebook"></i><i class="fab fa-linkedin"></i>
+            <h3 style="color:#fff; font-size:24px;">SPC | <span style="font-weight:400">Free Zone</span></h3>
+            <p style="font-size:12px; margin-top:5px;">WHERE MORE IS POSSIBLE</p>
+            <div class="social-icons">
+                <i class="fab fa-instagram"></i><i class="fab fa-facebook-f"></i><i class="fab fa-linkedin-in"></i>
             </div>
         </div>
         <div class="footer-col">
+            <h4>ABOUT US</h4>
+            <ul><li>Rules & Regulations</li><li>Announcements</li></ul>
+        </div>
+        <div class="footer-col">
             <h4>START BUSINESS</h4>
-            <ul><li>Cost Calculator</li><li>Business Activities</li></ul>
+            <ul><li>Cost Calculator</li><li>Business Activities</li><li>Invest in Sharjah</li></ul>
+        </div>
+        <div class="footer-col">
+            <h4>VALUE ADDED</h4>
+            <ul><li>Banking Assistance</li><li>Visa Renewal</li><li>VIP Medical</li></ul>
         </div>
         <div class="footer-col">
             <h4>GET IN TOUCH</h4>
             <ul>
-                <li onclick="openModal('Footer Contact Us Click')">Contact Us</li>
+                <li onclick="openModal('Contact Us Footer')">Contact Us</li>
                 <li onclick="openModal('Work With Us Request')">Work with Us</li>
                 <li>Customer Feedback</li>
             </ul>
@@ -184,14 +203,14 @@ footer { background: var(--uae-black); color: #bbb; padding: 60px 50px 20px; fon
 <div class="modal" id="popupModal">
     <div class="modal-content">
         <span class="close" onclick="closeModal()">&times;</span>
-        <h2 id="modalTitle" class="txt-red">Request Form</h2>
-        <p style="margin-bottom:15px;">We'll get back to you shortly.</p>
-        <form id="popupForm">
+        <h2 id="modalTitle" style="color:var(--uae-red)">Request Form</h2>
+        <p style="margin:10px 0; font-size:14px; color:#555;">Get expert help immediately.</p>
+        <form id="popupSheetForm">
             <input type="hidden" name="type" id="modalSubject">
-            <input type="text" name="name" placeholder="Full Name" required>
-            <input type="email" name="email" placeholder="Email Address" required>
+            <input type="text" name="name" placeholder="Name" required>
+            <input type="email" name="email" placeholder="Email" required>
             <input type="tel" name="phone" placeholder="WhatsApp Number" required>
-            <button type="submit" class="btn-blue" style="background:var(--uae-green)">SEND REQUEST</button>
+            <button type="submit" class="btn-submit" style="background:var(--uae-green)">SEND REQUEST</button>
         </form>
     </div>
 </div>
@@ -200,50 +219,42 @@ footer { background: var(--uae-black); color: #bbb; padding: 60px 50px 20px; fon
     // YOUR GOOGLE SCRIPT URL
     const scriptURL = 'https://script.google.com/macros/s/AKfycbx6Zeu2stbgAN_pS1MEUO66SiCp1X_fLq1-eIeqbxsbvwZHGSJt9FBSeXtJPxmWF-aoqw/exec';
 
-    // Function to handle form submissions
-    function handleForm(formId) {
-        const form = document.getElementById(formId);
+    function handleForm(id) {
+        const form = document.getElementById(id);
         form.addEventListener('submit', e => {
             e.preventDefault();
             const btn = form.querySelector('button');
-            const originalText = btn.innerHTML;
             btn.disabled = true;
-            btn.innerHTML = "Saving Data...";
+            btn.innerHTML = "Processing...";
 
             fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-                .then(response => {
-                    alert("Success! Your data has been recorded in Google Sheets.");
+                .then(res => {
+                    alert("Success! Your data is recorded in Google Sheets.");
                     btn.disabled = false;
-                    btn.innerHTML = originalText;
+                    btn.innerHTML = "SUBMITTED";
                     form.reset();
                     closeModal();
                 })
-                .catch(error => {
-                    console.error('Error!', error.message);
-                    alert("Error saving data. Please try again.");
+                .catch(err => {
+                    alert("Error! Please try again.");
                     btn.disabled = false;
-                    btn.innerHTML = originalText;
                 });
         });
     }
 
-    // Initialize both forms
-    handleForm('mainContactForm');
-    handleForm('popupForm');
+    handleForm('mainSheetForm');
+    handleForm('popupSheetForm');
 
     function openModal(title) {
         document.getElementById('popupModal').style.display = 'flex';
         document.getElementById('modalTitle').innerText = title;
         document.getElementById('modalSubject').value = title;
     }
-
-    function closeModal() {
-        document.getElementById('popupModal').style.display = 'none';
-    }
-
-    window.onclick = function(e) {
-        if(e.target == document.getElementById('popupModal')) closeModal();
-    }
+    function closeModal() { document.getElementById('popupModal').style.display = 'none'; }
+    window.onclick = function(e) { if(e.target == document.getElementById('popupModal')) closeModal(); }
+    
+    // Auto popup after 5 seconds
+    setTimeout(() => { openModal('Special License Offer'); }, 5000);
 </script>
 
 </body>
