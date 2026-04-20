@@ -17,6 +17,11 @@
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body { font-family: 'Montserrat', sans-serif; background: #f4f7fa; color: #1a1a1a; line-height: 1.6; }
 
+/* UAE COLOR TEXT CLASSES */
+.txt-green { color: var(--uae-green); }
+.txt-red { color: var(--uae-red); }
+.txt-black { color: var(--uae-black); }
+
 /* HEADER */
 header {
     display: flex; justify-content: space-between; align-items: center;
@@ -25,99 +30,141 @@ header {
     position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
-.logo-container { display: flex; align-items: center; gap: 12px; }
-.logo-container img { width: 50px; height: 50px; border-radius: 50%; border: 2px solid var(--uae-green); }
-.logo-text strong { font-size: 18px; display: block; }
-.arabic-text { font-family: 'Cairo', sans-serif; font-size: 13px; color: var(--uae-green); }
+.logo-container { display: flex; align-items: center; gap: 12px; text-decoration: none; color: white; }
+.logo-container img { width: 55px; height: 55px; border-radius: 50%; border: 2px solid var(--uae-green); object-fit: cover; }
+.logo-text strong { font-size: 18px; display: block; letter-spacing: 1px; }
 
-nav a { color: white; margin-left: 20px; text-decoration: none; font-weight: 600; font-size: 14px; }
-nav a:hover { color: var(--uae-red); }
+nav a { color: white; margin-left: 20px; text-decoration: none; font-weight: 600; font-size: 14px; transition: 0.3s; }
+nav a:hover { color: var(--uae-green); }
+
+/* SIDE LOGO */
+.side-logo {
+    position: fixed; left: 0; top: 50%; transform: translateY(-50%);
+    background: white; padding: 15px 8px; border-radius: 0 12px 12px 0;
+    box-shadow: 4px 0 10px rgba(0,0,0,0.1); z-index: 999;
+    border-left: 5px solid var(--uae-red); text-align: center;
+}
+.side-logo img { width: 40px; margin-bottom: 5px; }
+.side-logo span { writing-mode: vertical-rl; text-orientation: mixed; font-weight: 800; font-size: 12px; color: var(--uae-black); }
 
 /* HERO */
 .hero {
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+    background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), 
     url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1600');
     background-size: cover; background-position: center;
-    color: white; text-align: center; padding: 120px 20px;
+    color: white; text-align: center; padding: 150px 20px;
 }
-.hero h1 { font-size: 45px; text-transform: uppercase; margin-bottom: 10px; }
-.hero h2 { font-family: 'Cairo', sans-serif; color: var(--uae-green); margin-bottom: 20px; }
+.hero h1 { font-size: 50px; text-transform: uppercase; margin-bottom: 10px; }
+.hero h2 { font-family: 'Cairo', sans-serif; font-size: 35px; margin-bottom: 25px; }
 
 /* BUTTON */
 .btn {
-    background: var(--uae-green); color: white; padding: 15px 35px;
+    background: var(--uae-green); color: white; padding: 16px 40px;
     border: none; border-radius: 50px; font-weight: 700; cursor: pointer;
     text-transform: uppercase; transition: 0.3s; box-shadow: 0 4px 15px rgba(0,115,47,0.3);
 }
-.btn:hover { background: var(--uae-red); transform: translateY(-3px); }
+.btn:hover { background: var(--uae-red); transform: scale(1.05); }
 
 /* SECTIONS */
-.section { padding: 80px 20px; text-align: center; }
-.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; max-width: 1200px; margin: auto; }
-.card { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 25px rgba(0,0,0,0.05); transition: 0.3s; }
-.card:hover { transform: translateY(-10px); border-bottom: 5px solid var(--uae-green); }
-.card img { width: 100%; height: 220px; object-fit: cover; }
-.card h3 { padding: 20px 10px; }
+.section { padding: 100px 20px; text-align: center; }
+.section h2 { font-size: 36px; margin-bottom: 50px; text-transform: uppercase; }
+
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; max-width: 1200px; margin: auto; }
+.card { background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 15px 35px rgba(0,0,0,0.06); transition: 0.4s; border-bottom: 5px solid transparent; }
+.card:hover { transform: translateY(-15px); border-bottom: 5px solid var(--uae-green); }
+.card img { width: 100%; height: 250px; object-fit: cover; }
+.card-content { padding: 25px; }
+.card h3 { margin-bottom: 15px; font-size: 22px; }
 
 /* MODAL / POPUP */
 .modal {
     display: none; position: fixed; z-index: 2000; left: 0; top: 0; width: 100%; height: 100%;
-    background: rgba(0,0,0,0.8); align-items: center; justify-content: center;
+    background: rgba(0,0,0,0.85); align-items: center; justify-content: center; opacity: 0; transition: 0.3s;
 }
-.modal.show { display: flex; }
+.modal.show { display: flex; opacity: 1; }
 .modal-content {
-    background: white; padding: 40px; border-radius: 20px; width: 90%; max-width: 500px;
-    position: relative; border-top: 8px solid var(--uae-green);
+    background: white; padding: 45px; border-radius: 25px; width: 95%; max-width: 500px;
+    position: relative; border-top: 10px solid var(--uae-green);
 }
-.close-modal { position: absolute; top: 15px; right: 20px; font-size: 25px; cursor: pointer; }
+.close-modal { position: absolute; top: 20px; right: 25px; font-size: 30px; cursor: pointer; color: #999; }
+.close-modal:hover { color: var(--uae-red); }
 
-input, select { width: 100%; padding: 12px; margin: 10px 0 20px; border: 1px solid #ddd; border-radius: 8px; }
+input, select { width: 100%; padding: 15px; margin: 10px 0 20px; border: 2px solid #eee; border-radius: 10px; font-family: inherit; }
+input:focus { border-color: var(--uae-green); outline: none; }
 
 /* WHATSAPP */
 .whatsapp {
-    position: fixed; bottom: 30px; right: 30px; background: #25D366; color: white;
-    width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
-    font-size: 30px; text-decoration: none; z-index: 1000;
+    position: fixed; bottom: 35px; right: 35px; background: #25D366; color: white;
+    width: 65px; height: 65px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+    font-size: 35px; text-decoration: none; z-index: 1000; box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+@media (max-width: 768px) {
+    .hero h1 { font-size: 35px; }
+    header { padding: 15px 20px; flex-direction: column; gap: 10px; }
 }
 </style>
 </head>
 <body>
 
+<div class="side-logo">
+    <img src="https://images.unsplash.com/photo-1523217582562-09d0def993a6?auto=format&fit=crop&w=100" alt="Icon">
+    <span>UAE WORKSPACE</span>
+</div>
+
 <header>
-    <div class="logo-container">
+    <a href="#" class="logo-container">
         <img src="https://images.unsplash.com/photo-1523217582562-09d0def993a6?auto=format&fit=crop&w=100" alt="Logo">
         <div class="logo-text">
-            <strong>UAE FREEZONE WORKSPACE</strong>
+            <strong><span class="txt-green">UAE</span> <span class="txt-red">FREEZONE</span> <span class="txt-white">WORKSPACE</span></strong>
             <span class="arabic-text">مساحة عمل المنطقة الحرة</span>
         </div>
-    </div>
+    </a>
     <nav>
         <a href="#">Home</a>
-        <a href="#" class="open-modal">Contact Us</a>
+        <a href="#" class="open-modal">Services</a>
+        <a href="#" class="open-modal">Contact</a>
     </nav>
 </header>
 
 <div class="hero">
-    <h1>Launch Your UAE Business</h1>
-    <h2 dir="rtl">ابدأ عملك في الإمارات</h2>
-    <p>0% Tax | 100% Ownership | Quick Setup</p>
-    <button class="btn open-modal">Get Free Consultation</button>
+    <h1>
+        <span class="txt-green">UAE</span> 
+        <span class="txt-white">Freezone</span> 
+        <span class="txt-red">Workspace</span>
+    </h1>
+    <h2 dir="rtl">مساحة عمل <span class="txt-green">المنطقة</span> <span class="txt-red">الحرة</span></h2>
+    <p>Premium Business Solutions: 0% Tax | 100% Ownership | Fast Setup</p>
+    <button class="btn open-modal">Start Your Business Now</button>
 </div>
 
 <div class="section">
-    <h2>Our Services</h2>
+    <h2>
+        <span class="txt-green">Our</span> 
+        <span class="txt-black">Premium</span> 
+        <span class="txt-red">Services</span>
+    </h2>
     <div class="grid">
         <div class="card">
-            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=500" alt="License">
-            <h3>Trade License</h3>
+            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=600" alt="License">
+            <div class="card-content">
+                <h3 class="txt-green">Trade License</h3>
+                <p>Get your business license in just 24 hours with full digital processing.</p>
+            </div>
         </div>
         <div class="card">
-            <img src="https://images.unsplash.com/photo-1582555172866-f73bb12a2ab3?auto=format&fit=crop&w=500" alt="Golden Visa">
-            <h3>Golden Visa Services</h3>
+            <img src="https://images.unsplash.com/photo-1582555172866-f73bb12a2ab3?auto=format&fit=crop&w=600" alt="Visa">
+            <div class="card-content">
+                <h3 class="txt-red">Golden Visa</h3>
+                <p>10-year residency for investors, entrepreneurs, and professional talents.</p>
+            </div>
         </div>
         <div class="card">
-            <img src="https://images.unsplash.com/photo-1601597111158-2fceff292cdc?auto=format&fit=crop&w=500" alt="Bank">
-            <h3>Bank Account Opening</h3>
+            <img src="https://images.unsplash.com/photo-1601597111158-2fceff292cdc?auto=format&fit=crop&w=600" alt="Bank">
+            <div class="card-content">
+                <h3 class="txt-black">Bank Setup</h3>
+                <p>Hassle-free corporate bank account opening with top UAE local banks.</p>
+            </div>
         </div>
     </div>
 </div>
@@ -125,19 +172,22 @@ input, select { width: 100%; padding: 12px; margin: 10px 0 20px; border: 1px sol
 <div class="modal" id="formModal">
     <div class="modal-content">
         <span class="close-modal">&times;</span>
-        <h2 style="margin-bottom:10px;">Free Consultation</h2>
-        <p style="color:#666; margin-bottom:20px;">Details bhariye, hum aapko contact karenge.</p>
+        <h2 style="margin-bottom:10px;">
+            <span class="txt-green">Free</span> <span class="txt-red">Consultation</span>
+        </h2>
+        <p style="color:#666; margin-bottom:25px;">Please fill the form, our expert will call you.</p>
         
         <form action="https://formspree.io/f/xpqkjqep" method="POST">
-            <input type="text" name="name" placeholder="Full Name" required>
-            <input type="tel" name="phone" placeholder="Phone (with country code)" required>
+            <input type="text" name="name" placeholder="Enter Your Full Name" required>
+            <input type="tel" name="phone" placeholder="WhatsApp Number (+971...)" required>
             <input type="email" name="email" placeholder="Email Address" required>
             <select name="service">
-                <option value="Trade License">Trade License</option>
-                <option value="Golden Visa">Golden Visa</option>
-                <option value="Bank Account">Bank Account</option>
+                <option value="Trade License">Trade License Setup</option>
+                <option value="Golden Visa">Golden Visa Assistance</option>
+                <option value="Corporate Bank">Corporate Banking</option>
+                <option value="Other">Other Services</option>
             </select>
-            <button type="submit" class="btn" style="width: 100%;">Submit Now</button>
+            <button type="submit" class="btn" style="width: 100%;">Submit Request</button>
         </form>
     </div>
 </div>
@@ -150,7 +200,10 @@ input, select { width: 100%; padding: 12px; margin: 10px 0 20px; border: 1px sol
     const closeBtn = document.querySelector('.close-modal');
 
     openBtns.forEach(btn => {
-        btn.onclick = () => modal.classList.add('show');
+        btn.onclick = (e) => {
+            e.preventDefault();
+            modal.classList.add('show');
+        }
     });
 
     closeBtn.onclick = () => modal.classList.remove('show');
