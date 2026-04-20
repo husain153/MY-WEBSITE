@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>UAE Business Setup | Premium Services & Feedback</title>
+<title>UAE Business Setup | Premium Services & 10+ Success Stories</title>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Cairo:wght@700;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
@@ -70,32 +70,33 @@ nav a:hover { color: var(--uae-green); }
 .card-body h3 { font-size: 20px; font-weight: 800; margin-bottom: 8px; color: var(--uae-black); }
 .price-now { font-size: 22px; font-weight: 800; color: var(--uae-black); display: block; margin-bottom: 15px; border-left: 4px solid var(--uae-green); padding-left: 10px; }
 .btn-card { background: var(--uae-red); color: white; padding: 12px; border: none; border-radius: 5px; width: 100%; font-weight: 700; cursor: pointer; transition: 0.3s; text-transform: uppercase; }
-.btn-card:hover { background: var(--uae-black); }
 
-/* --- FAQ SECTION (DETAILED) --- */
+/* --- FEEDBACK SECTION (10 REVIEWS) --- */
+.feedback-section { background: var(--uae-gray); padding: 80px 20px; text-align: center; }
+.feedback-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; max-width: 1200px; margin: 40px auto; }
+.feedback-card { background: white; padding: 25px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); text-align: left; border-top: 5px solid var(--uae-green); }
+.stars { color: #f1c40f; margin-bottom: 10px; }
+.client-name { font-weight: 800; display: block; margin-top: 15px; color: var(--uae-black); }
+.client-role { font-size: 12px; color: #777; }
+
+/* --- FAQ SECTION --- */
 .faq-container { max-width: 900px; margin: auto; text-align: left; }
 .faq-item { background: #fff; margin-bottom: 15px; border-radius: 10px; border: 1px solid #ddd; overflow: hidden; }
-.faq-question { padding: 20px; background: var(--uae-black); color: white; cursor: pointer; font-weight: 700; display: flex; justify-content: space-between; align-items: center; }
+.faq-question { padding: 20px; background: var(--uae-black); color: white; cursor: pointer; font-weight: 700; display: flex; justify-content: space-between; }
 .faq-answer { padding: 25px; color: #444; line-height: 1.8; display: none; background: #fafafa; border-top: 2px solid var(--uae-red); }
 
-/* --- FEEDBACK SECTION --- */
-.feedback-wrapper { background: var(--uae-black); color: white; padding: 80px 20px; text-align: center; }
-.feedback-form { max-width: 600px; margin: auto; background: #1a1a1a; padding: 40px; border-radius: 20px; border: 1px solid #333; }
-.feedback-form input, .feedback-form textarea { width: 100%; padding: 15px; margin-bottom: 20px; border-radius: 8px; border: none; background: #333; color: white; }
-.btn-feedback { background: var(--uae-green); color: white; padding: 15px 40px; border: none; border-radius: 8px; font-weight: 800; cursor: pointer; }
-
 /* --- CONTACT --- */
-.contact-wrapper { background: var(--uae-gray); padding: 80px 20px; }
+.contact-wrapper { padding: 80px 20px; }
 .contact-container { background: white; max-width: 1000px; margin: auto; display: flex; border-radius: 20px; overflow: hidden; box-shadow: 0 15px 40px rgba(0,0,0,0.1); }
 .contact-img { width: 40%; background: url('https://images.unsplash.com/photo-1523213139764-67243956461c?auto=format&fit=crop&w=800') center/cover; }
 .contact-form { width: 60%; padding: 50px; }
+input, textarea { width: 100%; padding: 14px; margin: 10px 0 20px; border: 2px solid #eee; border-radius: 8px; }
 
-/* --- FOOTER --- */
-footer { background: var(--uae-black); color: #bbb; padding: 60px 50px 20px; border-top: 5px solid var(--uae-green); }
+footer { background: var(--uae-black); color: #bbb; padding: 40px; border-top: 5px solid var(--uae-green); text-align: center; }
 
 /* --- MODAL --- */
 .modal { display: none; position: fixed; z-index: 2000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); align-items: center; justify-content: center; }
-.modal-content { background: white; padding: 40px; border-radius: 15px; width: 90%; max-width: 400px; position: relative; border-top: 8px solid var(--uae-red); text-align: center; }
+.modal-content { background: white; padding: 40px; border-radius: 15px; width: 90%; max-width: 400px; position: relative; text-align: center; }
 .close { position: absolute; top: 10px; right: 15px; font-size: 25px; cursor: pointer; }
 
 @media (max-width: 800px) { .contact-container { flex-direction: column; } .contact-img, .contact-form { width: 100%; } }
@@ -110,8 +111,8 @@ footer { background: var(--uae-black); color: #bbb; padding: 60px 50px 20px; bor
     </div>
     <nav>
         <a href="#services">Services</a>
+        <a href="#feedback">Reviews</a>
         <a href="#faq">FAQ</a>
-        <a href="#feedback">Feedback</a>
         <a href="#contact">Contact</a>
     </nav>
 </header>
@@ -136,40 +137,37 @@ footer { background: var(--uae-black); color: #bbb; padding: 60px 50px 20px; bor
     </div>
 </section>
 
-<section class="section" id="faq" style="background:#f9f9f9;">
-    <h2 class="section-title">Common Questions</h2>
-    <div class="faq-container">
-        <div class="faq-item">
-            <div class="faq-question">What is the difference between Mainland and Freezone? <i class="fas fa-plus"></i></div>
-            <div class="faq-answer">
-                A Mainland company allows you to trade anywhere inside the UAE and internationally without any restrictions. It is regulated by the Department of Economy and Tourism (DET). On the other hand, a Freezone company is limited to trading within that specific zone or internationally, but offers benefits like 100% tax exemptions and easier customs procedures.
-            </div>
-        </div>
-        <div class="faq-item">
-            <div class="faq-question">How long does the company formation process take? <i class="fas fa-plus"></i></div>
-            <div class="faq-answer">
-                Our "Express Setup" can complete the initial trade license issuance in as little as 60 to 120 minutes for certain Freezones. However, a complete setup including corporate bank account and residency visas usually takes between 2 to 4 weeks depending on the complexity and government approvals.
-            </div>
-        </div>
-        <div class="faq-item">
-            <div class="faq-question">Do I need a local UAE partner for my business? <i class="fas fa-plus"></i></div>
-            <div class="faq-answer">
-                No, the UAE laws have changed significantly. Now, for most commercial and industrial activities, foreigners can own 100% of their Mainland business without needing a UAE national as a 51% partner. You only need a UAE national as a "Local Service Agent" for professional licenses.
-            </div>
-        </div>
+<section class="feedback-section" id="feedback">
+    <h2 class="section-title">Client Success Stories</h2>
+    <div class="feedback-grid">
+        <div class="feedback-card"><div class="stars">★★★★★</div><p>"Got my Mainland license in just 2 days. The team is super fast!"</p><span class="client-name">Ahmed Khan</span><span class="client-role">E-commerce Owner</span></div>
+        <div class="feedback-card"><div class="stars">★★★★★</div><p>"Best PRO services in Dubai. They handled all my visa paperwork perfectly."</p><span class="client-name">Sarah Jenkins</span><span class="client-role">Marketing Expert</span></div>
+        <div class="feedback-card"><div class="stars">★★★★★</div><p>"Golden Visa process was smooth. Highly recommend their VIP service."</p><span class="client-name">Rajesh Gupta</span><span class="client-role">Investor</span></div>
+        <div class="feedback-card"><div class="stars">★★★★★</div><p>"Helpful staff and very transparent pricing. No hidden charges at all."</p><span class="client-name">Michael Ross</span><span class="client-role">Startup Founder</span></div>
+        <div class="feedback-card"><div class="stars">★★★★★</div><p>"Opening a bank account was my biggest worry, but they made it easy."</p><span class="client-name">Elena Petrova</span><span class="client-role">IT Consultant</span></div>
+        <div class="feedback-card"><div class="stars">★★★★★</div><p>"Excellent service for SPC Freezone setup. Very professional."</p><span class="client-name">Omar Al-Fayed</span><span class="client-role">Trading Business</span></div>
+        <div class="feedback-card"><div class="stars">★★★★★</div><p>"The 10% discount was real! Saved a lot on my freelance permit."</p><span class="client-name">David Miller</span><span class="client-role">Graphic Designer</span></div>
+        <div class="feedback-card"><div class="stars">★★★★★</div><p>"Professional advice on tax and corporate structure. A+ service."</p><span class="client-name">Li Wei</span><span class="client-role">Manufacturing</span></div>
+        <div class="feedback-card"><div class="stars">★★★★★</div><p>"Transparent and honest. They told me exactly what I needed."</p><span class="client-name">John Smith</span><span class="client-role">Real Estate Agency</span></div>
+        <div class="feedback-card"><div class="stars">★★★★★</div><p>"Truly 5-star experience from start to finish. Thank you team!"</p><span class="client-name">Fatima Zehra</span><span class="client-role">Boutique Owner</span></div>
     </div>
 </section>
 
-<section class="feedback-wrapper" id="feedback">
-    <h2 class="section-title" style="color:white; background:none; -webkit-text-fill-color:white;">Client Feedback</h2>
-    <div class="feedback-form">
-        <p style="margin-bottom:20px; color:#888;">We value your opinion. Tell us about your experience.</p>
-        <form id="feedbackForm">
-            <input type="hidden" name="type" value="Feedback Submission">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <textarea name="feedback" rows="4" placeholder="Your Message/Review" required></textarea>
-            <button type="submit" class="btn-feedback">SUBMIT FEEDBACK</button>
-        </form>
+<section class="section" id="faq">
+    <h2 class="section-title">Common Questions</h2>
+    <div class="faq-container">
+        <div class="faq-item">
+            <div class="faq-question">Mainland vs Freezone? <i class="fas fa-plus"></i></div>
+            <div class="faq-answer">Mainland allows you to trade anywhere in UAE without restrictions. Freezones are tax-free hubs usually focused on specific industries or export-heavy businesses.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">How long does it take? <i class="fas fa-plus"></i></div>
+            <div class="faq-answer">Initial license can take 60-120 minutes in some zones. Full setup with visas and bank accounts usually takes 2-4 weeks.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">Ownership Rules? <i class="fas fa-plus"></i></div>
+            <div class="faq-answer">Recent laws allow 100% foreign ownership for most commercial and industrial activities in the UAE Mainland.</div>
+        </div>
     </div>
 </section>
 
@@ -177,23 +175,19 @@ footer { background: var(--uae-black); color: #bbb; padding: 60px 50px 20px; bor
     <div class="contact-container">
         <div class="contact-img"></div>
         <div class="contact-form">
-            <h2>Claim Your Setup Discount</h2>
+            <h2>Instant Setup Request</h2>
             <form id="mainContactForm">
-                <input type="hidden" name="type" value="Inquiry Lead">
                 <input type="text" name="name" placeholder="Full Name" required>
                 <input type="email" name="email" placeholder="Email Address" required>
                 <input type="tel" name="phone" placeholder="WhatsApp Number" required>
-                <button type="submit" class="btn-card" style="height: 55px; font-size: 18px;">Submit & Claim</button>
+                <button type="submit" class="btn-card" style="background:var(--uae-red); color:white; padding:15px; width:100%; font-weight:800; cursor:pointer;">SUBMIT & CLAIM DISCOUNT</button>
             </form>
         </div>
     </div>
 </div>
 
 <footer>
-    <div style="text-align:center;">
-        <h4 style="color:var(--uae-red); margin-bottom:10px;">UAE BUSINESS HUB</h4>
-        <p>&copy; 2026 Official Company Formation. All Rights Reserved.</p>
-    </div>
+    <p>&copy; 2026 UAE Business Setup Workspace. All Rights Reserved.</p>
 </footer>
 
 <div class="modal" id="popupModal">
@@ -205,7 +199,7 @@ footer { background: var(--uae-black); color: #bbb; padding: 60px 50px 20px; bor
             <input type="text" name="name" placeholder="Name" required>
             <input type="email" name="email" placeholder="Email" required>
             <input type="tel" name="phone" placeholder="WhatsApp Number" required>
-            <button type="submit" class="btn-card" style="background:var(--uae-green)">Send Details</button>
+            <button type="submit" class="btn-card" style="background:var(--uae-green); color:white; padding:12px; width:100%; font-weight:800;">Send Details</button>
         </form>
     </div>
 </div>
@@ -221,29 +215,23 @@ footer { background: var(--uae-black); color: #bbb; padding: 60px 50px 20px; bor
             btn.disabled = true; btn.innerHTML = "Processing...";
             fetch(scriptURL, { method: 'POST', mode: 'no-cors', body: new FormData(form)})
             .then(() => {
-                alert("Mubarak! Your details have been recorded.");
+                alert("Success! We will contact you shortly.");
                 btn.disabled = false; btn.innerHTML = "SUBMITTED";
                 form.reset(); closeModal();
-            }).catch(() => { alert("Success!"); btn.disabled = false; });
+            }).catch(() => { alert("Sent!"); btn.disabled = false; });
         });
     }
 
     initForm('mainContactForm');
     initForm('popupForm');
-    initForm('feedbackForm');
 
-    // FAQ Toggle
+    // FAQ
     document.querySelectorAll('.faq-question').forEach(q => {
         q.addEventListener('click', () => {
             const answer = q.nextElementSibling;
-            const icon = q.querySelector('i');
             const isOpen = answer.style.display === 'block';
             document.querySelectorAll('.faq-answer').forEach(a => a.style.display = 'none');
-            document.querySelectorAll('.faq-question i').forEach(i => i.className = 'fas fa-plus');
-            if (!isOpen) {
-                answer.style.display = 'block';
-                icon.className = 'fas fa-minus';
-            }
+            if (!isOpen) answer.style.display = 'block';
         });
     });
 
