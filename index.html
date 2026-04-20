@@ -5,43 +5,45 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>UAE Freezone Workspace | مساحة عمل المنطقة الحرة</title>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Cairo:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
 <style>
 :root {
   --uae-red: #FF0000;
   --uae-green: #00732F;
-  --uae-black: #000000;
-  --uae-white: #FFFFFF;
+  --uae-black: #1a1a1a;
+  --uae-dark-gray: #222222;
   --uae-blue: #0052FF;
+  --footer-bg: #2a2a2a;
 }
 
-* { box-sizing: border-box; margin: 0; padding: 0; }
-body { font-family: 'Montserrat', sans-serif; background: #f4f7fa; color: #1a1a1a; line-height: 1.6; }
+* { box-sizing: border-box; margin: 0; padding: 0; scroll-behavior: smooth; }
+body { font-family: 'Montserrat', sans-serif; background: #f4f7fa; color: #333; line-height: 1.6; }
 
 /* UTILS */
 .txt-green { color: var(--uae-green); }
 .txt-red { color: var(--uae-red); }
-.txt-black { color: var(--uae-black); }
+.txt-white { color: #ffffff; }
 
 /* HEADER */
 header {
     display: flex; justify-content: space-between; align-items: center;
-    padding: 15px 50px; background: var(--uae-black);
+    padding: 15px 50px; background: #000;
     border-top: 5px solid var(--uae-red); color: white;
     position: sticky; top: 0; z-index: 1000;
 }
 .logo strong { font-size: 20px; letter-spacing: 1px; }
-nav a { color: white; margin-left: 20px; text-decoration: none; font-weight: 600; font-size: 14px; transition: 0.3s; }
-nav a:hover { color: var(--uae-green); }
+nav a { color: white; margin-left: 20px; text-decoration: none; font-weight: 600; font-size: 14px; }
 
 /* HERO */
 .hero {
     background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
     url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1600');
     background-size: cover; background-position: center;
-    color: white; text-align: center; padding: 120px 20px;
+    color: white; text-align: center; padding: 100px 20px;
 }
-.hero h1 { font-size: 45px; text-transform: uppercase; margin-bottom: 10px; }
+.hero h1 { font-size: clamp(30px, 5vw, 50px); text-transform: uppercase; margin-bottom: 10px; }
+.arabic-title { font-family: 'Cairo', sans-serif; font-size: 30px; margin-bottom: 20px; }
 
 /* SECTIONS */
 .section { padding: 80px 20px; text-align: center; max-width: 1200px; margin: auto; }
@@ -49,12 +51,11 @@ nav a:hover { color: var(--uae-green); }
 
 /* CARDS */
 .card { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 20px rgba(0,0,0,0.05); transition: 0.3s; }
-.card:hover { transform: translateY(-10px); }
 .card img { width: 100%; height: 220px; object-fit: cover; }
 .card-content { padding: 25px; }
-.price-tag { background: var(--uae-black); color: white; padding: 8px 15px; font-weight: 800; border-radius: 5px; display: inline-block; margin-top: 10px; }
+.price-tag { background: #000; color: white; padding: 8px 15px; font-weight: 800; border-radius: 5px; display: inline-block; margin-top: 10px; }
 
-/* CONTACT CONTAINER (IMAGE STYLE) */
+/* CONTACT CONTAINER (AS PER IMAGE) */
 .contact-container {
     background: white; border-radius: 20px; max-width: 1100px;
     margin: 50px auto; display: flex; overflow: hidden;
@@ -62,124 +63,121 @@ nav a:hover { color: var(--uae-green); }
 }
 .contact-image { width: 45%; background: url('https://images.unsplash.com/photo-1549923746-c502d488b3ea?auto=format&fit=crop&w=800') center/cover; }
 .contact-form-side { width: 55%; padding: 50px; }
-input, select { width: 100%; padding: 15px; margin: 10px 0 20px; border: 1px solid #ddd; border-radius: 10px; font-size: 16px; }
-.btn-submit { background: var(--uae-blue); color: white; padding: 15px; border: none; border-radius: 10px; width: 100%; font-weight: 700; cursor: pointer; font-size: 18px; }
+input, select { width: 100%; padding: 15px; margin: 10px 0 20px; border: 1px solid #ddd; border-radius: 10px; }
+.btn-blue { background: var(--uae-blue); color: white; padding: 15px; border: none; border-radius: 10px; width: 100%; font-weight: 700; cursor: pointer; font-size: 18px; }
 
 /* FAQ */
-.faq-section { background: #fff; padding: 80px 20px; }
+.faq-section { background: #fff; padding: 60px 20px; }
 .faq-container { max-width: 900px; margin: auto; text-align: left; }
 .faq-item { border-bottom: 1px solid #eee; padding: 20px 0; }
-.faq-question { font-weight: 700; color: var(--uae-black); display: block; margin-bottom: 10px; font-size: 18px; }
+.faq-q { font-weight: 700; font-size: 18px; color: #000; margin-bottom: 5px; display: block;}
+
+/* NEW FOOTER (AS PER YOUR IMAGE) */
+footer { background: var(--uae-black); color: #bbb; padding: 60px 50px 20px; font-size: 14px; }
+.footer-grid { 
+    display: grid; 
+    grid-template-columns: 1.5fr 1fr 1fr 1.2fr 1fr; 
+    gap: 40px; max-width: 1300px; margin: auto; 
+}
+.footer-col h4 { color: #fff; margin-bottom: 20px; font-size: 16px; text-transform: uppercase; }
+.footer-col ul { list-style: none; }
+.footer-col ul li { margin-bottom: 10px; cursor: pointer; transition: 0.3s; }
+.footer-col ul li:hover { color: #fff; transform: translateX(5px); }
+.social-links { display: flex; gap: 15px; margin-top: 20px; }
+.social-links i { background: #333; color: #fff; width: 35px; height: 35px; display: flex; align-items: center; justify-content: center; border-radius: 5px; font-size: 18px; }
 
 /* POPUP */
 .modal {
     display: none; position: fixed; z-index: 2000; left: 0; top: 0; width: 100%; height: 100%;
     background: rgba(0,0,0,0.85); align-items: center; justify-content: center;
 }
-.modal-content {
-    background: white; padding: 40px; border-radius: 20px; width: 90%; max-width: 450px;
-    position: relative; border-top: 10px solid var(--uae-red); text-align: center;
-}
-.close { position: absolute; top: 15px; right: 20px; font-size: 30px; cursor: pointer; color: #999; }
+.modal-content { background: white; padding: 40px; border-radius: 20px; width: 90%; max-width: 450px; position: relative; border-top: 10px solid var(--uae-red); text-align: center; }
+.close { position: absolute; top: 15px; right: 20px; font-size: 30px; cursor: pointer; }
 
-.whatsapp { position: fixed; bottom: 30px; right: 30px; background: #25D366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; text-decoration: none; z-index: 1000; }
+@media (max-width: 992px) {
+    .footer-grid { grid-template-columns: repeat(2, 1fr); }
+    .contact-container { flex-direction: column; }
+    .contact-image, .contact-form-side { width: 100%; height: 300px; }
+}
 </style>
 </head>
 <body>
 
 <header>
-    <div class="logo">
-        <strong>UAE FREEZONE WORKSPACE</strong>
-    </div>
-    <nav style="font-family: 'Cairo', sans-serif;">
+    <div class="logo"><strong>UAE FREEZONE WORKSPACE</strong></div>
+    <nav>
         <a href="#mainland">Mainland</a>
         <a href="#freezone">Freezone</a>
-        <span class="txt-green" style="margin-left:20px;">مساحة</span> <span class="txt-white">عمل</span> <span class="txt-red">المنطقة الحرة</span>
+        <a href="#contact">Contact Us</a>
     </nav>
 </header>
 
 <div class="hero">
     <h1><span class="txt-green">UAE</span> FREEZONE <span class="txt-red">WORKSPACE</span></h1>
-    <h2 style="font-family: 'Cairo', sans-serif;">مساحة عمل المنطقة الحرة</h2>
-    <p>Professional Business Setup & Office Solutions across the UAE</p>
+    <div class="arabic-title"><span class="txt-green">مساحة</span> <span class="txt-white">عمل</span> <span class="txt-red">المنطقة الحرة</span></div>
+    <p>Premium Business Setup & Licensing Solutions</p>
 </div>
 
-<div class="section" id="mainland">
-    <h2><span class="txt-black">Mainland</span> <span class="txt-red">Services</span></h2>
+<section class="section" id="mainland">
+    <h2><span class="txt-black">Mainland</span> <span class="txt-red">Setup Services</span></h2>
     <div class="grid">
         <div class="card">
-            <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=500" alt="LLC Setup">
+            <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=500">
             <div class="card-content">
-                <h3>LLC Company Formation</h3>
-                <p>100% ownership options with full access to the local UAE market.</p>
-                <div class="price-tag">Starting AED 15,500</div>
+                <h3>LLC Formation</h3>
+                <p>100% ownership with local market access.</p>
+                <div class="price-tag">AED 15,500*</div>
             </div>
         </div>
         <div class="card">
-            <img src="https://images.unsplash.com/photo-1554415707-6e8cfc93fe23?auto=format&fit=crop&w=500" alt="Professional License">
+            <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=500">
             <div class="card-content">
-                <h3>Professional License</h3>
-                <p>Ideal for consultants, doctors, and engineers wanting a local presence.</p>
-                <div class="price-tag">Starting AED 12,000</div>
-            </div>
-        </div>
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=500" alt="PRO">
-            <div class="card-content">
-                <h3>PRO & Gov Liaison</h3>
-                <p>All government approvals, visa processing, and document clearing.</p>
-                <div class="price-tag">Starting AED 3,500</div>
+                <h3>PRO Services</h3>
+                <p>Government liaison & document clearing.</p>
+                <div class="price-tag">AED 3,500*</div>
             </div>
         </div>
     </div>
-</div>
+</section>
 
-<div class="section" id="freezone" style="background: #eceff3;">
-    <h2><span class="txt-green">Freezone</span> <span class="txt-black">Workspaces</span></h2>
+<section class="section" id="freezone" style="background:#f0f2f5">
+    <h2><span class="txt-green">Freezone</span> <span class="txt-black">Workspace Plans</span></h2>
     <div class="grid">
         <div class="card">
-            <img src="https://images.unsplash.com/photo-1527192491265-7e15c55b1ed2?auto=format&fit=crop&w=500" alt="Flexi Desk">
             <div class="card-content">
-                <h3>Flexi Desk / Hot Desk</h3>
-                <p>Most affordable option for startups. Get a license + desk hours.</p>
-                <div class="price-tag">AED 8,500 / Year</div>
+                <h3>Flexi Desk</h3>
+                <p>Perfect for Freelancers & Startups.</p>
+                <div class="price-tag">AED 8,500 / Yr</div>
             </div>
         </div>
         <div class="card">
-            <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=500" alt="Dedicated Desk">
             <div class="card-content">
-                <h3>Dedicated Executive Desk</h3>
-                <p>A permanent desk for your business with high-speed internet.</p>
-                <div class="price-tag">AED 14,000 / Year</div>
+                <h3>Executive Office</h3>
+                <p>Dedicated space for professional teams.</p>
+                <div class="price-tag">AED 18,000 / Yr</div>
             </div>
         </div>
         <div class="card">
-            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=500" alt="Private Office">
             <div class="card-content">
-                <h3>Private Serviced Office</h3>
-                <p>Full-fledged private office for teams with 24/7 access.</p>
-                <div class="price-tag">AED 25,000 / Year</div>
+                <h3>Private Workspace</h3>
+                <p>Full privacy with 24/7 access.</p>
+                <div class="price-tag">AED 25,000 / Yr</div>
             </div>
         </div>
     </div>
-</div>
+</section>
 
 <section class="section" id="contact">
     <div class="contact-container">
         <div class="contact-image"></div>
         <div class="contact-form-side">
-            <div class="form-title">
-                <h2 style="margin-bottom:10px;">Contact <span class="txt-green">Us</span></h2>
-                <p style="color:#666; margin-bottom:20px;">Fill this form and receive a call within 60 seconds.</p>
-            </div>
+            <h2>Contact Us</h2>
+            <p>Fill this form and receive a call within 60 seconds.</p>
             <form action="https://formspree.io/f/xpqkjqep" method="POST">
-                <label><b>Name</b></label>
-                <input type="text" name="name" placeholder="Enter your name" required>
-                <label><b>Email</b></label>
-                <input type="email" name="email" placeholder="Enter your email" required>
-                <label><b>Phone</b></label>
-                <input type="tel" name="phone" placeholder="WhatsApp Number" required>
-                <button type="submit" class="btn-submit">Submit Request</button>
+                <input type="text" name="name" placeholder="Full Name" required>
+                <input type="email" name="email" placeholder="Email Address" required>
+                <input type="tel" name="phone" placeholder="WhatsApp Phone Number" required>
+                <button type="submit" class="btn-blue">Submit</button>
             </form>
         </div>
     </div>
@@ -187,43 +185,105 @@ input, select { width: 100%; padding: 15px; margin: 10px 0 20px; border: 1px sol
 
 <section class="faq-section">
     <div class="faq-container">
-        <h2 style="text-align: center; margin-bottom: 50px;">FAQs on <span class="txt-green">Business</span> & <span class="txt-red">Licenses</span></h2>
-        
+        <h2 style="margin-bottom:30px">FAQs on <span class="txt-green">Business Activities</span></h2>
         <div class="faq-item">
-            <span class="faq-question">What are the benefits of Free Zone companies in Sharjah?</span>
-            <p>100% foreign ownership, 100% repatriation of profits, and 0% personal/corporate tax.</p>
+            <span class="faq-q">Can any business be set up in a Sharjah Free Zone?</span>
+            <p>Most types are allowed (Trading, Manufacturing, Services). Some require special approvals.</p>
         </div>
         <div class="faq-item">
-            <span class="faq-question">How much does it cost to start a business in UAE?</span>
-            <p>Freezone setups start from AED 8,500, while Mainland LLC starts from AED 15,500 approx.</p>
-        </div>
-        <div class="faq-item">
-            <span class="faq-question">Can a foreigner own 100% of a company in UAE?</span>
-            <p>Yes, 100% ownership is available in all Freezones and most Mainland commercial activities.</p>
+            <span class="faq-q">Can you own 100% of a company in UAE?</span>
+            <p>Yes, 100% foreign ownership is allowed in all Free Zones and most Mainland sectors.</p>
         </div>
     </div>
 </section>
+
+<footer>
+    <div class="footer-grid">
+        <div class="footer-col">
+            <h3 style="color:#fff; font-size:24px; margin-bottom:10px;">SPC | <span style="font-weight:400">Free Zone</span></h3>
+            <p style="font-size:12px">WHERE MORE IS POSSIBLE</p>
+            <div class="social-links">
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-linkedin-in"></i>
+                <i class="fab fa-facebook-f"></i>
+                <i class="fas fa-map-marker-alt"></i>
+                <i class="fab fa-youtube"></i>
+                <i class="fab fa-tiktok"></i>
+            </div>
+        </div>
+        <div class="footer-col">
+            <h4>ABOUT US</h4>
+            <ul>
+                <li>Rules and Regulations</li>
+                <li>Announcements</li>
+            </ul>
+            <h4 style="margin-top:20px">PARTNER WITH US</h4>
+            <ul>
+                <li>Become a Channel Partner</li>
+                <li>Channel Partner Portal</li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>START YOUR BUSINESS</h4>
+            <ul>
+                <li>Pay as you go</li>
+                <li>Invest in Sharjah</li>
+                <li>Publishers Hub</li>
+                <li>Cost Calculator</li>
+                <li>Name Check</li>
+                <li>Business Activities</li>
+                <li>Business setup in UAE from UK</li>
+                <li>Business Setup in Sharjah</li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>VALUE ADDED SERVICES</h4>
+            <ul>
+                <li>Corporate Banking Assistance</li>
+                <li>Spouse and Dependents Visa</li>
+                <li>VIP Medical & Emirates ID</li>
+                <li>Documentation</li>
+                <li>SPC Finance</li>
+                <li>Virtual Receptionist</li>
+                <li>Coworking Space</li>
+                <li>Dedicated Account Manager</li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>INSIGHTS</h4>
+            <ul>
+                <li>Activity Hub</li>
+                <li>Blogs</li>
+            </ul>
+            <h4 style="margin-top:20px">GET IN TOUCH</h4>
+            <ul>
+                <li>Contact Us</li>
+                <li>Work with Us</li>
+                <li>Customer Feedback</li>
+            </ul>
+        </div>
+    </div>
+    <div style="text-align:center; margin-top:50px; border-top:1px solid #444; padding-top:20px; font-size:12px;">
+        &copy; 2026 UAE Freezone Workspace. All Rights Reserved.
+    </div>
+</footer>
 
 <div class="modal" id="visaModal">
     <div class="modal-content">
         <span class="close" id="closeVisa">&times;</span>
         <h2 class="txt-red">Visa Renewal <span class="txt-green">Alert!</span></h2>
-        <p style="margin: 15px 0;">Is your UAE Visa expiring soon?<br>Get expert help at the best prices!</p>
+        <p style="margin: 15px 0;">Is your UAE Visa expiring soon? Get expert help now!</p>
         <form action="https://formspree.io/f/xpqkjqep" method="POST">
-            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="text" name="name" placeholder="Full Name" required>
             <input type="tel" name="phone" placeholder="WhatsApp Number" required>
-            <button type="submit" class="btn-submit" style="background: var(--uae-green);">Apply for Renewal</button>
+            <button type="submit" class="btn-blue" style="background:var(--uae-green)">Apply Now</button>
         </form>
     </div>
 </div>
 
-<a href="https://wa.me/971XXXXXXXXX" class="whatsapp">💬</a>
-
 <script>
     window.onload = function() {
-        setTimeout(function() {
-            document.getElementById('visaModal').style.display = 'flex';
-        }, 4000);
+        setTimeout(function() { document.getElementById('visaModal').style.display = 'flex'; }, 4000);
     };
     document.getElementById('closeVisa').onclick = function() {
         document.getElementById('visaModal').style.display = 'none';
