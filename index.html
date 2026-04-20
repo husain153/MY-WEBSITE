@@ -207,16 +207,16 @@ cursor:pointer;
 <!-- WHATSAPP -->
 <a class="whatsapp" href="https://wa.me/971XXXXXXXXX">💬</a>
 
-<!-- POPUP -->
-<div class="popup" id="popup">
 <div class="popup-content">
 <span class="close" onclick="closePopup()">✖</span>
+
 <h3>Get Free Consultation</h3>
+
 <input type="text" placeholder="Name">
 <input type="tel" placeholder="Phone">
 <input type="email" placeholder="Email">
+
 <button class="btn">Submit</button>
-</div>
 </div>
 
 <script>
@@ -232,3 +232,17 @@ document.getElementById("popup").style.display="none";
 
 </body>
 </html>
+document.getElementById("leadForm").addEventListener("submit", function(e){
+  e.preventDefault();
+
+  fetch("PASTE_YOUR_WEBAPP_URL_HERE", {
+    method: "POST",
+    body: JSON.stringify({
+      name: this.name.value,
+      phone: this.phone.value,
+      email: this.email.value
+    })
+  });
+
+  alert("Thanks! We will contact you soon.");
+});
