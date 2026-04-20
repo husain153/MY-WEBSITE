@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>UAE Business Setup | Premium Visa Services</title>
+<title>UAE Business Setup | Mainland & Freezone Experts</title>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Cairo:wght@600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
@@ -11,148 +11,188 @@
 :root {
   --uae-red: #FF0000;
   --uae-green: #00732F;
-  --uae-black: #000000;
-  --uae-white: #FFFFFF;
+  --uae-black: #1a1a1a;
+  --uae-white: #ffffff;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; scroll-behavior: smooth; }
-body { font-family: 'Montserrat', sans-serif; background: var(--uae-white); color: #1a1a1a; }
+body { font-family: 'Montserrat', sans-serif; background: #f4f7fa; color: #333; line-height: 1.6; }
 
 /* HEADER */
 header {
     display: flex; justify-content: space-between; align-items: center;
-    padding: 15px 50px; background: var(--uae-black); 
-    border-bottom: 4px solid var(--uae-red); color: white;
+    padding: 15px 50px; background: #000; border-top: 5px solid var(--uae-red); color: white;
     position: sticky; top: 0; z-index: 1000;
 }
-nav a { color: white; margin-left: 20px; text-decoration: none; font-weight: 600; cursor: pointer; }
+nav a { color: white; margin-left: 20px; text-decoration: none; font-weight: 600; cursor: pointer; font-size: 13px; }
+nav a:hover { color: var(--uae-green); }
 
 /* HERO */
 .hero {
     background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
     url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1600');
     background-size: cover; background-position: center;
-    color: white; text-align: center; padding: 100px 20px;
-    border-bottom: 8px solid var(--uae-green);
+    color: white; text-align: center; padding: 110px 20px;
 }
+.hero h1 { font-size: 45px; font-weight: 800; }
+.arabic-title { font-family: 'Cairo', sans-serif; font-size: 32px; margin-top: 10px; }
 
-/* PRICING CARDS */
-.section { padding: 60px 20px; text-align: center; max-width: 1200px; margin: auto; }
-.pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 30px; }
-.price-card { 
-    background: white; border-radius: 15px; padding: 30px; 
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1); border-top: 5px solid var(--uae-red);
-}
-.price-val { font-size: 32px; font-weight: 800; margin: 15px 0; }
-.price-val span { text-decoration: line-through; color: #888; font-size: 18px; margin-right: 10px; }
+/* SECTION */
+.section { padding: 70px 20px; text-align: center; max-width: 1200px; margin: auto; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; margin-top: 30px; }
 
-/* FORM */
-.contact-container { 
-    background: #f4f4f4; padding: 50px 20px; border-radius: 20px; 
-    max-width: 800px; margin: 40px auto; box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-}
-input { width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #ddd; border-radius: 8px; }
-.btn-submit { background: var(--uae-red); color: white; padding: 15px; border: none; border-radius: 8px; width: 100%; font-weight: 800; cursor: pointer; }
+/* CARDS */
+.card { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 20px rgba(0,0,0,0.05); transition: 0.3s; position: relative; }
+.card:hover { transform: translateY(-10px); }
+.card img { width: 100%; height: 200px; object-fit: cover; }
+.card-content { padding: 25px; }
+.price-tag { background: #000; color: white; padding: 8px 15px; border-radius: 5px; font-weight: 800; display: inline-block; margin-top: 10px; }
+.old-price { text-decoration: line-through; color: #888; font-size: 14px; margin-right: 8px; }
+.discount-badge { position: absolute; top: 15px; right: 15px; background: var(--uae-green); color: white; padding: 5px 10px; border-radius: 5px; font-weight: 700; font-size: 12px; }
+
+/* CONTACT */
+.contact-container { background: white; border-radius: 20px; max-width: 1100px; margin: 40px auto; display: flex; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); text-align: left; }
+.contact-image { width: 45%; background: url('https://images.unsplash.com/photo-1549923746-c502d488b3ea?auto=format&fit=crop&w=800') center/cover; }
+.contact-form-side { width: 55%; padding: 40px; }
+input { width: 100%; padding: 12px; margin: 8px 0 15px; border: 1px solid #ddd; border-radius: 8px; }
+.btn-blue { background: var(--uae-red); color: white; padding: 15px; border: none; border-radius: 10px; width: 100%; font-weight: 700; cursor: pointer; font-size: 16px; }
+
+/* FOOTER */
+footer { background: #1a1a1a; color: #bbb; padding: 60px 50px 20px; font-size: 13px; }
+.footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1.2fr 1fr; gap: 30px; max-width: 1300px; margin: auto; }
 
 /* MODAL */
-.modal { display: none; position: fixed; z-index: 2000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); align-items: center; justify-content: center; }
-.modal-content { background: white; padding: 40px; border-radius: 15px; width: 90%; max-width: 400px; position: relative; }
-.close { position: absolute; top: 10px; right: 20px; font-size: 25px; cursor: pointer; }
+.modal { display: none; position: fixed; z-index: 9999; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); align-items: center; justify-content: center; }
+.modal-content { background: white; padding: 40px; border-radius: 20px; width: 90%; max-width: 450px; position: relative; border-top: 8px solid var(--uae-red); }
+.close { position: absolute; top: 15px; right: 20px; font-size: 25px; cursor: pointer; }
 </style>
 </head>
 <body>
 
 <header>
-    <div class="logo"><strong>UAE FREEZONE</strong></div>
+    <div class="logo"><strong>UAE FREEZONE WORKSPACE</strong></div>
     <nav>
-        <a href="#pricing">Visa Pricing</a>
-        <a onclick="openModal('Contact Us Footer')">Contact Us</a>
+        <a href="#services">Services</a>
+        <a onclick="openModal('Visa Pricing Request')">Visa Charges</a>
+        <a onclick="openModal('Contact Support')">Contact Us</a>
     </nav>
 </header>
 
 <div class="hero">
-    <h1>60-MINUTE <span style="color:var(--uae-green)">VISA</span> PROCESS</h1>
-    <p style="font-size: 20px; margin-top: 10px;">Get 10% Instant Discount on Premium Setup</p>
+    <h1>MAINLAND & <span style="color:var(--uae-red)">FREEZONE</span> SETUP</h1>
+    <div class="arabic-title"><span style="color:var(--uae-green)">مساحة</span> عمل <span style="color:var(--uae-red)">المنطقة الحرة</span></div>
+    <p>Process Complete Within <strong>60 Minutes</strong> | 10% Instant Discount</p>
 </div>
 
-<section class="section" id="pricing">
-    <h2>Our <span style="color:var(--uae-red)">Pricing</span></h2>
-    <div class="pricing-grid">
-        <div class="price-card">
-            <h3>Standard Visa</h3>
-            <div class="price-val"><span>AED 15,500</span>AED 13,999</div>
-            <p>Complete Process within 60 Minutes</p>
-            <button class="btn-submit" onclick="openModal('Standard Visa AED 13,999')">BOOK NOW</button>
+<section class="section" id="services">
+    <h2>Our <span style="color:var(--uae-red)">Visa Packages</span></h2>
+    <div class="grid">
+        <div class="card">
+            <div class="discount-badge">10% OFF</div>
+            <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=500">
+            <div class="card-content">
+                <h3>Standard Residency</h3>
+                <p>Complete process within 60 minutes.</p>
+                <div class="price-tag"><span class="old-price">AED 15,500</span> AED 13,999</div>
+                <button class="btn-blue" style="margin-top:15px; background:var(--uae-black);" onclick="openModal('Standard Visa 13,999')">BOOK NOW</button>
+            </div>
         </div>
-        <div class="price-card" style="border-top-color: var(--uae-green);">
-            <h3>Premium Golden Visa</h3>
-            <div class="price-val"><span>AED 25,500</span>AED 22,999</div>
-            <p>10-Year Residency & VIP Medical</p>
-            <button class="btn-submit" style="background:var(--uae-green)" onclick="openModal('Premium Visa AED 22,999')">BOOK NOW</button>
+        <div class="card">
+            <div class="discount-badge">10% OFF</div>
+            <img src="https://images.unsplash.com/photo-1554415707-6e8cfc93fe23?auto=format&fit=crop&w=500">
+            <div class="card-content">
+                <h3>Premium Golden Visa</h3>
+                <p>VIP Medical & 10-Year Eligibility.</p>
+                <div class="price-tag"><span class="old-price">AED 25,500</span> AED 22,999</div>
+                <button class="btn-blue" style="margin-top:15px; background:var(--uae-green);" onclick="openModal('Premium Visa 22,999')">BOOK NOW</button>
+            </div>
         </div>
     </div>
 </section>
 
-<div class="contact-container">
-    <h2 style="text-align:center">Start Your Process</h2>
-    <form id="mainContactForm">
-        <input type="hidden" name="type" value="Home Page Form">
-        <input type="text" name="name" placeholder="Full Name" required>
-        <input type="email" name="email" placeholder="Email Address" required>
-        <input type="tel" name="phone" placeholder="WhatsApp Number" required>
-        <button type="submit" class="btn-submit">SUBMIT REQUEST</button>
-    </form>
-</div>
+<section class="section" id="contact">
+    <div class="contact-container">
+        <div class="contact-image"></div>
+        <div class="contact-form-side">
+            <h3>Instant Consultation</h3>
+            <p>Data is securely sent to our Google Sheet.</p>
+            <form id="mainSheetForm">
+                <input type="hidden" name="type" value="Main Page Contact">
+                <input type="text" name="name" placeholder="Name" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="tel" name="phone" placeholder="WhatsApp Number" required>
+                <button type="submit" class="btn-blue">START PROCESS NOW</button>
+            </form>
+        </div>
+    </div>
+</section>
 
 <div class="modal" id="popupModal">
     <div class="modal-content">
         <span class="close" onclick="closeModal()">&times;</span>
-        <h2 id="modalTitle">Request Form</h2>
-        <form id="popupForm">
+        <h2 id="modalTitle" style="color:var(--uae-red)">Request Form</h2>
+        <p style="margin:10px 0; font-size:14px;">Get 10% Discount and 60-min processing.</p>
+        <form id="popupSheetForm">
             <input type="hidden" name="type" id="modalSubject">
-            <input type="text" name="name" placeholder="Name" required>
-            <input type="email" name="email" placeholder="Email" required>
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
             <input type="tel" name="phone" placeholder="WhatsApp Number" required>
-            <button type="submit" class="btn-submit" style="background:var(--uae-green); margin-top:10px;">SEND REQUEST</button>
+            <button type="submit" class="btn-blue" style="background:var(--uae-green)">GET OFFER NOW</button>
         </form>
     </div>
 </div>
 
+<footer>
+    <div class="footer-grid">
+        <div class="footer-col">
+            <h3 style="color:#fff;">SPC | <span style="font-weight:400">Free Zone</span></h3>
+            <p>WHERE MORE IS POSSIBLE</p>
+        </div>
+        <div class="footer-col">
+            <h4>GET IN TOUCH</h4>
+            <ul>
+                <li onclick="openModal('Contact Footer')">Contact Us</li>
+                <li onclick="openModal('Work With Us')">Work with Us</li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
 <script>
-    // GOOGLE WEB APP URL
+    // YOUR GOOGLE SCRIPT URL
     const scriptURL = 'https://script.google.com/macros/s/AKfycbx6Zeu2stbgAN_pS1MEUO66SiCp1X_fLq1-eIeqbxsbvwZHGSJt9FBSeXtJPxmWF-aoqw/exec';
 
-    function setupFormSubmit(formId) {
-        const form = document.getElementById(formId);
+    function handleForm(id) {
+        const form = document.getElementById(id);
         form.addEventListener('submit', e => {
             e.preventDefault();
             const btn = form.querySelector('button');
             btn.disabled = true;
             btn.innerHTML = "Processing...";
 
-            // Browser compatible fetch for Google Scripts
+            // NO-CORS mode used to prevent browser error while still sending data
             fetch(scriptURL, { 
                 method: 'POST', 
-                mode: 'no-cors', // Important for Google Scripts
+                mode: 'no-cors', 
                 body: new FormData(form)
             })
             .then(() => {
-                alert("Mubarak Ho! Data received. Our team will contact you within 60 minutes.");
+                alert("Mubarak Ho! Your data has been recorded. Our team will contact you within 60 minutes.");
                 btn.disabled = false;
-                btn.innerHTML = "SUBMITTED";
+                btn.innerHTML = "SUCCESS";
                 form.reset();
-                closeModal();
+                if(id === 'popupSheetForm') closeModal();
             })
             .catch(error => {
                 console.error('Error!', error.message);
-                alert("Something went wrong, but we will try to recover your data.");
+                alert("Network busy, but we are trying to record your data.");
                 btn.disabled = false;
             });
         });
     }
 
-    setupFormSubmit('mainContactForm');
-    setupFormSubmit('popupForm');
+    handleForm('mainSheetForm');
+    handleForm('popupSheetForm');
 
     function openModal(title) {
         document.getElementById('popupModal').style.display = 'flex';
@@ -160,6 +200,7 @@ input { width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #ddd; bord
         document.getElementById('modalSubject').value = title;
     }
     function closeModal() { document.getElementById('popupModal').style.display = 'none'; }
+    window.onclick = function(e) { if(e.target == document.getElementById('popupModal')) closeModal(); }
 </script>
 
 </body>
