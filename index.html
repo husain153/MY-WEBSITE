@@ -6,24 +6,28 @@
 <title>UAE Business Setup</title>
 
 <style>
-body{margin:0;font-family:Arial;background:#f4f6f9;}
+body{margin:0;font-family:Poppins,Arial;background:#f4f6fb;}
 
 /* HERO */
 .hero{
-background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
-url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c');
-background-size:cover;
+background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
 color:white;
 text-align:center;
 padding:120px 20px;
 }
-.hero h1{font-size:40px;}
+.hero h1{font-size:42px;margin-bottom:10px;}
+.hero p{font-size:18px;}
 .btn{
-background:#00c853;color:white;padding:12px 25px;
-border:none;cursor:pointer;margin-top:15px;
+background:#00c853;
+color:white;
+padding:12px 25px;
+border:none;
+border-radius:5px;
+cursor:pointer;
+margin-top:15px;
 }
 
-/* SECTIONS */
+/* SECTION */
 .section{padding:60px 20px;text-align:center;}
 .grid{
 display:grid;
@@ -32,12 +36,21 @@ gap:20px;
 max-width:1100px;
 margin:auto;
 }
+
+/* CARD */
 .card{
 background:white;
-padding:20px;
-border-radius:10px;
-box-shadow:0 3px 10px rgba(0,0,0,0.1);
+border-radius:12px;
+overflow:hidden;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
 }
+.card img{
+width:100%;
+height:180px;
+object-fit:cover;
+}
+.card h3{margin:15px 0;}
+.card p{padding:0 10px 15px;}
 
 /* FORM */
 .form-box{
@@ -46,6 +59,7 @@ padding:25px;
 border-radius:10px;
 max-width:400px;
 margin:auto;
+box-shadow:0 3px 10px rgba(0,0,0,0.1);
 }
 input{
 width:100%;
@@ -65,6 +79,33 @@ border-radius:50%;
 font-size:20px;
 text-decoration:none;
 }
+
+/* POPUP */
+.popup{
+display:none;
+position:fixed;
+top:0;left:0;
+width:100%;height:100%;
+background:rgba(0,0,0,0.6);
+justify-content:center;
+align-items:center;
+}
+.popup-content{
+background:white;
+padding:25px;
+border-radius:10px;
+width:90%;
+max-width:350px;
+text-align:center;
+position:relative;
+}
+.close{
+position:absolute;
+top:10px;
+right:15px;
+font-size:20px;
+cursor:pointer;
+}
 </style>
 </head>
 
@@ -72,19 +113,19 @@ text-decoration:none;
 
 <!-- HERO -->
 <div class="hero">
-<h1>Start Your UAE Freezone Business</h1>
-<p>0% Tax | 100% Ownership | Fast Setup</p>
-<button class="btn" onclick="document.getElementById('form').scrollIntoView()">Apply Now</button>
+<h1>Start Your UAE Business Today</h1>
+<p>0% Tax | Full Ownership | Fast Setup</p>
+<button class="btn" onclick="openPopup()">Get Free Consultation</button>
 </div>
 
 <!-- FEATURES -->
 <div class="section">
 <h2>Why Choose UAE?</h2>
 <div class="grid">
-<div class="card">0% Income Tax</div>
-<div class="card">Full Ownership</div>
-<div class="card">Quick Setup</div>
-<div class="card">Global Business Access</div>
+<div class="card"><img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a"><h3>0% Income Tax</h3></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf"><h3>Full Ownership</h3></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7"><h3>Quick Setup</h3></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d"><h3>Global Business</h3></div>
 </div>
 </div>
 
@@ -92,27 +133,26 @@ text-decoration:none;
 <div class="section">
 <h2>Our Services</h2>
 <div class="grid">
-<div class="card">Freezone License</div>
-<div class="card">Visa Services</div>
-<div class="card">Bank Account Setup</div>
-<div class="card">Business Consulting</div>
+<div class="card"><img src="https://images.unsplash.com/photo-1556740749-887f6717d7e4"><h3>Freezone License</h3></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1588776814546-ec7e8a1d4a09"><h3>Visa Services</h3></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1565514158740-064f34bd6f66"><h3>Bank Account Setup</h3></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1559526324-593bc073d938"><h3>Business Consulting</h3></div>
 </div>
 </div>
 
 <!-- PACKAGES -->
 <div class="section">
-<h2>Packages</h2>
+<h2>Our Packages</h2>
 <div class="grid">
-<div class="card"><h3>Starter</h3><p>AED 5,999</p></div>
-<div class="card"><h3>Business</h3><p>AED 9,999</p></div>
-<div class="card"><h3>Premium</h3><p>AED 14,999</p></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f"><h3>Starter</h3><p>AED 5,999</p></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1526304640581-d334cdbbf45e"><h3>Business</h3><p>AED 9,999</p></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df"><h3>Premium</h3><p>AED 14,999</p></div>
 </div>
 </div>
 
-<!-- FORM (BOTTOM) -->
+<!-- FORM -->
 <div class="section" id="form">
 <h2>Get Free Consultation</h2>
-
 <div class="form-box">
 <form>
 <input type="text" placeholder="Your Name" required>
@@ -121,11 +161,40 @@ text-decoration:none;
 <button class="btn">Submit</button>
 </form>
 </div>
+</div>
 
+<!-- CONTACT -->
+<div class="section">
+<h2>Contact Us</h2>
+<p>Email: support@yourbusiness.com</p>
+<p>Phone: +971XXXXXXXXX</p>
 </div>
 
 <!-- WHATSAPP -->
 <a class="whatsapp" href="https://wa.me/971XXXXXXXXX">💬</a>
+
+<!-- POPUP -->
+<div class="popup" id="popup">
+<div class="popup-content">
+<span class="close" onclick="closePopup()">✖</span>
+<h3>Get Free Consultation</h3>
+<input type="text" placeholder="Name">
+<input type="tel" placeholder="Phone">
+<input type="email" placeholder="Email">
+<button class="btn">Submit</button>
+</div>
+</div>
+
+<script>
+setTimeout(()=>{openPopup();},4000);
+
+function openPopup(){
+document.getElementById("popup").style.display="flex";
+}
+function closePopup(){
+document.getElementById("popup").style.display="none";
+}
+</script>
 
 </body>
 </html>
