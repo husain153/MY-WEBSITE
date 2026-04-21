@@ -209,42 +209,34 @@ footer { background: var(--uae-black); color: #bbb; padding: 40px; border-top: 5
 </div>
 
 <script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbx008SSEqjrTMXQx1HDhW8KYpjoQid5kS_I5BHB-CtDhtiR27uOH3AJ6zoA_uKh8oAh6A/exec';
-    function initForm(id) {
-        const form = document.getElementById(id);
-        form.addEventListener('submit', e => {
-            e.preventDefault();
-            const btn = form.querySelector('button');
-            btn.disabled = true; btn.innerHTML = "Processing...";
-            fetch(scriptURL, { method: 'POST', mode: 'no-cors', body: new FormData(form)})
-            .then(() => {
-                alert("Success! We will contact you shortly.");
-                btn.disabled = false; btn.innerHTML = "SUBMITTED";
-                form.reset(); closeModal();
-            }).catch(() => { alert("Sent!"); btn.disabled = false; });
-        });
-    }
+    <form action="https://api.web3forms.com/submit" method="POST" id="mainContactForm">
+    <input type="hidden" name="access_key" value="252d3295-8b19-43fd-a1ba-2707a6b82cc9">
+    <input type="hidden" name="from_name" value="UAE Business Setup Website">
 
-    initForm('mainContactForm');
-    initForm('popupForm');
+    <input type="text" name="name" placeholder="Full Name" required>
+    <input type="email" name="email" placeholder="Email Address" required>
+    <input type="tel" name="phone" placeholder="WhatsApp Number" required>
+    
+    <button type="submit" class="btn-card" style="background:var(--uae-red); color:white; padding:15px; width:100%; font-weight:800; cursor:pointer; border:none;">
+        SUBMIT & CLAIM DISCOUNT
+    </button>
+</form>
 
-    // FAQ
-    document.querySelectorAll('.faq-question').forEach(q => {
-        q.addEventListener('click', () => {
-            const answer = q.nextElementSibling;
-            const isOpen = answer.style.display === 'block';
-            document.querySelectorAll('.faq-answer').forEach(a => a.style.display = 'none');
-            if (!isOpen) answer.style.display = 'block';
-        });
-    });
 
-    function openModal(title) {
-        document.getElementById('popupModal').style.display = 'flex';
-        document.getElementById('modalTitle').innerText = title;
-        document.getElementById('modalSubject').value = title;
-    }
-    function closeModal() { document.getElementById('popupModal').style.display = 'none'; }
-</script>
-
-</body>
-</html>
+<div class="modal" id="popupModal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2 id="modalTitle" style="color:var(--uae-red); margin-bottom:15px;">Enquiry</h2>
+        <form action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="252d3295-8b19-43fd-a1ba-2707a6b82cc9">
+            <input type="hidden" name="subject" id="modalSubject" value="Service Enquiry">
+            
+            <input type="text" name="name" placeholder="Name" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="tel" name="phone" placeholder="WhatsApp Number" required>
+            <button type="submit" class="btn-card" style="background:var(--uae-green); color:white; padding:12px; width:100%; font-weight:800; border:none;">
+                Send Details
+            </button>
+        </form>
+    </div>
+</div>
