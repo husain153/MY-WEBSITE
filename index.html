@@ -3,129 +3,120 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>UAE SPCZ | Business Setup & Freezone Services</title>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Cairo:wght@700;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<title>UAE Freezone Setup | UAE SPCZ</title>
+
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+
+fbq('init', 'YOUR_PIXEL_ID');
+fbq('track', 'PageView');
+</script>
 
 <style>
-:root {
-  --uae-red: #FF0000;
-  --uae-green: #00732F;
-  --uae-black: #000000;
-  --uae-white: #FFFFFF;
-  --uae-gold: #D4AF37;
-  --uae-gray: #f4f4f4;
-}
+body {font-family: Arial; margin:0; background:#f4f6f9;}
+/* Header Style for Logo */
+.header-nav {background: white; padding: 10px 20px; display: flex; align-items: center; justify-content: space-between; box-shadow: 0 2px 5px rgba(0,0,0,0.1);}
+.logo-img {height: 50px; width: auto;}
 
-* { box-sizing: border-box; margin: 0; padding: 0; scroll-behavior: smooth; }
-body { font-family: 'Montserrat', sans-serif; background: var(--uae-white); color: #1a1a1a; }
+.hero {background:#0a2540; color:white; text-align:center; padding:60px 20px;}
+.hero h1 {font-size:32px;}
+.btn {background:#00c853; color:white; padding:12px 20px; border:none; cursor:pointer;}
+.section {padding:40px 20px; text-align:center;}
+.form-box {background:white; padding:25px; border-radius:10px; max-width:350px; margin:auto;}
+input {width:100%; padding:10px; margin:10px 0;}
+.packages {display:flex; flex-wrap:wrap; justify-content:center; gap:15px;}
+.card {background:white; padding:15px; border-radius:10px; width:250px;}
 
-/* --- Header & Logo Section --- */
-header {
-    display: flex; justify-content: space-between; align-items: center;
-    padding: 10px 50px; background: var(--uae-black); 
-    border-bottom: 3px solid var(--uae-green); color: white;
-    position: sticky; top: 0; z-index: 1000;
-}
+/* Email Styling */
+.contact-info {margin-top: 15px; font-size: 14px; color: #666;}
+.contact-info a {color: #0a2540; text-decoration: none; font-weight: bold;}
 
-.logo-box { display: flex; align-items: center; text-decoration: none; }
-.logo-image { 
-    height: 60px; /* Logo ka size adjusted for premium feel */
-    width: auto;
-    margin-right: 15px; 
-    border-radius: 5px; /* Subtle rounded corners */
-}
-.logo-text-container { display: flex; flex-direction: column; }
-.logo-main { 
-    font-family: 'Cairo', sans-serif; font-size: 24px; font-weight: 900; line-height: 1;
-    color: var(--uae-white); letter-spacing: 1px;
-}
-.logo-sub { font-size: 11px; color: var(--uae-green); font-weight: 700; text-transform: uppercase; letter-spacing: 2.5px; }
-
-nav a { color: white; margin-left: 20px; text-decoration: none; font-weight: 600; font-size: 14px; transition: 0.3s; text-transform: uppercase; }
-nav a:hover { color: var(--uae-green); }
-
-/* --- Hero Section --- */
-.hero {
-    background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), 
-    url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1600');
-    background-size: cover; background-position: center;
-    color: white; text-align: center; padding: 160px 20px;
-}
-.hero h1 { font-size: 55px; font-weight: 900; margin-bottom: 15px; }
-.hero span { color: var(--uae-green); }
-.hero p { font-size: 20px; opacity: 0.95; max-width: 750px; margin: 0 auto 30px; line-height: 1.6; }
-.btn-hero { background: var(--uae-red); color: white; padding: 18px 35px; text-decoration: none; font-weight: 800; border-radius: 5px; font-size: 16px; transition: 0.3s; }
-.btn-hero:hover { background: var(--uae-gold); }
-
-/* --- Form Section Styling --- */
-.contact-section { padding: 80px 20px; text-align: center; background-color: var(--uae-gray); }
-.form-container { max-width: 600px; margin: 0 auto; background: var(--uae-white); padding: 40px; border-radius: 10px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); }
-input, textarea { width: 100%; padding: 15px; margin-bottom: 20px; border: 1px solid #ddd; border-radius: 5px; }
-.btn-form { background: var(--uae-green); color: white; padding: 15px; width: 100%; font-weight: 800; border: none; border-radius: 5px; cursor: pointer; transition: 0.3s; }
-.btn-form:hover { background: var(--uae-black); }
-
-/* --- Footer Section Styling --- */
-footer {
-    background: var(--uae-black); color: var(--uae-gray); padding: 50px; text-align: center; border-top: 5px solid var(--uae-red);
-}
-footer a { color: var(--uae-green); text-decoration: none; font-weight: 700; }
-footer i { margin-right: 10px; color: var(--uae-gold); }
-
-/* Mobile Menu */
-@media (max-width: 768px) {
-    header { padding: 15px 20px; flex-direction: column; gap: 15px; text-align: center; }
-    .logo-box { flex-direction: column; gap: 10px; }
-    .logo-image { margin-right: 0; height: 50px; }
-    .hero h1 { font-size: 36px; }
-    .hero p { font-size: 16px; }
+.whatsapp {
+position: fixed;
+bottom: 20px;
+right: 20px;
+background: #25D366;
+color: white;
+padding: 15px;
+border-radius: 50%;
+font-size: 20px;
+text-decoration: none;
+z-index: 1000;
 }
 </style>
 </head>
+
 <body>
 
-<header>
-    <a href="#" class="logo-box">
-        <img src="https://lh3.googleusercontent.com/d/1a1c71d-your-actual-image-link-here" alt="UAE SPCZ Logo" class="logo-image">
-        <div class="logo-text-container">
-            <span class="logo-main">UAE <span style="color:var(--uae-green)">SPCZ</span></span>
-            <span class="logo-sub">Freezone Business Experts</span>
-        </div>
-    </a>
-    <nav>
-        <a href="#services">Services</a>
-        <a href="#contact">Consult Now</a>
-    </nav>
-</header>
-
-<div class="hero">
-    <h1>Your Gateway to <span>UAE Business</span> Success</h1>
-    <p>Official SPC Freezone Partners. Mainland & Freezone Setup in 2 Hours. Trustworthy Corporate Consultancy.</p>
-    <a href="#contact" class="btn-hero">GET FREE CONSULTATION</a>
+<div class="header-nav">
+    <img src="https://lh3.googleusercontent.com/d/1a1c71d-your-actual-image-link-here" alt="UAE SPCZ Logo" class="logo-img">
+    <div style="font-size: 12px; text-align: right; font-weight: bold; color: #0a2540;">UAE SPCZ<br>CORPORATE SERVICES</div>
 </div>
 
-<section class="contact-section" id="contact">
-    <div class="form-container">
-        <h2 style="font-size: 28px; margin-bottom: 20px;">Instant Setup Enquiry</h2>
-        <form action="https://api.web3forms.com/submit" method="POST">
-            <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
-            <input type="hidden" name="from_name" value="UAE SPCZ Support">
-            
-            <input type="text" name="name" placeholder="Full Name" required>
-            <input type="email" name="email" placeholder="Email Address" required>
-            <input type="tel" name="phone" placeholder="WhatsApp Number" required>
-            <textarea name="message" placeholder="Your Business Idea (Optional)" rows="4"></textarea>
-            
-            <button type="submit" class="btn-form">SUBMIT & CLAIM DISCOUNT</button>
-        </form>
-    </div>
-</section>
+<div class="hero">
+<h1>Start Your UAE Freezone Company</h1>
+<p>0% Tax | Full Ownership | Fast Setup</p>
+<button class="btn" onclick="scrollToForm()">Get Free Consultation</button>
+</div>
 
-<footer>
-    <p><i class="fas fa-envelope"></i> Email: <a href="mailto:info@uaespcz.com"><strong>info@uaespcz.com</strong></a></p>
-    <p><i class="fas fa-globe"></i> Website: <a href="https://www.uaespcz.com"><strong>www.uaespcz.com</strong></a></p>
-    <p style="margin-top: 20px; font-size: 12px; opacity: 0.8;">&copy; 2026 UAE SPCZ Corporate Services. All Rights Reserved.</p>
-</footer>
+<div class="section">
+<h2>Our Packages</h2>
+<div class="packages">
+<div class="card">Starter - AED 5,999</div>
+<div class="card">Business - AED 9,999</div>
+<div class="card">Premium - AED 14,999</div>
+</div>
+</div>
+
+<div class="section" id="form">
+<h2>Get Free Consultation</h2>
+<div class="form-box">
+<form id="leadForm">
+<input type="text" id="name" placeholder="Name" required>
+<input type="tel" id="phone" placeholder="Phone" required>
+<input type="email" id="email" placeholder="Email" required>
+<button class="btn" type="submit">Submit</button>
+</form>
+<div class="contact-info">
+    Official Enquiry: <a href="mailto:info@uaespcz.com">info@uaespcz.com</a>
+</div>
+</div>
+</div>
+
+<a class="whatsapp" href="https://wa.me/971XXXXXXXXX" target="_blank">💬</a>
+
+<script>
+function scrollToForm() {
+document.getElementById('form').scrollIntoView({behavior:'smooth'});
+}
+
+// GOOGLE SHEETS INTEGRATION
+document.getElementById("leadForm").addEventListener("submit", function(e){
+e.preventDefault();
+
+let data = {
+name: document.getElementById("name").value,
+phone: document.getElementById("phone").value,
+email: document.getElementById("email").value
+};
+
+fetch("YOUR_GOOGLE_SCRIPT_URL", {
+method: "POST",
+body: JSON.stringify(data)
+})
+.then(res => {
+alert("Submitted Successfully!");
+fbq('track', 'Lead'); // Pixel Lead Event
+});
+});
+</script>
 
 </body>
 </html>
