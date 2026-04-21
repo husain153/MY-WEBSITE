@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>UAE Business Setup | Premium Services & 10+ Success Stories</title>
+<title>UAE SPCZ | Business Setup & Freezone Services</title>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Cairo:wght@700;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
@@ -13,231 +13,119 @@
   --uae-green: #00732F;
   --uae-black: #000000;
   --uae-white: #FFFFFF;
+  --uae-gold: #D4AF37;
   --uae-gray: #f4f4f4;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; scroll-behavior: smooth; }
 body { font-family: 'Montserrat', sans-serif; background: var(--uae-white); color: #1a1a1a; }
 
+/* --- Header & Logo Section --- */
 header {
     display: flex; justify-content: space-between; align-items: center;
-    padding: 15px 50px; background: var(--uae-black); 
-    border-bottom: 4px solid var(--uae-red); color: white;
+    padding: 10px 50px; background: var(--uae-black); 
+    border-bottom: 3px solid var(--uae-green); color: white;
     position: sticky; top: 0; z-index: 1000;
 }
-.logo-container { text-align: left; }
-.logo-arabic { 
-    font-family: 'Cairo', sans-serif; font-size: 22px; font-weight: 900;
-    background: linear-gradient(to right, var(--uae-green) 33%, var(--uae-white) 33%, var(--uae-white) 66%, var(--uae-red) 66%);
-    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-}
-.logo-english { font-size: 12px; color: var(--uae-white); font-weight: 700; display: block; letter-spacing: 1px; }
 
-nav a { color: white; margin-left: 20px; text-decoration: none; font-weight: 600; font-size: 14px; transition: 0.3s; }
+.logo-box { display: flex; align-items: center; text-decoration: none; }
+.logo-image { 
+    height: 60px; /* Logo ka size adjusted for premium feel */
+    width: auto;
+    margin-right: 15px; 
+    border-radius: 5px; /* Subtle rounded corners */
+}
+.logo-text-container { display: flex; flex-direction: column; }
+.logo-main { 
+    font-family: 'Cairo', sans-serif; font-size: 24px; font-weight: 900; line-height: 1;
+    color: var(--uae-white); letter-spacing: 1px;
+}
+.logo-sub { font-size: 11px; color: var(--uae-green); font-weight: 700; text-transform: uppercase; letter-spacing: 2.5px; }
+
+nav a { color: white; margin-left: 20px; text-decoration: none; font-weight: 600; font-size: 14px; transition: 0.3s; text-transform: uppercase; }
 nav a:hover { color: var(--uae-green); }
 
+/* --- Hero Section --- */
 .hero {
-    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), 
+    background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), 
     url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1600');
     background-size: cover; background-position: center;
-    color: white; text-align: center; padding: 120px 20px;
-    border-bottom: 8px solid var(--uae-green);
+    color: white; text-align: center; padding: 160px 20px;
 }
-.hero h1 { 
-    font-size: 55px; font-weight: 900; margin-bottom: 10px; 
-    background: linear-gradient(to right, var(--uae-green), var(--uae-white), var(--uae-red));
-    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+.hero h1 { font-size: 55px; font-weight: 900; margin-bottom: 15px; }
+.hero span { color: var(--uae-green); }
+.hero p { font-size: 20px; opacity: 0.95; max-width: 750px; margin: 0 auto 30px; line-height: 1.6; }
+.btn-hero { background: var(--uae-red); color: white; padding: 18px 35px; text-decoration: none; font-weight: 800; border-radius: 5px; font-size: 16px; transition: 0.3s; }
+.btn-hero:hover { background: var(--uae-gold); }
+
+/* --- Form Section Styling --- */
+.contact-section { padding: 80px 20px; text-align: center; background-color: var(--uae-gray); }
+.form-container { max-width: 600px; margin: 0 auto; background: var(--uae-white); padding: 40px; border-radius: 10px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); }
+input, textarea { width: 100%; padding: 15px; margin-bottom: 20px; border: 1px solid #ddd; border-radius: 5px; }
+.btn-form { background: var(--uae-green); color: white; padding: 15px; width: 100%; font-weight: 800; border: none; border-radius: 5px; cursor: pointer; transition: 0.3s; }
+.btn-form:hover { background: var(--uae-black); }
+
+/* --- Footer Section Styling --- */
+footer {
+    background: var(--uae-black); color: var(--uae-gray); padding: 50px; text-align: center; border-top: 5px solid var(--uae-red);
 }
-.hero .badge { background: var(--uae-red); color: white; padding: 12px 25px; border-radius: 5px; font-weight: 700; display: inline-block; margin-top: 15px; }
+footer a { color: var(--uae-green); text-decoration: none; font-weight: 700; }
+footer i { margin-right: 10px; color: var(--uae-gold); }
 
-.section { padding: 80px 20px; text-align: center; max-width: 1300px; margin: auto; }
-.section-title { 
-    font-size: 40px; font-weight: 900; margin-bottom: 50px; position: relative; padding-bottom: 15px;
-    background: linear-gradient(to right, var(--uae-green), var(--uae-black), var(--uae-red));
-    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+/* Mobile Menu */
+@media (max-width: 768px) {
+    header { padding: 15px 20px; flex-direction: column; gap: 15px; text-align: center; }
+    .logo-box { flex-direction: column; gap: 10px; }
+    .logo-image { margin-right: 0; height: 50px; }
+    .hero h1 { font-size: 36px; }
+    .hero p { font-size: 16px; }
 }
-.section-title::after { content: ''; width: 100px; height: 6px; background: var(--uae-red); position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); }
-
-.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
-.card { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); border: 1px solid #eee; transition: 0.3s; position: relative; text-align: left; }
-.card:hover { transform: translateY(-10px); border-color: var(--uae-green); }
-.card img { width: 100%; height: 200px; object-fit: cover; }
-.card-body { padding: 20px; }
-.card-body h3 { font-size: 20px; font-weight: 800; margin-bottom: 8px; color: var(--uae-black); }
-.price-now { font-size: 22px; font-weight: 800; color: var(--uae-black); display: block; margin-bottom: 15px; border-left: 4px solid var(--uae-green); padding-left: 10px; }
-.btn-card { background: var(--uae-red); color: white; padding: 12px; border: none; border-radius: 5px; width: 100%; font-weight: 700; cursor: pointer; transition: 0.3s; text-transform: uppercase; }
-
-.feedback-section { background: var(--uae-gray); padding: 80px 20px; text-align: center; }
-.feedback-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; max-width: 1200px; margin: 40px auto; }
-.feedback-card { background: white; padding: 25px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); text-align: left; border-top: 5px solid var(--uae-green); }
-.stars { color: #f1c40f; margin-bottom: 10px; }
-.client-name { font-weight: 800; display: block; margin-top: 15px; color: var(--uae-black); }
-.client-role { font-size: 12px; color: #777; }
-
-.faq-container { max-width: 900px; margin: auto; text-align: left; }
-.faq-item { background: #fff; margin-bottom: 15px; border-radius: 10px; border: 1px solid #ddd; overflow: hidden; }
-.faq-question { padding: 20px; background: var(--uae-black); color: white; cursor: pointer; font-weight: 700; display: flex; justify-content: space-between; }
-.faq-answer { padding: 25px; color: #444; line-height: 1.8; display: none; background: #fafafa; border-top: 2px solid var(--uae-red); }
-
-.contact-wrapper { 
-    padding: 100px 20px;
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
-    url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1600') center/cover no-repeat;
-}
-.contact-container { background: white; max-width: 1000px; margin: auto; display: flex; border-radius: 20px; overflow: hidden; box-shadow: 0 15px 40px rgba(0,0,0,0.3); }
-.contact-img { width: 40%; background: url('https://images.unsplash.com/photo-1523213139764-67243956461c?auto=format&fit=crop&w=800') center/cover; }
-.contact-form { width: 60%; padding: 50px; }
-input, textarea { width: 100%; padding: 14px; margin: 10px 0 20px; border: 2px solid #eee; border-radius: 8px; font-size: 16px; }
-
-footer { background: var(--uae-black); color: #bbb; padding: 40px; border-top: 5px solid var(--uae-green); text-align: center; }
-
-.modal { display: none; position: fixed; z-index: 2000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); align-items: center; justify-content: center; }
-.modal-content { background: white; padding: 40px; border-radius: 15px; width: 90%; max-width: 400px; position: relative; text-align: center; }
-.close { position: absolute; top: 10px; right: 15px; font-size: 25px; cursor: pointer; }
-
-@media (max-width: 800px) { .contact-container { flex-direction: column; } .contact-img, .contact-form { width: 100%; } }
 </style>
 </head>
 <body>
 
 <header>
-    <div class="logo-container">
-        <span class="logo-arabic">شركة إعداد الأعمال</span>
-        <span class="logo-english">UAE BUSINESS SETUP</span>
-    </div>
+    <a href="#" class="logo-box">
+        <img src="https://lh3.googleusercontent.com/d/1a1c71d-your-actual-image-link-here" alt="UAE SPCZ Logo" class="logo-image">
+        <div class="logo-text-container">
+            <span class="logo-main">UAE <span style="color:var(--uae-green)">SPCZ</span></span>
+            <span class="logo-sub">Freezone Business Experts</span>
+        </div>
+    </a>
     <nav>
         <a href="#services">Services</a>
-        <a href="#feedback">Reviews</a>
-        <a href="#faq">FAQ</a>
-        <a href="#contact">Contact</a>
+        <a href="#contact">Consult Now</a>
     </nav>
 </header>
 
 <div class="hero">
-    <h1>UAE CORPORATE EXCELLENCE</h1>
-    <p>Professional Business Setup, Visa Services & Legal Consultation</p>
-    <div class="badge">10% INSTANT DISCOUNT IF SETUP IS COMPLETED WITHIN 60 MINUTES</div>
+    <h1>Your Gateway to <span>UAE Business</span> Success</h1>
+    <p>Official SPC Freezone Partners. Mainland & Freezone Setup in 2 Hours. Trustworthy Corporate Consultancy.</p>
+    <a href="#contact" class="btn-hero">GET FREE CONSULTATION</a>
 </div>
 
-<section class="section" id="services">
-    <h2 class="section-title">Exclusive Business Services</h2>
-    <div class="grid">
-        <div class="card"><img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=500"><div class="card-body"><h3>Mainland License</h3><span class="price-now">AED 13,999</span><button class="btn-card" onclick="openModal('Mainland')">Details</button></div></div>
-        <div class="card"><img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=500"><div class="card-body"><h3>Freezone Setup</h3><span class="price-now">AED 8,500</span><button class="btn-card" onclick="openModal('Freezone')">Details</button></div></div>
-        <div class="card"><img src="https://images.unsplash.com/photo-1554415707-6e8cfc93fe23?auto=format&fit=crop&w=500"><div class="card-body"><h3>Golden Visa</h3><span class="price-now">AED 22,999</span><button class="btn-card" onclick="openModal('Golden Visa')">Details</button></div></div>
-        <div class="card"><img src="https://images.unsplash.com/photo-1556742044-3c52d6e88c62?auto=format&fit=crop&w=500"><div class="card-body"><h3>E-Commerce</h3><span class="price-now">AED 5,999</span><button class="btn-card" onclick="openModal('E-Comm')">Details</button></div></div>
-        <div class="card"><img src="https://images.unsplash.com/photo-1501167786227-4cba60f6d58f?auto=format&fit=crop&w=500"><div class="card-body"><h3>Corporate Banking</h3><span class="price-now">FREE</span><button class="btn-card" onclick="openModal('Banking')">Details</button></div></div>
-        <div class="card"><img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=500"><div class="card-body"><h3>PRO Services</h3><span class="price-now">AED 2,500</span><button class="btn-card" onclick="openModal('PRO')">Details</button></div></div>
-        <div class="card"><img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=500"><div class="card-body"><h3>Virtual Office</h3><span class="price-now">AED 1,200</span><button class="btn-card" onclick="openModal('Office')">Details</button></div></div>
-        <div class="card"><img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=500"><div class="card-body"><h3>Freelance Permit</h3><span class="price-now">AED 7,500</span><button class="btn-card" onclick="openModal('Freelance')">Details</button></div></div>
-    </div>
-</section>
-
-<section class="feedback-section" id="feedback">
-    <h2 class="section-title">Client Success Stories</h2>
-    <div class="feedback-grid">
-        <div class="feedback-card"><div class="stars">★★★★★</div><p>"Got my Mainland license in just 2 days. The team is super fast!"</p><span class="client-name">Ahmed Khan</span><span class="client-role">E-commerce Owner</span></div>
-        <div class="feedback-card"><div class="stars">★★★★★</div><p>"Best PRO services in Dubai. They handled all my visa paperwork perfectly."</p><span class="client-name">Sarah Jenkins</span><span class="client-role">Marketing Expert</span></div>
-        <div class="feedback-card"><div class="stars">★★★★★</div><p>"Golden Visa process was smooth. Highly recommend their VIP service."</p><span class="client-name">Rajesh Gupta</span><span class="client-role">Investor</span></div>
-        <div class="feedback-card"><div class="stars">★★★★★</div><p>"Helpful staff and very transparent pricing. No hidden charges at all."</p><span class="client-name">Michael Ross</span><span class="client-role">Startup Founder</span></div>
-        <div class="feedback-card"><div class="stars">★★★★★</div><p>"Opening a bank account was my biggest worry, but they made it easy."</p><span class="client-name">Elena Petrova</span><span class="client-role">IT Consultant</span></div>
-        <div class="feedback-card"><div class="stars">★★★★★</div><p>"Excellent service for SPC Freezone setup. Very professional."</p><span class="client-name">Omar Al-Fayed</span><span class="client-role">Trading Business</span></div>
-        <div class="feedback-card"><div class="stars">★★★★★</div><p>"The 10% discount was real! Saved a lot on my freelance permit."</p><span class="client-name">David Miller</span><span class="client-role">Graphic Designer</span></div>
-        <div class="feedback-card"><div class="stars">★★★★★</div><p>"Professional advice on tax and corporate structure. A+ service."</p><span class="client-name">Li Wei</span><span class="client-role">Manufacturing</span></div>
-        <div class="feedback-card"><div class="stars">★★★★★</div><p>"Transparent and honest. They told me exactly what I needed."</p><span class="client-name">John Smith</span><span class="client-role">Real Estate Agency</span></div>
-        <div class="feedback-card"><div class="stars">★★★★★</div><p>"Truly 5-star experience from start to finish. Thank you team!"</p><span class="client-name">Fatima Zehra</span><span class="client-role">Boutique Owner</span></div>
-    </div>
-</section>
-
-<section class="section" id="faq">
-    <h2 class="section-title">Common Questions</h2>
-    <div class="faq-container">
-        <div class="faq-item">
-            <div class="faq-question">Mainland vs Freezone? <i class="fas fa-plus"></i></div>
-            <div class="faq-answer">Mainland allows you to trade anywhere in UAE without restrictions. Freezones are tax-free hubs usually focused on specific industries or export-heavy businesses.</div>
-        </div>
-        <div class="faq-item">
-            <div class="faq-question">How long does it take? <i class="fas fa-plus"></i></div>
-            <div class="faq-answer">Initial license can take 60-120 minutes in some zones. Full setup with visas and bank accounts usually takes 2-4 weeks.</div>
-        </div>
-        <div class="faq-item">
-            <div class="faq-question">Ownership Rules? <i class="fas fa-plus"></i></div>
-            <div class="faq-answer">Recent laws allow 100% foreign ownership for most commercial and industrial activities in the UAE Mainland.</div>
-        </div>
-    </div>
-</section>
-
-<div class="contact-wrapper" id="contact">
-    <div class="contact-container">
-        <div class="contact-img"></div>
-        <div class="contact-form">
-            <h2>Instant Setup Request</h2>
-            <form action="https://api.web3forms.com/submit" method="POST">
-                <input type="hidden" name="access_key" value="252d3295-8b19-43fd-a1ba-2707a6b82cc9">
-                <input type="hidden" name="subject" value="New Business Enquiry - UAE Website">
-                
-                <input type="text" name="name" placeholder="Full Name" required>
-                <input type="email" name="email" placeholder="Email Address" required>
-                <input type="tel" name="phone" placeholder="WhatsApp Number" required>
-                
-                <button type="submit" class="btn-card" style="background:var(--uae-red); color:white; padding:15px; width:100%; font-weight:800; cursor:pointer; border:none;">
-                    SUBMIT & CLAIM DISCOUNT
-                </button>
-            </form>
-        </div>
-    </div>
-</div>
-
-<footer>
-    <p>&copy; 2026 UAE Business Setup Workspace. All Rights Reserved.</p>
-</footer>
-
-<div class="modal" id="popupModal">
-    <div class="modal-content">
-        <span class="close" onclick="closeModal()">&times;</span>
-        <h2 id="modalTitle" style="color:var(--uae-red); margin-bottom:15px;">Enquiry</h2>
+<section class="contact-section" id="contact">
+    <div class="form-container">
+        <h2 style="font-size: 28px; margin-bottom: 20px;">Instant Setup Enquiry</h2>
         <form action="https://api.web3forms.com/submit" method="POST">
-            <input type="hidden" name="access_key" value="252d3295-8b19-43fd-a1ba-2707a6b82cc9">
-            <input type="hidden" name="subject" id="modalSubject" value="Service Enquiry">
+            <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+            <input type="hidden" name="from_name" value="UAE SPCZ Support">
             
-            <input type="text" name="name" placeholder="Name" required>
-            <input type="email" name="email" placeholder="Email" required>
+            <input type="text" name="name" placeholder="Full Name" required>
+            <input type="email" name="email" placeholder="Email Address" required>
             <input type="tel" name="phone" placeholder="WhatsApp Number" required>
-            <button type="submit" class="btn-card" style="background:var(--uae-green); color:white; padding:12px; width:100%; font-weight:800; border:none;">
-                Send Details
-            </button>
+            <textarea name="message" placeholder="Your Business Idea (Optional)" rows="4"></textarea>
+            
+            <button type="submit" class="btn-form">SUBMIT & CLAIM DISCOUNT</button>
         </form>
     </div>
-</div>
+</section>
 
-<script>
-    // FAQ Toggle
-    document.querySelectorAll('.faq-question').forEach(q => {
-        q.addEventListener('click', () => {
-            const answer = q.nextElementSibling;
-            const isOpen = answer.style.display === 'block';
-            document.querySelectorAll('.faq-answer').forEach(a => a.style.display = 'none');
-            if (!isOpen) answer.style.display = 'block';
-        });
-    });
-
-    function openModal(title) {
-        document.getElementById('popupModal').style.display = 'flex';
-        document.getElementById('modalTitle').innerText = title;
-        document.getElementById('modalSubject').value = "Service Enquiry: " + title;
-    }
-    
-    function closeModal() { 
-        document.getElementById('popupModal').style.display = 'none'; 
-    }
-
-    // Modal click outside to close
-    window.onclick = function(event) {
-        if (event.target == document.getElementById('popupModal')) {
-            closeModal();
-        }
-    }
-</script>
+<footer>
+    <p><i class="fas fa-envelope"></i> Email: <a href="mailto:info@uaespcz.com"><strong>info@uaespcz.com</strong></a></p>
+    <p><i class="fas fa-globe"></i> Website: <a href="https://www.uaespcz.com"><strong>www.uaespcz.com</strong></a></p>
+    <p style="margin-top: 20px; font-size: 12px; opacity: 0.8;">&copy; 2026 UAE SPCZ Corporate Services. All Rights Reserved.</p>
+</footer>
 
 </body>
 </html>
