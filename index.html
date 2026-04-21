@@ -7,25 +7,12 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Cairo:wght@700;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', 'YOUR_PIXEL_ID');
-fbq('track', 'PageView');
-</script>
-
 <style>
 :root { --uae-red: #FF0000; --uae-green: #00732F; --uae-black: #000000; --uae-white: #FFFFFF; --uae-gray: #f8f9fa; }
 * { box-sizing: border-box; margin: 0; padding: 0; scroll-behavior: smooth; }
 body { font-family: 'Montserrat', sans-serif; background: var(--uae-white); color: #1a1a1a; line-height: 1.6; }
 
-/* HEADER & CSS LOGO (NO BROKEN IMAGES) */
+/* HEADER & LOGO */
 header { display: flex; justify-content: space-between; align-items: center; padding: 10px 50px; background: var(--uae-black); border-bottom: 5px solid var(--uae-green); color: white; position: sticky; top: 0; z-index: 1000; }
 .logo-container { display: flex; align-items: center; text-decoration: none; }
 .logo-flag-icon { width: 45px; height: 45px; margin-right: 15px; background: linear-gradient(to bottom, var(--uae-green) 33.3%, var(--uae-white) 33.3%, var(--uae-white) 66.6%, var(--uae-black) 66.6%); border-left: 12px solid var(--uae-red); border-radius: 4px; }
@@ -36,8 +23,7 @@ nav a { color: white; margin-left: 20px; text-decoration: none; font-weight: 700
 /* HERO */
 .hero { background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1600'); background-size: cover; background-position: center; color: white; text-align: center; padding: 130px 20px; border-bottom: 10px solid var(--uae-red); }
 .hero h1 { font-size: 55px; font-weight: 900; font-family: 'Cairo'; }
-.hero p { font-size: 22px; margin-top: 15px; color: var(--uae-green); font-weight: 700; }
-.badge { background: var(--uae-red); color: white; padding: 15px 30px; border-radius: 5px; font-weight: 900; display: inline-block; margin-top: 30px; box-shadow: 0 5px 20px rgba(255,0,0,0.4); }
+.badge { background: var(--uae-red); color: white; padding: 15px 30px; border-radius: 5px; font-weight: 900; display: inline-block; margin-top: 30px; }
 
 /* SERVICES (8 CARDS) */
 .section { padding: 80px 20px; text-align: center; max-width: 1300px; margin: auto; }
@@ -45,17 +31,15 @@ nav a { color: white; margin-left: 20px; text-decoration: none; font-weight: 700
 .section-title::after { content: ''; width: 100px; height: 6px; background: var(--uae-green); position: absolute; bottom: -15px; left: 50%; transform: translateX(-50%); }
 .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
 .card { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 15px 35px rgba(0,0,0,0.1); transition: 0.4s; border: 1px solid #eee; text-align: left; }
-.card:hover { transform: translateY(-15px); border-color: var(--uae-red); }
 .card img { width: 100%; height: 200px; object-fit: cover; }
 .card-body { padding: 25px; }
 .price { font-size: 24px; font-weight: 900; color: var(--uae-green); margin: 15px 0; display: block; }
 .btn-card { background: var(--uae-black); color: white; padding: 15px; border: none; width: 100%; font-weight: 800; cursor: pointer; border-radius: 5px; }
 
 /* FEEDBACK (10 STORIES) */
-.feedback-bg { background: var(--uae-gray); padding: 80px 20px; }
-.f-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; max-width: 1200px; margin: auto; }
-.f-card { background: white; padding: 30px; border-radius: 10px; border-left: 8px solid var(--uae-green); box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
-.stars { color: #f1c40f; margin-bottom: 10px; }
+.feedback-bg { background: var(--uae-gray); padding: 80px 20px; text-align: center; }
+.f-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; max-width: 1200px; margin: auto; }
+.f-card { background: white; padding: 25px; border-radius: 10px; border-left: 8px solid var(--uae-green); text-align: left; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
 
 /* FAQ */
 .faq-container { max-width: 900px; margin: 50px auto; text-align: left; }
@@ -63,17 +47,15 @@ nav a { color: white; margin-left: 20px; text-decoration: none; font-weight: 700
 .faq-q { padding: 20px; background: var(--uae-black); color: white; cursor: pointer; font-weight: 700; display: flex; justify-content: space-between; }
 .faq-a { padding: 25px; display: none; border-top: 3px solid var(--uae-red); }
 
-/* CONTACT FORM (WEB3FORMS) */
+/* CONTACT FORM */
 .form-section { padding: 100px 20px; background: #000; color: white; text-align: center; }
 .form-box { background: white; color: #333; padding: 50px; border-radius: 20px; max-width: 600px; margin: auto; }
-input, textarea { width: 100%; padding: 18px; margin: 15px 0; border: 2px solid #eee; border-radius: 8px; font-size: 16px; font-family: inherit; }
+input, textarea { width: 100%; padding: 18px; margin: 15px 0; border: 2px solid #eee; border-radius: 8px; font-size: 16px; }
 .btn-submit { background: var(--uae-green); color: white; padding: 20px; width: 100%; border: none; border-radius: 8px; font-weight: 900; font-size: 18px; cursor: pointer; }
 
 /* WHATSAPP */
 .whatsapp { position: fixed; bottom: 30px; right: 30px; background: #25D366; color: white; width: 70px; height: 70px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 35px; z-index: 1000; text-decoration: none; }
 footer { background: #000; color: white; padding: 60px 20px; text-align: center; border-top: 8px solid var(--uae-green); }
-
-@media (max-width: 768px) { header { padding: 20px; flex-direction: column; } .hero h1 { font-size: 35px; } }
 </style>
 </head>
 <body>
@@ -93,8 +75,8 @@ footer { background: #000; color: white; padding: 60px 20px; text-align: center;
 
 <div class="hero">
     <h1>10,000+ SUCCESS STORIES</h1>
-    <p>Professional Partner for UAE Mainland & Freezone Setup</p>
-    <div class="badge">0% TAX | 100% OWNERSHIP | SETUP WITHIN 2 HOURS</div>
+    <p>Professional Partner for UAE Business Setup</p>
+    <div class="badge">0% TAX | 100% OWNERSHIP | SETUP IN 2 HOURS</div>
 </div>
 
 <section class="section" id="services">
@@ -104,7 +86,7 @@ footer { background: #000; color: white; padding: 60px 20px; text-align: center;
         <div class="card"><img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=500"><div class="card-body"><h3>Freezone Setup</h3><span class="price">AED 8,500</span><button class="btn-card" onclick="scrollToForm()">GET STARTED</button></div></div>
         <div class="card"><img src="https://images.unsplash.com/photo-1554415707-6e8cfc93fe23?w=500"><div class="card-body"><h3>Golden Visa</h3><span class="price">AED 22,999</span><button class="btn-card" onclick="scrollToForm()">GET STARTED</button></div></div>
         <div class="card"><img src="https://images.unsplash.com/photo-1556742044-3c52d6e88c62?w=500"><div class="card-body"><h3>E-Commerce</h3><span class="price">AED 5,999</span><button class="btn-card" onclick="scrollToForm()">GET STARTED</button></div></div>
-        <div class="card"><img src="https://images.unsplash.com/photo-1501167786227-4cba60f6d58f?w=500"><div class="card-body"><h3>Corporate Banking</h3><span class="price">FREE</span><button class="btn-card" onclick="scrollToForm()">GET STARTED</button></div></div>
+        <div class="card"><img src="https://images.unsplash.com/photo-1501167786227-4cba60f6d58f?w=500"><div class="card-body"><h3>Banking Support</h3><span class="price">FREE</span><button class="btn-card" onclick="scrollToForm()">GET STARTED</button></div></div>
         <div class="card"><img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=500"><div class="card-body"><h3>PRO Services</h3><span class="price">AED 2,500</span><button class="btn-card" onclick="scrollToForm()">GET STARTED</button></div></div>
         <div class="card"><img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=500"><div class="card-body"><h3>Virtual Office</h3><span class="price">AED 1,200</span><button class="btn-card" onclick="scrollToForm()">GET STARTED</button></div></div>
         <div class="card"><img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=500"><div class="card-body"><h3>Freelance Permit</h3><span class="price">AED 7,500</span><button class="btn-card" onclick="scrollToForm()">GET STARTED</button></div></div>
@@ -112,26 +94,26 @@ footer { background: #000; color: white; padding: 60px 20px; text-align: center;
 </section>
 
 <div class="feedback-bg" id="feedback">
-    <h2 class="section-title">10+ VERIFIED CLIENT REVIEWS</h2>
+    <h2 class="section-title">10+ VERIFIED REVIEWS</h2>
     <div class="f-grid">
-        <div class="f-card"><div class="stars">★★★★★</div><p>"Got my license in 2 hours. Professional!"</p><b>- Ahmed Khan</b></div>
-        <div class="f-card"><div class="stars">★★★★★</div><p>"Golden Visa was a smooth process."</p><b>- Rajesh G.</b></div>
-        <div class="f-card"><div class="stars">★★★★★</div><p>"Best consultants for SPC Freezone."</p><b>- Sarah Jenkins</b></div>
-        <div class="f-card"><div class="stars">★★★★★</div><p>"Opened bank account in 7 days."</p><b>- Michael R.</b></div>
-        <div class="f-card"><div class="stars">★★★★★</div><p>"Very transparent team."</p><b>- Omar F.</b></div>
-        <div class="f-card"><div class="stars">★★★★★</div><p>"100% recommended for startups."</p><b>- Li Wei</b></div>
-        <div class="f-card"><div class="stars">★★★★★</div><p>"Amazing support and guidance."</p><b>- Elena P.</b></div>
-        <div class="f-card"><div class="stars">★★★★★</div><p>"Handled everything perfectly."</p><b>- John Smith</b></div>
-        <div class="f-card"><div class="stars">★★★★★</div><p>"Loved the 10% discount offer!"</p><b>- David Miller</b></div>
-        <div class="f-card"><div class="stars">★★★★★</div><p>"Truly 5-star service."</p><b>- Fatima Z.</b></div>
+        <div class="f-card"><p>"Got license in 2 hours!"</p><b>- Ahmed K.</b></div>
+        <div class="f-card"><p>"Smooth Golden Visa."</p><b>- Rajesh G.</b></div>
+        <div class="f-card"><p>"Best consultants."</p><b>- Sarah J.</b></div>
+        <div class="f-card"><p>"Opened bank account fast."</p><b>- Michael R.</b></div>
+        <div class="f-card"><p>"Very transparent team."</p><b>- Omar F.</b></div>
+        <div class="f-card"><p>"Highly recommend SPCZ."</p><b>- Li Wei</b></div>
+        <div class="f-card"><p>"Amazing guidance."</p><b>- Elena P.</b></div>
+        <div class="f-card"><p>"Perfect handling."</p><b>- John S.</b></div>
+        <div class="f-card"><p>"Loved the discount."</p><b>- David M.</b></div>
+        <div class="f-card"><p>"5-star service."</p><b>- Fatima Z.</b></div>
     </div>
 </div>
 
 <section class="section" id="faq">
-    <h2 class="section-title">FREQUENTLY ASKED QUESTIONS</h2>
+    <h2 class="section-title">FAQ</h2>
     <div class="faq-container">
-        <div class="faq-item"><div class="faq-q">Mainland vs Freezone? <span>+</span></div><div class="faq-a">Mainland allows trade across UAE. Freezone offers industry tax benefits.</div></div>
-        <div class="faq-item"><div class="faq-q">Is 100% ownership possible? <span>+</span></div><div class="faq-a">Yes, foreign ownership is 100% in most UAE sectors now.</div></div>
+        <div class="faq-item"><div class="faq-q">Setup time? <span>+</span></div><div class="faq-a">Within 2-4 hours.</div></div>
+        <div class="faq-item"><div class="faq-q">Ownership? <span>+</span></div><div class="faq-a">100% foreign ownership allowed.</div></div>
     </div>
 </section>
 
@@ -143,10 +125,8 @@ footer { background: #000; color: white; padding: 60px 20px; text-align: center;
             <input type="text" name="name" placeholder="Full Name" required>
             <input type="tel" name="phone" placeholder="WhatsApp Number" required>
             <input type="email" name="email" placeholder="Email Address" required>
-            <textarea name="message" placeholder="Message (Optional)"></textarea>
-            <button class="btn-submit" type="submit">SUBMIT & CLAIM DISCOUNT</button>
+            <button class="btn-submit" type="submit">SUBMIT NOW</button>
         </form>
-        <p style="margin-top: 20px; font-weight: 700;">Support: info@uaespcz.com</p>
     </div>
 </div>
 
@@ -154,7 +134,7 @@ footer { background: #000; color: white; padding: 60px 20px; text-align: center;
 
 <footer>
     <p><b>UAE SPCZ CORPORATE SERVICES</b></p>
-    <p>© 2026 UAE SPCZ. All Rights Reserved.</p>
+    <p>Contact: info@uaespcz.com</p>
 </footer>
 
 <script>
