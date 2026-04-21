@@ -19,7 +19,6 @@
 * { box-sizing: border-box; margin: 0; padding: 0; scroll-behavior: smooth; }
 body { font-family: 'Montserrat', sans-serif; background: var(--uae-white); color: #1a1a1a; }
 
-/* --- HEADER --- */
 header {
     display: flex; justify-content: space-between; align-items: center;
     padding: 15px 50px; background: var(--uae-black); 
@@ -37,7 +36,6 @@ header {
 nav a { color: white; margin-left: 20px; text-decoration: none; font-weight: 600; font-size: 14px; transition: 0.3s; }
 nav a:hover { color: var(--uae-green); }
 
-/* --- HERO --- */
 .hero {
     background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), 
     url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1600');
@@ -52,7 +50,6 @@ nav a:hover { color: var(--uae-green); }
 }
 .hero .badge { background: var(--uae-red); color: white; padding: 12px 25px; border-radius: 5px; font-weight: 700; display: inline-block; margin-top: 15px; }
 
-/* --- SECTIONS --- */
 .section { padding: 80px 20px; text-align: center; max-width: 1300px; margin: auto; }
 .section-title { 
     font-size: 40px; font-weight: 900; margin-bottom: 50px; position: relative; padding-bottom: 15px;
@@ -61,7 +58,6 @@ nav a:hover { color: var(--uae-green); }
 }
 .section-title::after { content: ''; width: 100px; height: 6px; background: var(--uae-red); position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); }
 
-/* --- SERVICES GRID (8 IMAGES) --- */
 .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
 .card { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); border: 1px solid #eee; transition: 0.3s; position: relative; text-align: left; }
 .card:hover { transform: translateY(-10px); border-color: var(--uae-green); }
@@ -71,7 +67,6 @@ nav a:hover { color: var(--uae-green); }
 .price-now { font-size: 22px; font-weight: 800; color: var(--uae-black); display: block; margin-bottom: 15px; border-left: 4px solid var(--uae-green); padding-left: 10px; }
 .btn-card { background: var(--uae-red); color: white; padding: 12px; border: none; border-radius: 5px; width: 100%; font-weight: 700; cursor: pointer; transition: 0.3s; text-transform: uppercase; }
 
-/* --- FEEDBACK SECTION (10 REVIEWS - INDIAN NAMES) --- */
 .feedback-section { background: var(--uae-gray); padding: 80px 20px; text-align: center; }
 .feedback-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; max-width: 1200px; margin: 40px auto; }
 .feedback-card { background: white; padding: 25px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); text-align: left; border-top: 5px solid var(--uae-green); }
@@ -79,13 +74,11 @@ nav a:hover { color: var(--uae-green); }
 .client-name { font-weight: 800; display: block; margin-top: 15px; color: var(--uae-black); }
 .client-role { font-size: 12px; color: #777; }
 
-/* --- FAQ SECTION --- */
 .faq-container { max-width: 900px; margin: auto; text-align: left; }
 .faq-item { background: #fff; margin-bottom: 15px; border-radius: 10px; border: 1px solid #ddd; overflow: hidden; }
 .faq-question { padding: 20px; background: var(--uae-black); color: white; cursor: pointer; font-weight: 700; display: flex; justify-content: space-between; }
 .faq-answer { padding: 25px; color: #444; line-height: 1.8; display: none; background: #fafafa; border-top: 2px solid var(--uae-red); }
 
-/* --- CONTACT (FIXED BACKGROUND IMAGE) --- */
 .contact-wrapper { 
     padding: 100px 20px;
     background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
@@ -98,7 +91,6 @@ input, textarea { width: 100%; padding: 14px; margin: 10px 0 20px; border: 2px s
 
 footer { background: var(--uae-black); color: #bbb; padding: 40px; border-top: 5px solid var(--uae-green); text-align: center; }
 
-/* --- MODAL --- */
 .modal { display: none; position: fixed; z-index: 2000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); align-items: center; justify-content: center; }
 .modal-content { background: white; padding: 40px; border-radius: 15px; width: 90%; max-width: 400px; position: relative; text-align: center; }
 .close { position: absolute; top: 10px; right: 15px; font-size: 25px; cursor: pointer; }
@@ -180,11 +172,17 @@ footer { background: var(--uae-black); color: #bbb; padding: 40px; border-top: 5
         <div class="contact-img"></div>
         <div class="contact-form">
             <h2>Instant Setup Request</h2>
-            <form id="mainContactForm">
+            <form action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="252d3295-8b19-43fd-a1ba-2707a6b82cc9">
+                <input type="hidden" name="subject" value="New Business Enquiry - UAE Website">
+                
                 <input type="text" name="name" placeholder="Full Name" required>
                 <input type="email" name="email" placeholder="Email Address" required>
                 <input type="tel" name="phone" placeholder="WhatsApp Number" required>
-                <button type="submit" class="btn-card" style="background:var(--uae-red); color:white; padding:15px; width:100%; font-weight:800; cursor:pointer;">SUBMIT & CLAIM DISCOUNT</button>
+                
+                <button type="submit" class="btn-card" style="background:var(--uae-red); color:white; padding:15px; width:100%; font-weight:800; cursor:pointer; border:none;">
+                    SUBMIT & CLAIM DISCOUNT
+                </button>
             </form>
         </div>
     </div>
@@ -193,35 +191,6 @@ footer { background: var(--uae-black); color: #bbb; padding: 40px; border-top: 5
 <footer>
     <p>&copy; 2026 UAE Business Setup Workspace. All Rights Reserved.</p>
 </footer>
-
-<div class="modal" id="popupModal">
-    <div class="modal-content">
-        <span class="close" onclick="closeModal()">&times;</span>
-        <h2 id="modalTitle" style="color:var(--uae-red); margin-bottom:15px;">Enquiry</h2>
-        <form id="popupForm">
-            <input type="hidden" name="type" id="modalSubject">
-            <input type="text" name="name" placeholder="Name" required>
-            <input type="email" name="email" placeholder="Email" required>
-            <input type="tel" name="phone" placeholder="WhatsApp Number" required>
-            <button type="submit" class="btn-card" style="background:var(--uae-green); color:white; padding:12px; width:100%; font-weight:800;">Send Details</button>
-        </form>
-    </div>
-</div>
-
-<script>
-    <form action="https://api.web3forms.com/submit" method="POST" id="mainContactForm">
-    <input type="hidden" name="access_key" value="252d3295-8b19-43fd-a1ba-2707a6b82cc9">
-    <input type="hidden" name="from_name" value="UAE Business Setup Website">
-
-    <input type="text" name="name" placeholder="Full Name" required>
-    <input type="email" name="email" placeholder="Email Address" required>
-    <input type="tel" name="phone" placeholder="WhatsApp Number" required>
-    
-    <button type="submit" class="btn-card" style="background:var(--uae-red); color:white; padding:15px; width:100%; font-weight:800; cursor:pointer; border:none;">
-        SUBMIT & CLAIM DISCOUNT
-    </button>
-</form>
-
 
 <div class="modal" id="popupModal">
     <div class="modal-content">
@@ -240,3 +209,35 @@ footer { background: var(--uae-black); color: #bbb; padding: 40px; border-top: 5
         </form>
     </div>
 </div>
+
+<script>
+    // FAQ Toggle
+    document.querySelectorAll('.faq-question').forEach(q => {
+        q.addEventListener('click', () => {
+            const answer = q.nextElementSibling;
+            const isOpen = answer.style.display === 'block';
+            document.querySelectorAll('.faq-answer').forEach(a => a.style.display = 'none');
+            if (!isOpen) answer.style.display = 'block';
+        });
+    });
+
+    function openModal(title) {
+        document.getElementById('popupModal').style.display = 'flex';
+        document.getElementById('modalTitle').innerText = title;
+        document.getElementById('modalSubject').value = "Service Enquiry: " + title;
+    }
+    
+    function closeModal() { 
+        document.getElementById('popupModal').style.display = 'none'; 
+    }
+
+    // Modal click outside to close
+    window.onclick = function(event) {
+        if (event.target == document.getElementById('popupModal')) {
+            closeModal();
+        }
+    }
+</script>
+
+</body>
+</html>
