@@ -3,538 +3,1310 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>UAE SPCZ | Business Setup & Company Formation in Dubai</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<title>UAE SPCZ | Premium Business Setup in Dubai & UAE Free Zones</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Nunito:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18152695280"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'AW-18152695280');
+window.dataLayer=window.dataLayer||[];
+function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());
+gtag('config','AW-18152695280');
 </script>
 <style>
-:root {
-  --gold: #C9A84C;
-  --gold-light: #E8C96A;
-  --dark: #0D1117;
-  --dark-2: #161B22;
-  --dark-3: #21262D;
-  --text: #E6EDF3;
-  --text-muted: #8B949E;
-  --white: #FFFFFF;
-  --border: rgba(201,168,76,0.2);
+/* ══════════════════════════════════════
+   ROOT & RESET
+══════════════════════════════════════ */
+:root{
+  --uae-red:#EF3340;
+  --uae-green:#009A44;
+  --uae-black:#0A0A0A;
+  --uae-white:#FFFFFF;
+  --gold:#C9A84C;
+  --gold-light:#F0D078;
+  --bg:#06080D;
+  --bg2:#0C0F18;
+  --bg3:#121622;
+  --bg4:#181C28;
+  --surface:rgba(255,255,255,0.03);
+  --surface2:rgba(255,255,255,0.06);
+  --text:#F2F4F8;
+  --muted:#7A8499;
+  --border:rgba(255,255,255,0.06);
+  --border-red:rgba(239,51,64,0.2);
+  --border-gold:rgba(201,168,76,0.2);
+  --shadow-red:0 20px 60px rgba(239,51,64,0.15);
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-html{scroll-behavior:smooth;}
-body{font-family:'DM Sans',sans-serif;background:var(--dark);color:var(--text);line-height:1.6;}
+html{scroll-behavior:smooth;font-size:16px;}
+body{font-family:'Nunito',sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden;}
+::selection{background:rgba(239,51,64,0.3);color:#fff;}
+::-webkit-scrollbar{width:3px;}
+::-webkit-scrollbar-track{background:var(--bg);}
+::-webkit-scrollbar-thumb{background:var(--uae-red);border-radius:2px;}
+img{max-width:100%;}
+a{text-decoration:none;}
 
-/* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(13,17,23,0.97);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:72px;}
-.logo{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:var(--gold);}
-.logo span{color:var(--text-muted);font-weight:400;font-size:12px;display:block;letter-spacing:2px;text-transform:uppercase;}
+/* ══════════════════════════════════════
+   ANIMATIONS
+══════════════════════════════════════ */
+@keyframes fadeUp{from{opacity:0;transform:translateY(30px);}to{opacity:1;transform:translateY(0);}}
+@keyframes fadeIn{from{opacity:0;}to{opacity:1;}}
+@keyframes float{0%,100%{transform:translateY(0);}50%{transform:translateY(-12px);}}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1);}50%{opacity:0.5;transform:scale(0.85);}}
+@keyframes shimmer{0%{background-position:-200% 0;}100%{background-position:200% 0;}}
+@keyframes rotate{from{transform:rotate(0deg);}to{transform:rotate(360deg);}}
+@keyframes gradient-shift{0%,100%{background-position:0% 50%;}50%{background-position:100% 50%;}};
+@keyframes slideDown{from{opacity:0;transform:translateY(-10px);}to{opacity:1;transform:translateY(0);}}
+
+.animate-fade-up{animation:fadeUp 0.7s ease forwards;}
+.delay-1{animation-delay:0.1s;opacity:0;}
+.delay-2{animation-delay:0.2s;opacity:0;}
+.delay-3{animation-delay:0.3s;opacity:0;}
+.delay-4{animation-delay:0.4s;opacity:0;}
+.delay-5{animation-delay:0.5s;opacity:0;}
+.delay-6{animation-delay:0.6s;opacity:0;}
+
+/* ══════════════════════════════════════
+   NAVBAR
+══════════════════════════════════════ */
+.navbar{
+  position:fixed;top:0;left:0;right:0;z-index:1000;
+  height:70px;padding:0 5%;
+  display:flex;align-items:center;justify-content:space-between;
+  transition:all 0.4s;
+}
+.navbar.scrolled{background:rgba(6,8,13,0.96);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);}
+.nav-brand{display:flex;align-items:center;gap:12px;}
+.brand-icon{
+  width:40px;height:40px;border-radius:10px;
+  background:linear-gradient(135deg,var(--uae-red) 0%,#b0202a 100%);
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Syne',serif;font-size:17px;font-weight:800;color:#fff;
+  box-shadow:0 4px 16px rgba(239,51,64,0.4);
+}
+.brand-name{font-family:'Syne',sans-serif;font-size:19px;font-weight:800;color:var(--uae-white);letter-spacing:-0.3px;}
+.brand-sub{font-size:10px;color:var(--muted);font-weight:400;letter-spacing:2px;text-transform:uppercase;display:block;margin-top:1px;}
 .nav-links{display:flex;gap:2rem;list-style:none;}
-.nav-links a{color:var(--text-muted);text-decoration:none;font-size:14px;font-weight:500;transition:color 0.2s;}
-.nav-links a:hover{color:var(--gold);}
-.nav-cta{background:var(--gold);color:var(--dark);padding:10px 24px;border-radius:6px;text-decoration:none;font-weight:600;font-size:14px;transition:all 0.2s;}
-.nav-cta:hover{background:var(--gold-light);transform:translateY(-1px);}
+.nav-links a{color:rgba(255,255,255,0.6);font-size:13px;font-weight:500;transition:color 0.2s;letter-spacing:0.2px;}
+.nav-links a:hover{color:var(--uae-white);}
+.nav-right{display:flex;align-items:center;gap:10px;}
+.nav-wa{
+  display:inline-flex;align-items:center;gap:6px;
+  background:rgba(37,211,102,0.1);border:1px solid rgba(37,211,102,0.2);
+  color:#4ade80;padding:8px 16px;border-radius:6px;
+  font-size:12px;font-weight:600;transition:all 0.2s;
+}
+.nav-wa:hover{background:rgba(37,211,102,0.15);color:#4ade80;}
+.nav-wa svg{width:14px;height:14px;fill:currentColor;}
+.nav-btn{
+  background:var(--uae-red);color:#fff;
+  padding:9px 20px;border-radius:6px;
+  font-size:13px;font-weight:600;cursor:pointer;
+  border:none;font-family:'Nunito',sans-serif;
+  transition:all 0.2s;
+}
+.nav-btn:hover{background:#d42e3a;transform:translateY(-1px);}
 
-/* HERO */
-.hero{min-height:100vh;padding:120px 5% 80px;display:flex;align-items:center;position:relative;overflow:hidden;background:linear-gradient(135deg,#0D1117 0%,#0A1628 50%,#0D1117 100%);}
-.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 60% 40%,rgba(201,168,76,0.07) 0%,transparent 70%);pointer-events:none;}
-.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;width:100%;max-width:1200px;margin:0 auto;position:relative;z-index:1;}
-.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(201,168,76,0.08);border:1px solid var(--border);border-radius:50px;padding:6px 16px;font-size:13px;color:var(--gold);margin-bottom:24px;}
-.hero-badge::before{content:'';width:6px;height:6px;background:var(--gold);border-radius:50%;animation:pulse 2s infinite;}
-@keyframes pulse{0%,100%{opacity:1;}50%{opacity:0.3;}}
-h1{font-family:'Playfair Display',serif;font-size:clamp(34px,4.5vw,58px);line-height:1.15;font-weight:700;color:var(--white);margin-bottom:20px;}
-h1 em{color:var(--gold);font-style:normal;}
-.hero-sub{font-size:16px;color:var(--text-muted);line-height:1.75;margin-bottom:28px;max-width:480px;}
-.trust-badges{display:flex;gap:18px;margin-bottom:30px;flex-wrap:wrap;}
-.trust-badge{display:flex;align-items:center;gap:6px;font-size:13px;color:var(--text-muted);}
-.trust-badge svg{width:15px;height:15px;stroke:var(--gold);fill:none;stroke-width:2;}
-.hero-btns{display:flex;gap:12px;flex-wrap:wrap;}
-.btn-primary{background:var(--gold);color:var(--dark);padding:14px 28px;border-radius:8px;font-weight:600;font-size:15px;text-decoration:none;transition:all 0.2s;display:inline-flex;align-items:center;gap:8px;}
-.btn-primary:hover{background:var(--gold-light);transform:translateY(-2px);box-shadow:0 8px 24px rgba(201,168,76,0.3);}
-.whatsapp-btn{background:#25D366;color:#fff;padding:14px 24px;border-radius:8px;font-weight:600;font-size:15px;text-decoration:none;transition:all 0.2s;display:inline-flex;align-items:center;gap:8px;}
-.whatsapp-btn:hover{background:#128C7E;transform:translateY(-2px);}
-.whatsapp-btn svg,.btn-primary svg{width:18px;height:18px;flex-shrink:0;}
-.btn-secondary{background:transparent;color:var(--text);padding:14px 28px;border-radius:8px;border:1px solid rgba(255,255,255,0.15);font-weight:500;font-size:15px;text-decoration:none;transition:all 0.2s;display:inline-flex;align-items:center;gap:8px;}
-.btn-secondary:hover{border-color:var(--gold);color:var(--gold);}
+/* UAE Flag stripe */
+.flag-bar{position:fixed;top:70px;left:0;right:0;z-index:999;height:2px;background:linear-gradient(90deg,var(--uae-red) 25%,var(--uae-white) 25% 50%,var(--uae-black) 50% 75%,var(--uae-green) 75%);opacity:0.6;}
 
-/* FORM */
-.hero-form{background:var(--dark-2);border:1px solid var(--border);border-radius:20px;padding:36px;box-shadow:0 24px 64px rgba(0,0,0,0.4);}
-.hero-form h3{font-family:'Playfair Display',serif;font-size:22px;color:var(--white);margin-bottom:4px;}
-.form-subtitle{font-size:13px;color:var(--text-muted);margin-bottom:22px;}
-.form-group{margin-bottom:14px;}
-.form-group label{display:block;font-size:11px;color:var(--text-muted);margin-bottom:6px;font-weight:500;text-transform:uppercase;letter-spacing:0.5px;}
-.form-group input,.form-group select,.form-group textarea{width:100%;padding:12px 14px;background:var(--dark-3);border:1px solid rgba(255,255,255,0.07);border-radius:8px;color:var(--text);font-size:14px;font-family:inherit;transition:border-color 0.2s,box-shadow 0.2s;}
-.form-group input:focus,.form-group select:focus,.form-group textarea:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(201,168,76,0.1);}
-.form-group select option{background:var(--dark-2);}
-.form-group textarea{resize:none;height:78px;}
-.form-submit{width:100%;padding:15px;background:linear-gradient(135deg,var(--gold),var(--gold-light));color:var(--dark);border:none;border-radius:8px;font-size:15px;font-weight:700;cursor:pointer;transition:all 0.2s;font-family:inherit;letter-spacing:0.3px;}
-.form-submit:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(201,168,76,0.35);}
-.form-submit:disabled{opacity:0.7;cursor:not-allowed;transform:none;}
-.form-note{font-size:11px;color:var(--text-muted);text-align:center;margin-top:10px;}
-.form-success{display:none;text-align:center;padding:24px;background:rgba(46,160,67,0.1);border:1px solid rgba(46,160,67,0.3);border-radius:12px;margin-top:16px;}
-.form-success h4{color:#2ea043;font-size:18px;margin-bottom:8px;}
-.form-success p{color:var(--text-muted);font-size:14px;line-height:1.6;}
+/* ══════════════════════════════════════
+   HERO
+══════════════════════════════════════ */
+.hero{
+  min-height:100vh;
+  position:relative;
+  display:flex;align-items:center;
+  padding:100px 5% 60px;
+  overflow:hidden;
+}
 
-/* STATS */
-.stats-bar{background:var(--dark-2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:40px 5%;}
+/* Layered background */
+.hero-bg-base{
+  position:absolute;inset:0;
+  background:
+    radial-gradient(ellipse 120% 80% at 100% 50%, rgba(239,51,64,0.07) 0%, transparent 55%),
+    radial-gradient(ellipse 80% 60% at 0% 80%, rgba(0,154,68,0.04) 0%, transparent 50%),
+    radial-gradient(ellipse 60% 40% at 50% 0%, rgba(201,168,76,0.05) 0%, transparent 50%),
+    linear-gradient(180deg, #06080D 0%, #080B14 50%, #06080D 100%);
+}
+
+/* Geometric grid overlay */
+.hero-grid-overlay{
+  position:absolute;inset:0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+  background-size:60px 60px;
+  mask-image:radial-gradient(ellipse 70% 70% at 60% 50%, black 0%, transparent 80%);
+}
+
+/* Glowing orbs */
+.orb{position:absolute;border-radius:50%;pointer-events:none;filter:blur(80px);}
+.orb-1{width:500px;height:500px;background:rgba(239,51,64,0.06);right:-100px;top:10%;}
+.orb-2{width:400px;height:400px;background:rgba(0,154,68,0.04);left:-80px;bottom:20%;}
+.orb-3{width:300px;height:300px;background:rgba(201,168,76,0.05);right:30%;top:60%;}
+
+/* Dubai Skyline SVG */
+.skyline-wrap{
+  position:absolute;bottom:0;left:0;right:0;
+  height:50%;pointer-events:none;
+}
+.skyline-wrap svg{width:100%;height:100%;}
+
+/* Floating UAE flag */
+.flag-float{
+  position:absolute;top:120px;right:5%;
+  width:70px;height:48px;
+  border-radius:4px;overflow:hidden;
+  display:grid;grid-template-columns:1fr 3fr;
+  box-shadow:0 8px 32px rgba(0,0,0,0.5);
+  animation:float 6s ease-in-out infinite;
+  opacity:0.7;
+}
+.flag-red-vert{background:var(--uae-red);}
+.flag-stripes{display:flex;flex-direction:column;}
+.flag-stripe-1{background:var(--uae-green);flex:1;}
+.flag-stripe-2{background:var(--uae-white);flex:1;}
+.flag-stripe-3{background:var(--uae-black);flex:1;}
+
+.hero-content{
+  max-width:1200px;margin:0 auto;width:100%;
+  display:grid;grid-template-columns:1fr 430px;
+  gap:64px;align-items:center;position:relative;z-index:2;
+}
+
+/* Left column */
+.hero-left{}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:8px;
+  border:1px solid var(--border-red);
+  background:rgba(239,51,64,0.06);
+  border-radius:4px;padding:5px 14px;
+  font-size:11px;font-weight:700;color:rgba(239,51,64,0.9);
+  letter-spacing:2px;text-transform:uppercase;margin-bottom:24px;
+}
+.badge-dot{width:5px;height:5px;background:var(--uae-red);border-radius:50%;animation:pulse 1.8s infinite;}
+
+.hero-h1{
+  font-family:'Syne',sans-serif;
+  font-size:clamp(38px,5.5vw,68px);
+  font-weight:800;line-height:1.05;
+  color:var(--uae-white);margin-bottom:8px;
+  letter-spacing:-1px;
+}
+.hero-h1 .line-red{
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  background:linear-gradient(90deg,var(--uae-red),#ff6b74);
+  background-clip:text;
+}
+.hero-h1 .line-gold{
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  background:linear-gradient(90deg,var(--gold),var(--gold-light));
+  background-clip:text;
+}
+
+.hero-sub{font-size:16px;color:var(--muted);line-height:1.8;margin:20px 0 28px;max-width:500px;font-weight:400;}
+
+/* Trust strip */
+.trust-strip{
+  display:flex;flex-wrap:wrap;gap:10px;margin-bottom:32px;
+}
+.trust-chip{
+  display:flex;align-items:center;gap:7px;
+  background:var(--surface2);
+  border:1px solid var(--border);
+  border-radius:100px;padding:7px 14px;
+  font-size:12px;color:var(--muted);font-weight:500;
+  transition:all 0.2s;
+}
+.trust-chip:hover{border-color:rgba(239,51,64,0.25);color:var(--text);}
+.chip-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0;}
+.c-red{background:var(--uae-red);}
+.c-green{background:var(--uae-green);}
+.c-gold{background:var(--gold);}
+.c-white{background:rgba(255,255,255,0.5);}
+
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;}
+.btn-primary{
+  background:linear-gradient(135deg,var(--uae-red),#c0272d);
+  color:#fff;padding:14px 28px;border-radius:8px;
+  font-weight:700;font-size:14px;
+  display:inline-flex;align-items:center;gap:8px;
+  transition:all 0.25s;border:none;cursor:pointer;font-family:'Nunito',sans-serif;
+  box-shadow:0 4px 20px rgba(239,51,64,0.25);
+}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(239,51,64,0.4);}
+.btn-primary svg,.btn-whatsapp svg{width:17px;height:17px;fill:currentColor;flex-shrink:0;}
+.btn-whatsapp{
+  background:linear-gradient(135deg,#25D366,#1aad52);
+  color:#fff;padding:14px 24px;border-radius:8px;
+  font-weight:700;font-size:14px;
+  display:inline-flex;align-items:center;gap:8px;
+  transition:all 0.25s;
+  box-shadow:0 4px 16px rgba(37,211,102,0.2);
+}
+.btn-whatsapp:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(37,211,102,0.35);}
+.btn-ghost{
+  background:transparent;color:rgba(255,255,255,0.6);
+  padding:14px 24px;border-radius:8px;
+  border:1px solid var(--border);
+  font-weight:600;font-size:14px;
+  display:inline-flex;align-items:center;gap:8px;
+  transition:all 0.2s;
+}
+.btn-ghost:hover{border-color:rgba(255,255,255,0.2);color:var(--uae-white);}
+
+/* Hero Form — glassmorphism */
+.hero-form-card{
+  background:rgba(12,15,24,0.9);
+  border:1px solid rgba(255,255,255,0.07);
+  border-radius:20px;overflow:hidden;
+  backdrop-filter:blur(20px);
+  box-shadow:0 40px 100px rgba(0,0,0,0.5),inset 0 1px 0 rgba(255,255,255,0.05);
+  position:relative;
+}
+.hero-form-card::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:1px;
+  background:linear-gradient(90deg,transparent,rgba(239,51,64,0.4),transparent);
+}
+.form-top{
+  padding:24px 28px 20px;
+  background:linear-gradient(135deg,rgba(239,51,64,0.08),rgba(239,51,64,0.02));
+  border-bottom:1px solid var(--border);
+}
+.form-top-label{font-size:10px;color:var(--uae-red);font-weight:700;letter-spacing:2.5px;text-transform:uppercase;margin-bottom:6px;}
+.form-top h3{font-family:'Syne',sans-serif;font-size:20px;font-weight:700;color:var(--uae-white);margin-bottom:4px;}
+.form-top p{font-size:12px;color:var(--muted);}
+.form-body{padding:22px 28px 28px;}
+.fg{margin-bottom:13px;}
+.fg label{display:block;font-size:10px;color:var(--muted);margin-bottom:5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;}
+.fg input,.fg select,.fg textarea{
+  width:100%;padding:11px 14px;
+  background:rgba(255,255,255,0.04);
+  border:1px solid rgba(255,255,255,0.07);
+  border-radius:8px;color:var(--text);
+  font-size:13px;font-family:'Nunito',sans-serif;
+  transition:all 0.2s;
+  -webkit-appearance:none;
+}
+.fg input::placeholder,.fg textarea::placeholder{color:rgba(255,255,255,0.2);}
+.fg input:focus,.fg select:focus,.fg textarea:focus{
+  outline:none;
+  border-color:rgba(239,51,64,0.4);
+  background:rgba(239,51,64,0.04);
+  box-shadow:0 0 0 3px rgba(239,51,64,0.08);
+}
+.fg select{background-color:rgba(255,255,255,0.04);color:var(--muted);}
+.fg select option{background:#0C0F18;color:var(--text);}
+.fg textarea{height:72px;resize:none;}
+.form-cta{
+  width:100%;padding:14px;
+  background:linear-gradient(135deg,var(--uae-red),#c0272d);
+  color:#fff;border:none;border-radius:8px;
+  font-size:14px;font-weight:700;cursor:pointer;
+  font-family:'Nunito',sans-serif;letter-spacing:0.3px;
+  transition:all 0.2s;
+  box-shadow:0 4px 20px rgba(239,51,64,0.3);
+}
+.form-cta:hover{transform:translateY(-1px);box-shadow:0 8px 28px rgba(239,51,64,0.4);}
+.form-cta:disabled{opacity:0.6;cursor:not-allowed;transform:none;}
+.form-note{font-size:11px;color:var(--muted);text-align:center;margin-top:10px;display:flex;align-items:center;justify-content:center;gap:5px;}
+.form-success{display:none;padding:40px 28px;text-align:center;}
+.form-success .big-icon{font-size:52px;margin-bottom:14px;}
+.form-success h4{font-family:'Syne',sans-serif;font-size:22px;color:var(--uae-green);margin-bottom:8px;font-weight:700;}
+.form-success p{font-size:13px;color:var(--muted);line-height:1.7;}
+
+/* ══════════════════════════════════════
+   STATS BAR
+══════════════════════════════════════ */
+.stats-bar{
+  padding:40px 5%;
+  background:var(--bg2);
+  border-top:1px solid var(--border);
+  border-bottom:1px solid var(--border);
+  position:relative;overflow:hidden;
+}
+.stats-bar::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:1px;
+  background:linear-gradient(90deg,transparent,var(--uae-red),transparent);
+  opacity:0.5;
+}
 .stats-inner{display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;max-width:1200px;margin:0 auto;text-align:center;}
-.stat-num{font-family:'Playfair Display',serif;font-size:42px;font-weight:700;color:var(--gold);}
-.stat-label{font-size:13px;color:var(--text-muted);margin-top:4px;}
+.stat-val{font-family:'Syne',sans-serif;font-size:46px;font-weight:800;color:var(--uae-white);line-height:1;}
+.stat-val .accent{color:var(--uae-red);}
+.stat-lbl{font-size:11px;color:var(--muted);margin-top:6px;font-weight:600;letter-spacing:1px;text-transform:uppercase;}
 
-/* SECTIONS */
-section{padding:88px 5%;}
-.section-inner{max-width:1200px;margin:0 auto;}
-.section-tag{font-size:11px;text-transform:uppercase;letter-spacing:3px;color:var(--gold);margin-bottom:12px;}
-h2{font-family:'Playfair Display',serif;font-size:clamp(28px,3.5vw,44px);color:var(--white);line-height:1.2;margin-bottom:16px;}
-h2 em{color:var(--gold);font-style:normal;}
-.section-sub{font-size:16px;color:var(--text-muted);max-width:560px;margin-bottom:50px;line-height:1.7;}
+/* ══════════════════════════════════════
+   SECTION COMMONS
+══════════════════════════════════════ */
+section{padding:96px 5%;}
+.sec-wrap{max-width:1200px;margin:0 auto;}
+.sec-eyebrow{font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--uae-red);margin-bottom:10px;}
+h2{font-family:'Syne',sans-serif;font-size:clamp(28px,3.8vw,46px);color:var(--uae-white);line-height:1.12;margin-bottom:14px;font-weight:800;letter-spacing:-0.5px;}
+h2 em{color:var(--uae-red);font-style:normal;}
+h2 .gold{color:var(--gold);}
+.sec-sub{font-size:15px;color:var(--muted);max-width:540px;line-height:1.8;margin-bottom:52px;font-weight:400;}
 
-/* SERVICES */
-.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:1.5rem;}
-.service-card{background:var(--dark-2);border:1px solid rgba(201,168,76,0.1);border-radius:16px;padding:28px;transition:all 0.3s;position:relative;overflow:hidden;}
-.service-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);opacity:0;transition:opacity 0.3s;}
-.service-card:hover{border-color:rgba(201,168,76,0.3);transform:translateY(-6px);box-shadow:0 20px 48px rgba(0,0,0,0.3);}
-.service-card:hover::before{opacity:1;}
-.service-icon{width:50px;height:50px;border-radius:12px;background:rgba(201,168,76,0.1);display:flex;align-items:center;justify-content:center;margin-bottom:18px;}
-.service-icon svg{width:24px;height:24px;stroke:var(--gold);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;}
-.service-card h4{font-size:16px;font-weight:600;color:var(--white);margin-bottom:8px;}
-.service-card p{font-size:14px;color:var(--text-muted);line-height:1.65;}
-.service-items{list-style:none;margin-top:14px;}
-.service-items li{font-size:13px;color:var(--text-muted);padding:6px 0;border-bottom:1px solid rgba(255,255,255,0.04);display:flex;align-items:center;gap:8px;}
-.service-items li::before{content:'→';color:var(--gold);font-size:12px;flex-shrink:0;}
+/* ══════════════════════════════════════
+   IDEAL FOR — RAKEZ inspired
+══════════════════════════════════════ */
+.ideal-section{background:var(--bg2);position:relative;overflow:hidden;}
+.ideal-section::after{content:'';position:absolute;right:-200px;top:50%;transform:translateY(-50%);width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(239,51,64,0.04) 0%,transparent 70%);pointer-events:none;}
+.ideal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+.ideal-card{
+  background:var(--surface);border:1px solid var(--border);
+  border-radius:16px;padding:28px 24px;
+  transition:all 0.35s;position:relative;overflow:hidden;
+  cursor:default;
+}
+.ideal-card::before{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(135deg,rgba(239,51,64,0.05) 0%,transparent 60%);
+  opacity:0;transition:opacity 0.35s;
+}
+.ideal-card::after{
+  content:'';position:absolute;top:0;left:0;right:0;height:2px;
+  background:linear-gradient(90deg,var(--uae-red),transparent);
+  transform:scaleX(0);transform-origin:left;
+  transition:transform 0.35s;
+}
+.ideal-card:hover{border-color:rgba(239,51,64,0.2);transform:translateY(-6px);box-shadow:0 20px 50px rgba(0,0,0,0.3);}
+.ideal-card:hover::before{opacity:1;}
+.ideal-card:hover::after{transform:scaleX(1);}
+.ideal-emoji{font-size:36px;margin-bottom:16px;display:block;}
+.ideal-card h4{font-family:'Syne',sans-serif;font-size:16px;font-weight:700;color:var(--uae-white);margin-bottom:8px;}
+.ideal-card p{font-size:13px;color:var(--muted);line-height:1.65;}
+.ideal-tag{
+  display:inline-block;margin-top:14px;
+  font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;
+  color:var(--uae-red);
+  background:rgba(239,51,64,0.08);border:1px solid var(--border-red);
+  padding:4px 10px;border-radius:4px;
+}
 
-/* FREE ZONES */
-.freezone-bg{background:var(--dark-2);}
-.fz-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(148px,1fr));gap:10px;margin-top:16px;}
-.fz-tag{background:var(--dark-3);border:1px solid rgba(201,168,76,0.12);border-radius:8px;padding:12px 14px;font-size:13px;font-weight:500;color:var(--text-muted);text-align:center;transition:all 0.2s;cursor:default;}
-.fz-tag:hover{border-color:var(--gold);color:var(--gold);background:rgba(201,168,76,0.05);}
+/* ══════════════════════════════════════
+   PACKAGES / PRICING
+══════════════════════════════════════ */
+.pkg-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;align-items:start;}
+.pkg-card{
+  background:var(--bg3);border:1px solid var(--border);
+  border-radius:18px;padding:32px 28px;
+  position:relative;transition:all 0.3s;
+}
+.pkg-card:hover{transform:translateY(-4px);}
+.pkg-card.featured{
+  background:linear-gradient(155deg,rgba(239,51,64,0.08),var(--bg3));
+  border-color:rgba(239,51,64,0.3);
+  box-shadow:0 0 0 1px rgba(239,51,64,0.1),0 24px 60px rgba(0,0,0,0.4);
+}
+.pkg-popular{
+  position:absolute;top:-13px;left:50%;transform:translateX(-50%);
+  background:var(--uae-red);color:#fff;
+  font-size:10px;font-weight:800;letter-spacing:2px;text-transform:uppercase;
+  padding:5px 16px;border-radius:100px;white-space:nowrap;
+}
+.pkg-tier{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:18px;}
+.pkg-price-wrap{margin-bottom:8px;}
+.pkg-price{font-family:'Syne',sans-serif;font-size:48px;font-weight:800;color:var(--uae-white);line-height:1;}
+.pkg-price sup{font-size:20px;vertical-align:top;margin-top:10px;display:inline-block;color:var(--muted);}
+.pkg-period{font-size:13px;color:var(--muted);font-weight:500;}
+.pkg-desc{font-size:13px;color:var(--muted);line-height:1.65;margin-bottom:22px;}
+.pkg-hr{height:1px;background:var(--border);margin-bottom:22px;}
+.pkg-list{list-style:none;margin-bottom:26px;}
+.pkg-list li{
+  font-size:13px;color:var(--text);padding:9px 0;
+  border-bottom:1px solid rgba(255,255,255,0.03);
+  display:flex;align-items:center;gap:10px;
+}
+.check-wrap{width:18px;height:18px;border-radius:50%;background:rgba(0,154,68,0.12);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.check-wrap svg{width:10px;height:10px;stroke:var(--uae-green);fill:none;stroke-width:2.5;}
+.pkg-btn{width:100%;padding:13px;border-radius:8px;font-size:13px;font-weight:700;cursor:pointer;border:none;font-family:'Nunito',sans-serif;transition:all 0.2s;}
+.pkg-btn-red{background:var(--uae-red);color:#fff;}
+.pkg-btn-red:hover{background:#d42e3a;transform:translateY(-1px);box-shadow:0 6px 20px rgba(239,51,64,0.3);}
+.pkg-btn-outline{background:transparent;color:rgba(255,255,255,0.7);border:1px solid var(--border);}
+.pkg-btn-outline:hover{border-color:rgba(239,51,64,0.3);color:var(--uae-white);}
 
-/* WHY US */
-.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;}
-.why-list{list-style:none;}
-.why-item{display:flex;gap:16px;padding:22px 0;border-bottom:1px solid rgba(255,255,255,0.05);}
-.why-num{font-family:'Playfair Display',serif;font-size:32px;color:var(--gold);opacity:0.25;min-width:44px;line-height:1;}
-.why-text h4{font-size:16px;font-weight:600;color:var(--white);margin-bottom:4px;}
-.why-text p{font-size:14px;color:var(--text-muted);line-height:1.65;}
-.why-box{background:var(--dark-2);border:1px solid var(--border);border-radius:16px;padding:36px;text-align:center;}
-.why-box .big-num{font-family:'Playfair Display',serif;font-size:68px;font-weight:700;color:var(--gold);display:block;line-height:1;}
-.why-box p{font-size:14px;color:var(--text-muted);margin-top:10px;}
+/* ══════════════════════════════════════
+   SERVICES
+══════════════════════════════════════ */
+.svc-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;}
+.svc-card{
+  background:var(--bg3);border:1px solid var(--border);
+  border-radius:14px;padding:26px;
+  display:flex;gap:18px;
+  transition:all 0.3s;border-left:2px solid transparent;
+}
+.svc-card:hover{border-left-color:var(--uae-red);background:var(--bg4);}
+.svc-icon-wrap{
+  width:46px;height:46px;border-radius:10px;
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;
+}
+.svc-icon-wrap svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;}
+.svc-info h4{font-family:'Syne',sans-serif;font-size:15px;font-weight:700;color:var(--uae-white);margin-bottom:6px;}
+.svc-info p{font-size:13px;color:var(--muted);line-height:1.6;margin-bottom:12px;}
+.svc-tags{display:flex;flex-wrap:wrap;gap:6px;}
+.svc-tag{font-size:11px;color:var(--muted);background:var(--surface2);border:1px solid var(--border);padding:3px 9px;border-radius:4px;}
 
-/* TESTIMONIALS */
-.testimonials-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem;}
-.testimonial-card{background:var(--dark-2);border:1px solid rgba(201,168,76,0.1);border-radius:16px;padding:28px;position:relative;}
-.testimonial-card::before{content:'"';font-family:'Playfair Display',serif;font-size:80px;color:var(--gold);opacity:0.12;position:absolute;top:8px;left:18px;line-height:1;}
-.stars{color:var(--gold);font-size:14px;margin-bottom:14px;letter-spacing:2px;}
-.testimonial-text{font-size:14px;color:var(--text-muted);line-height:1.75;margin-bottom:20px;position:relative;z-index:1;}
-.testimonial-author{display:flex;align-items:center;gap:12px;}
-.author-avatar{width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,var(--gold),#8B6914);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:16px;color:var(--dark);flex-shrink:0;}
-.author-name{font-size:14px;font-weight:600;color:var(--white);}
-.author-role{font-size:12px;color:var(--text-muted);}
+/* ══════════════════════════════════════
+   FREE ZONES
+══════════════════════════════════════ */
+.fz-section{background:var(--bg2);}
+.fz-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:8px;}
+.fz-pill{
+  background:var(--surface);border:1px solid var(--border);
+  border-radius:8px;padding:12px 14px;
+  font-size:12px;font-weight:600;
+  color:var(--muted);text-align:center;
+  transition:all 0.2s;cursor:default;
+}
+.fz-pill:hover{border-color:rgba(239,51,64,0.3);color:var(--uae-white);background:rgba(239,51,64,0.04);}
 
-/* FAQ */
-.faq-list{max-width:800px;}
-.faq-item{border:1px solid rgba(201,168,76,0.1);border-radius:12px;margin-bottom:10px;overflow:hidden;transition:border-color 0.2s;}
-.faq-item.open{border-color:rgba(201,168,76,0.3);}
-.faq-question{width:100%;text-align:left;padding:20px 24px;background:var(--dark-2);border:none;color:var(--white);font-size:15px;font-weight:500;font-family:inherit;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;transition:background 0.2s;}
-.faq-question:hover{background:var(--dark-3);}
-.faq-icon{width:22px;height:22px;border-radius:50%;background:rgba(201,168,76,0.15);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:transform 0.3s,background 0.2s;}
-.faq-item.open .faq-icon{transform:rotate(45deg);background:rgba(201,168,76,0.25);}
-.faq-icon svg{width:12px;height:12px;stroke:var(--gold);fill:none;stroke-width:2.5;}
-.faq-answer{max-height:0;overflow:hidden;transition:max-height 0.35s ease;}
-.faq-answer-inner{padding:0 24px 20px;font-size:14px;color:var(--text-muted);line-height:1.75;background:var(--dark-2);}
+/* ══════════════════════════════════════
+   WHY US
+══════════════════════════════════════ */
+.why-layout{display:grid;grid-template-columns:1fr 380px;gap:4rem;align-items:center;}
+.why-steps{list-style:none;}
+.why-step{
+  display:flex;gap:20px;padding:22px 0;
+  border-bottom:1px solid var(--border);
+  transition:all 0.2s;
+}
+.why-step:hover{padding-left:6px;}
+.step-num{
+  font-family:'Syne',sans-serif;font-size:28px;font-weight:800;
+  color:var(--uae-red);opacity:0.3;min-width:40px;line-height:1;
+}
+.step-info h4{font-size:15px;font-weight:700;color:var(--uae-white);margin-bottom:4px;font-family:'Syne',sans-serif;}
+.step-info p{font-size:13px;color:var(--muted);line-height:1.65;}
+.why-panel{
+  background:var(--bg3);border:1px solid var(--border-gold);
+  border-radius:20px;padding:36px;text-align:center;
+  position:relative;overflow:hidden;
+}
+.why-panel::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(circle at 50% 0%,rgba(201,168,76,0.06) 0%,transparent 60%);
+}
+.big-number{
+  font-family:'Syne',sans-serif;font-size:76px;font-weight:800;
+  color:var(--uae-white);line-height:1;display:block;
+}
+.big-number .accent{color:var(--uae-red);}
+.big-label{font-size:12px;color:var(--muted);display:block;margin-top:8px;letter-spacing:0.5px;}
+.why-divider{height:1px;background:var(--border);margin:28px 0;}
+.mini-flag{
+  display:flex;height:28px;border-radius:5px;overflow:hidden;
+  width:72px;margin:0 auto;box-shadow:0 4px 12px rgba(0,0,0,0.4);
+}
+.mf-r{background:var(--uae-red);flex:1;}
+.mf-w{background:var(--uae-white);flex:1;}
+.mf-b{background:#1a1a1a;flex:1;}
+.mf-g{background:var(--uae-green);flex:1;}
 
-/* FEATURED */
-.featured-row{display:flex;gap:24px;align-items:center;flex-wrap:wrap;padding:24px 28px;background:var(--dark-2);border:1px solid var(--border);border-radius:12px;}
-.featured-label{font-size:11px;text-transform:uppercase;letter-spacing:2px;color:var(--text-muted);min-width:80px;}
-.featured-items{display:flex;gap:24px;flex-wrap:wrap;align-items:center;}
-.featured-item{font-size:14px;font-weight:600;color:var(--text-muted);}
+/* ══════════════════════════════════════
+   TESTIMONIALS
+══════════════════════════════════════ */
+.testi-section{background:var(--bg2);}
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+.testi-card{
+  background:var(--bg3);border:1px solid var(--border);
+  border-radius:16px;padding:26px;
+  position:relative;transition:border-color 0.3s;
+}
+.testi-card:hover{border-color:rgba(201,168,76,0.15);}
+.testi-quote-mark{
+  font-size:64px;line-height:1;
+  color:var(--uae-red);opacity:0.1;
+  font-family:'Syne',sans-serif;font-weight:800;
+  position:absolute;top:8px;left:18px;
+}
+.testi-stars{color:var(--gold);font-size:13px;letter-spacing:2px;margin-bottom:14px;}
+.testi-body{font-size:13px;color:var(--muted);line-height:1.8;margin-bottom:20px;position:relative;z-index:1;}
+.testi-footer{display:flex;align-items:center;gap:12px;}
+.testi-av{
+  width:40px;height:40px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-weight:800;font-size:14px;color:#fff;flex-shrink:0;
+  font-family:'Syne',sans-serif;
+}
+.testi-name{font-size:13px;font-weight:700;color:var(--uae-white);font-family:'Syne',sans-serif;}
+.testi-role{font-size:11px;color:var(--muted);}
 
-/* CONTACT */
-.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;}
-.contact-detail{display:flex;align-items:center;gap:12px;padding:16px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:15px;}
-.contact-detail svg{width:20px;height:20px;stroke:var(--gold);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0;}
-.contact-detail a{color:var(--text);text-decoration:none;}
-.contact-detail a:hover{color:var(--gold);}
-.contact-form-box{background:var(--dark-2);border:1px solid var(--border);border-radius:20px;padding:36px;box-shadow:0 24px 64px rgba(0,0,0,0.3);}
-.contact-form-box h3{font-family:'Playfair Display',serif;font-size:22px;color:var(--white);margin-bottom:22px;}
+/* ══════════════════════════════════════
+   FAQ
+══════════════════════════════════════ */
+.faq-container{max-width:780px;}
+.faq-item{
+  border:1px solid var(--border);border-radius:12px;
+  margin-bottom:8px;overflow:hidden;
+  transition:border-color 0.25s;
+}
+.faq-item.open{border-color:rgba(239,51,64,0.25);}
+.faq-q{
+  width:100%;text-align:left;padding:18px 22px;
+  background:var(--bg3);border:none;
+  color:var(--uae-white);font-size:14px;font-weight:600;
+  font-family:'Nunito',sans-serif;cursor:pointer;
+  display:flex;justify-content:space-between;align-items:center;gap:16px;
+  transition:background 0.2s;
+}
+.faq-q:hover{background:var(--bg4);}
+.faq-ico{
+  width:24px;height:24px;border-radius:50%;
+  background:rgba(239,51,64,0.1);
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;
+  transition:transform 0.3s,background 0.2s;
+}
+.faq-item.open .faq-ico{transform:rotate(45deg);background:rgba(239,51,64,0.2);}
+.faq-ico svg{width:12px;height:12px;stroke:var(--uae-red);fill:none;stroke-width:2.5;}
+.faq-ans{max-height:0;overflow:hidden;transition:max-height 0.35s ease;}
+.faq-ans-body{padding:0 22px 18px;font-size:13px;color:var(--muted);line-height:1.8;background:var(--bg3);}
 
-/* FOOTER */
-footer{background:var(--dark-2);border-top:1px solid var(--border);padding:52px 5% 28px;}
-.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;max-width:1200px;margin:0 auto;}
-.footer-brand p{font-size:14px;color:var(--text-muted);margin:16px 0;line-height:1.7;}
-.footer-col h5{font-size:11px;text-transform:uppercase;letter-spacing:2px;color:var(--gold);margin-bottom:16px;}
-.footer-col a{display:block;color:var(--text-muted);text-decoration:none;font-size:14px;margin-bottom:10px;transition:color 0.2s;}
-.footer-col a:hover{color:var(--gold);}
-.footer-bottom{max-width:1200px;margin:40px auto 0;padding-top:24px;border-top:1px solid rgba(255,255,255,0.05);display:flex;justify-content:space-between;align-items:center;font-size:12px;color:var(--text-muted);flex-wrap:wrap;gap:12px;}
+/* ══════════════════════════════════════
+   CONTACT
+══════════════════════════════════════ */
+.contact-section{background:var(--bg2);}
+.contact-layout{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;}
+.contact-left h2{margin-bottom:14px;}
+.contact-left .sec-sub{margin-bottom:32px;}
+.contact-item{
+  display:flex;align-items:center;gap:14px;
+  padding:16px 0;border-bottom:1px solid var(--border);
+}
+.contact-ico{
+  width:38px;height:38px;border-radius:9px;
+  background:rgba(239,51,64,0.07);border:1px solid var(--border-red);
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;
+}
+.contact-ico svg{width:16px;height:16px;stroke:var(--uae-red);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;}
+.contact-info-small{font-size:10px;color:var(--muted);font-weight:600;letter-spacing:1px;text-transform:uppercase;display:block;margin-bottom:2px;}
+.contact-info-val{font-size:14px;color:var(--text);}
+.contact-info-val a{color:var(--text);text-decoration:none;transition:color 0.2s;}
+.contact-info-val a:hover{color:var(--uae-red);}
+.contact-cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px;}
 
-/* FLOAT WA */
-.float-wa{position:fixed;bottom:28px;right:28px;z-index:999;background:#25D366;color:#fff;width:58px;height:58px;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;box-shadow:0 4px 20px rgba(37,211,102,0.45);transition:transform 0.2s,box-shadow 0.2s;}
-.float-wa:hover{transform:scale(1.12);box-shadow:0 6px 28px rgba(37,211,102,0.55);}
-.float-wa svg{width:28px;height:28px;}
+/* Contact form */
+.cform{
+  background:var(--bg3);border:1px solid var(--border-gold);
+  border-radius:20px;overflow:hidden;
+  box-shadow:0 24px 60px rgba(0,0,0,0.3);
+}
+.cform-head{
+  background:linear-gradient(135deg,rgba(239,51,64,0.1),rgba(239,51,64,0.04));
+  padding:22px 28px;border-bottom:1px solid var(--border);
+}
+.cform-head h3{font-family:'Syne',sans-serif;font-size:20px;font-weight:700;color:var(--uae-white);margin-bottom:4px;}
+.cform-head p{font-size:12px;color:var(--muted);}
+.cform-body{padding:24px 28px;}
 
-@media(max-width:900px){.hero-grid,.why-grid,.contact-grid{grid-template-columns:1fr;}.stats-inner{grid-template-columns:1fr 1fr;}.footer-grid{grid-template-columns:1fr 1fr;}.nav-links{display:none;}}
-@media(max-width:600px){.hero-btns{flex-direction:column;}.footer-grid{grid-template-columns:1fr;}}
+/* ══════════════════════════════════════
+   FEATURED STRIP
+══════════════════════════════════════ */
+.featured-strip-section{padding:36px 5%;}
+.featured-strip{
+  max-width:1200px;margin:0 auto;
+  display:flex;gap:20px;align-items:center;flex-wrap:wrap;
+  padding:20px 28px;
+  background:var(--bg2);border:1px solid var(--border);border-radius:10px;
+}
+.featured-lbl{font-size:10px;text-transform:uppercase;letter-spacing:2.5px;color:var(--muted);font-weight:700;min-width:80px;}
+.featured-names{display:flex;gap:24px;flex-wrap:wrap;align-items:center;}
+.feat-name{font-size:13px;font-weight:700;color:rgba(255,255,255,0.25);}
+
+/* ══════════════════════════════════════
+   FOOTER
+══════════════════════════════════════ */
+footer{background:var(--uae-black);border-top:1px solid var(--border);padding:52px 5% 28px;}
+.footer-flag-bar{height:3px;background:linear-gradient(90deg,var(--uae-red) 25%,var(--uae-white) 25% 50%,#111 50% 75%,var(--uae-green) 75%);max-width:1200px;margin:0 auto 40px;border-radius:2px;}
+.footer-cols{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;max-width:1200px;margin:0 auto;}
+.footer-brand-col{}
+.footer-brand-col p{font-size:13px;color:var(--muted);margin:14px 0;line-height:1.7;}
+.footer-contacts a,.footer-contacts span{display:block;font-size:13px;color:var(--muted);margin-bottom:6px;text-decoration:none;transition:color 0.2s;}
+.footer-contacts a:hover{color:var(--uae-red);}
+.footer-col h5{font-size:10px;text-transform:uppercase;letter-spacing:2.5px;color:var(--uae-red);margin-bottom:14px;font-weight:700;}
+.footer-col a{display:block;color:var(--muted);text-decoration:none;font-size:13px;margin-bottom:9px;transition:color 0.2s;}
+.footer-col a:hover{color:rgba(255,255,255,0.8);}
+.footer-bottom{max-width:1200px;margin:36px auto 0;padding-top:20px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;font-size:11px;color:var(--muted);flex-wrap:wrap;gap:10px;}
+
+/* ══════════════════════════════════════
+   FLOAT WHATSAPP
+══════════════════════════════════════ */
+.float-wa{
+  position:fixed;bottom:28px;right:28px;z-index:900;
+  width:56px;height:56px;border-radius:50%;
+  background:#25D366;
+  display:flex;align-items:center;justify-content:center;
+  text-decoration:none;
+  box-shadow:0 4px 20px rgba(37,211,102,0.5);
+  transition:all 0.2s;
+}
+.float-wa:hover{transform:scale(1.12);box-shadow:0 6px 28px rgba(37,211,102,0.6);}
+.float-wa svg{width:26px;height:26px;fill:#fff;}
+
+/* ══════════════════════════════════════
+   POPUP MODAL (InZone inspired)
+══════════════════════════════════════ */
+.popup-overlay{
+  position:fixed;inset:0;z-index:2000;
+  background:rgba(0,0,0,0.85);backdrop-filter:blur(8px);
+  display:flex;align-items:center;justify-content:center;padding:20px;
+  opacity:0;pointer-events:none;
+  transition:opacity 0.3s;
+}
+.popup-overlay.active{opacity:1;pointer-events:all;}
+.popup-modal{
+  background:var(--bg2);
+  border:1px solid rgba(255,255,255,0.08);
+  border-radius:22px;width:100%;max-width:480px;
+  overflow:hidden;
+  transform:scale(0.92) translateY(24px);
+  transition:transform 0.35s cubic-bezier(0.34,1.56,0.64,1);
+  box-shadow:0 50px 120px rgba(0,0,0,0.7);
+  position:relative;
+}
+.popup-overlay.active .popup-modal{transform:scale(1) translateY(0);}
+.popup-modal::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:1px;
+  background:linear-gradient(90deg,transparent,rgba(239,51,64,0.5),transparent);
+}
+.popup-head{
+  background:linear-gradient(135deg,rgba(239,51,64,0.12),rgba(239,51,64,0.04));
+  padding:26px 28px 22px;
+  display:flex;justify-content:space-between;align-items:flex-start;
+  border-bottom:1px solid var(--border);
+}
+.popup-head-text .popup-lbl{font-size:10px;color:var(--uae-red);font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:6px;}
+.popup-head-text h3{font-family:'Syne',sans-serif;font-size:22px;font-weight:800;color:var(--uae-white);margin-bottom:4px;}
+.popup-head-text p{font-size:12px;color:var(--muted);}
+.popup-close-btn{
+  background:rgba(255,255,255,0.07);border:1px solid var(--border);
+  color:var(--muted);width:30px;height:30px;border-radius:8px;
+  cursor:pointer;font-size:14px;font-weight:700;
+  display:flex;align-items:center;justify-content:center;
+  transition:all 0.2s;flex-shrink:0;
+}
+.popup-close-btn:hover{background:rgba(239,51,64,0.1);color:var(--uae-red);border-color:var(--border-red);}
+.popup-form-body{padding:24px 28px;}
+.popup-success{display:none;padding:44px 28px;text-align:center;}
+.popup-success .success-icon{font-size:56px;margin-bottom:14px;}
+.popup-success h4{font-family:'Syne',sans-serif;font-size:24px;color:var(--uae-green);margin-bottom:10px;font-weight:800;}
+.popup-success p{font-size:13px;color:var(--muted);line-height:1.75;}
+.popup-success strong{color:var(--uae-white);}
+
+/* ══════════════════════════════════════
+   RESPONSIVE
+══════════════════════════════════════ */
+@media(max-width:1100px){.pkg-grid{grid-template-columns:1fr 1fr;}.testi-grid{grid-template-columns:1fr 1fr;}.ideal-grid{grid-template-columns:1fr 1fr 1fr;}}
+@media(max-width:900px){
+  .hero-content{grid-template-columns:1fr;}.flag-float{display:none;}
+  .why-layout{grid-template-columns:1fr;}.contact-layout{grid-template-columns:1fr;}
+  .stats-inner{grid-template-columns:1fr 1fr;}.footer-cols{grid-template-columns:1fr 1fr;}
+  .svc-grid{grid-template-columns:1fr;}.pkg-grid{grid-template-columns:1fr;}.testi-grid{grid-template-columns:1fr;}
+  .ideal-grid{grid-template-columns:1fr 1fr;}.nav-links{display:none;}
+}
+@media(max-width:600px){.hero-actions{flex-direction:column;}.footer-cols{grid-template-columns:1fr;}.ideal-grid{grid-template-columns:1fr;}}
 </style>
 </head>
 <body>
 
-<a href="https://wa.me/919911738261" target="_blank" class="float-wa" title="Chat on WhatsApp">
-  <svg viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2.546 21l3.927-.921A9.952 9.952 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18a7.95 7.95 0 01-4.073-1.117l-.291-.173-3.024.709.728-2.942-.19-.302A7.957 7.957 0 014 12c0-4.418 3.582-8 8-8s8 3.582 8 8-3.582 8-8 8z"/></svg>
+<!-- ═══ POPUP MODAL ═══ -->
+<div class="popup-overlay" id="popupOverlay">
+  <div class="popup-modal">
+    <div class="popup-head">
+      <div class="popup-head-text">
+        <div class="popup-lbl">Free Consultation</div>
+        <h3>Start Your UAE Journey</h3>
+        <p>Expert callback guaranteed within 24 hours</p>
+      </div>
+      <button class="popup-close-btn" onclick="closePopup()">✕</button>
+    </div>
+    <div class="popup-form-body" id="popupFormWrap">
+      <form id="popupForm">
+        <input type="hidden" name="access_key" value="252d3295-8b19-43fd-a1ba-2707a6b82cc9">
+        <div class="fg"><label>Full Name *</label><input type="text" name="name" placeholder="Your full name" required></div>
+        <div class="fg"><label>Phone / WhatsApp *</label><input type="tel" name="phone" placeholder="+91 or +971..." required></div>
+        <div class="fg"><label>Email Address *</label><input type="email" name="email" placeholder="you@email.com" required></div>
+        <div class="fg">
+          <label>Service Interested In</label>
+          <select name="service">
+            <option value="">Select a service...</option>
+            <option>Mainland Corporate Solutions</option>
+            <option>Free Zone Business Consultation</option>
+            <option>FZCO Company Formation</option>
+            <option>Investor Residency Assistance</option>
+            <option>Employee Residency Processing</option>
+            <option>Family Sponsorship Advisory</option>
+            <option>Corporate Bank Account Opening</option>
+            <option>VAT / Tax Services</option>
+            <option>Legal &amp; Documentation</option>
+          </select>
+        </div>
+        <button type="submit" class="form-cta" id="popupSubmitBtn">Get Free Consultation →</button>
+        <p class="form-note">🔒 Your information is kept strictly private</p>
+      </form>
+    </div>
+    <div class="popup-success" id="popupSuccess">
+      <div class="success-icon">✅</div>
+      <h4>Request Received!</h4>
+      <p>Our team will contact you within 24 hours.<br>You can also reach us on WhatsApp:<br><strong>+91 99117 38261</strong></p>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ FLOAT WHATSAPP ═══ -->
+<a href="https://wa.me/919911738261" target="_blank" class="float-wa" title="WhatsApp Us">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2.546 21l3.927-.921A9.952 9.952 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18a7.95 7.95 0 01-4.073-1.117l-.291-.173-3.024.709.728-2.942-.19-.302A7.957 7.957 0 014 12c0-4.418 3.582-8 8-8s8 3.582 8 8-3.582 8-8 8z"/></svg>
 </a>
 
-<nav>
-  <div class="logo">UAE SPCZ<span>Business Setup Consultants</span></div>
+<!-- ═══ NAVBAR ═══ -->
+<nav class="navbar" id="navbar">
+  <div class="nav-brand">
+    <div class="brand-icon">U</div>
+    <div>
+      <div class="brand-name">UAE SPCZ</div>
+      <span class="brand-sub">Business Setup Consultants</span>
+    </div>
+  </div>
   <ul class="nav-links">
+    <li><a href="#ideal">Who It's For</a></li>
+    <li><a href="#packages">Packages</a></li>
     <li><a href="#services">Services</a></li>
-    <li><a href="#freezones">Free Zones</a></li>
     <li><a href="#faq">FAQ</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
-  <a href="https://wa.me/919911738261" class="nav-cta" target="_blank">WhatsApp Us</a>
+  <div class="nav-right">
+    <a href="https://wa.me/919911738261" target="_blank" class="nav-wa">
+      <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2.546 21l3.927-.921A9.952 9.952 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18a7.95 7.95 0 01-4.073-1.117l-.291-.173-3.024.709.728-2.942-.19-.302A7.957 7.957 0 014 12c0-4.418 3.582-8 8-8s8 3.582 8 8-3.582 8-8 8z"/></svg>
+      WhatsApp
+    </a>
+    <button class="nav-btn" onclick="openPopup()">Free Consultation</button>
+  </div>
 </nav>
+<div class="flag-bar"></div>
 
-<!-- HERO -->
+<!-- ═══ HERO ═══ -->
 <section class="hero">
-  <div class="hero-grid">
-    <div>
-      <div class="hero-badge">Certified UAE Business Setup Partner</div>
-      <h1>Set Up Your Business in <em>UAE</em> with Full Confidence</h1>
-      <p class="hero-sub">We guide you through the entire process — from company formation and residency processing to bank account opening and legal documentation. 100% foreign ownership available in select free zones.</p>
-      <div class="trust-badges">
-        <span class="trust-badge"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Trusted & Verified</span>
-        <span class="trust-badge"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>5000+ Businesses Assisted</span>
-        <span class="trust-badge"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>24hr Response</span>
+  <div class="hero-bg-base"></div>
+  <div class="hero-grid-overlay"></div>
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+
+  <!-- Dubai Skyline -->
+  <div class="skyline-wrap">
+    <svg viewBox="0 0 1440 300" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#C9A84C" stop-opacity="0.15"/>
+          <stop offset="100%" stop-color="#C9A84C" stop-opacity="0"/>
+        </linearGradient>
+      </defs>
+      <path fill="url(#skyGrad)" d="M0,300 L0,240 L30,240 L30,220 L50,220 L50,200 L60,200 L60,180 L65,180 L65,160 L68,160 L68,140 L70,140 L70,100 L71,100 L71,80 L72,80 L72,60 L73,60 L73,40 L74,40 L74,20 L75,20 L75,10 L76,10 L76,0 L77,0 L77,10 L78,10 L78,20 L79,20 L79,40 L80,40 L80,60 L81,60 L81,80 L82,80 L82,100 L84,100 L84,140 L86,140 L86,160 L90,160 L90,180 L95,180 L95,200 L100,200 L100,220 L110,220 L110,200 L120,200 L120,170 L130,170 L130,150 L140,150 L140,130 L145,130 L145,110 L148,110 L148,90 L150,90 L150,70 L152,70 L152,90 L154,90 L154,110 L157,110 L157,130 L162,130 L162,150 L172,150 L172,170 L182,170 L182,190 L200,190 L200,170 L220,170 L220,150 L230,150 L230,130 L235,130 L235,110 L238,110 L238,80 L240,80 L240,60 L241,60 L241,40 L242,40 L242,20 L243,20 L243,5 L244,5 L244,20 L245,20 L245,40 L246,40 L246,60 L247,60 L247,80 L249,80 L249,110 L252,110 L252,130 L257,130 L257,150 L267,150 L267,170 L290,170 L290,200 L320,200 L320,180 L340,180 L340,160 L350,160 L350,140 L355,140 L355,120 L358,120 L358,100 L360,100 L360,80 L362,80 L362,100 L364,100 L364,120 L367,120 L367,140 L372,140 L372,160 L382,160 L382,180 L402,180 L402,200 L440,200 L440,190 L460,190 L460,170 L470,170 L470,140 L475,140 L475,110 L478,110 L478,80 L480,80 L480,50 L481,50 L481,30 L482,30 L482,10 L483,10 L483,30 L484,30 L484,50 L485,50 L485,80 L487,80 L487,110 L490,110 L490,140 L495,140 L495,170 L505,170 L505,190 L525,190 L525,200 L560,200 L560,180 L580,180 L580,160 L590,160 L590,140 L595,140 L595,120 L597,120 L597,100 L598,100 L598,80 L599,80 L599,60 L600,60 L600,40 L601,40 L601,20 L602,20 L602,5 L603,5 L603,20 L604,20 L604,40 L605,40 L605,60 L606,60 L606,80 L607,80 L607,100 L608,100 L608,120 L610,120 L610,140 L615,140 L615,160 L625,160 L625,180 L645,180 L645,200 L680,200 L680,185 L700,185 L700,165 L710,165 L710,145 L715,145 L715,125 L718,125 L718,105 L720,105 L720,85 L722,85 L722,105 L724,105 L724,125 L727,125 L727,145 L732,145 L732,165 L742,165 L742,185 L762,185 L762,200 L800,200 L800,185 L820,185 L820,165 L830,165 L830,145 L835,145 L835,125 L838,125 L838,105 L840,105 L840,85 L841,85 L841,65 L842,65 L842,45 L843,45 L843,25 L844,25 L844,10 L845,10 L845,25 L846,25 L846,45 L847,45 L847,65 L848,65 L848,85 L849,85 L849,105 L851,105 L851,125 L854,125 L854,145 L859,145 L859,165 L869,165 L869,185 L889,185 L889,200 L920,200 L920,185 L940,185 L940,165 L950,165 L950,145 L955,145 L955,125 L958,125 L958,105 L960,105 L960,85 L961,85 L961,65 L962,65 L962,85 L963,85 L963,105 L965,105 L965,125 L968,125 L968,145 L973,145 L973,165 L983,165 L983,185 L1003,185 L1003,200 L1040,200 L1040,185 L1060,185 L1060,165 L1070,165 L1070,145 L1075,145 L1075,125 L1077,125 L1077,105 L1078,105 L1078,85 L1079,85 L1079,105 L1080,105 L1080,125 L1082,125 L1082,145 L1085,145 L1085,165 L1092,165 L1092,185 L1108,185 L1108,200 L1140,200 L1140,185 L1160,185 L1160,165 L1170,165 L1170,145 L1175,145 L1175,125 L1178,125 L1178,105 L1180,105 L1180,85 L1181,85 L1181,65 L1182,65 L1182,45 L1183,45 L1183,25 L1184,25 L1184,10 L1185,10 L1185,25 L1186,25 L1186,45 L1187,45 L1187,65 L1188,65 L1188,85 L1189,85 L1189,105 L1191,105 L1191,125 L1194,125 L1194,145 L1199,145 L1199,165 L1209,165 L1209,185 L1229,185 L1229,200 L1260,200 L1260,220 L1290,220 L1290,240 L1320,240 L1320,260 L1380,260 L1380,280 L1440,280 L1440,300 Z"/>
+    </svg>
+  </div>
+
+  <!-- Floating UAE Flag -->
+  <div class="flag-float">
+    <div class="flag-red-vert"></div>
+    <div class="flag-stripes">
+      <div class="flag-stripe-1"></div>
+      <div class="flag-stripe-2"></div>
+      <div class="flag-stripe-3"></div>
+    </div>
+  </div>
+
+  <div class="hero-content">
+    <!-- Left -->
+    <div class="hero-left">
+      <div class="hero-badge animate-fade-up delay-1">
+        <span class="badge-dot"></span>
+        Certified UAE Business Setup Partner
       </div>
-      <div class="hero-btns">
-        <a href="#contact" class="btn-primary">Book Free Consultation →</a>
-        <a href="https://wa.me/919911738261" class="whatsapp-btn" target="_blank">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2.546 21l3.927-.921A9.952 9.952 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18a7.95 7.95 0 01-4.073-1.117l-.291-.173-3.024.709.728-2.942-.19-.302A7.957 7.957 0 014 12c0-4.418 3.582-8 8-8s8 3.582 8 8-3.582 8-8 8z"/></svg>
+      <h1 class="hero-h1 animate-fade-up delay-2">
+        Launch Your<br>
+        <span class="line-red">UAE Business</span><br>
+        with <span class="line-gold">Confidence</span>
+      </h1>
+      <p class="hero-sub animate-fade-up delay-3">From company formation and residency processing to bank account opening and legal documentation — we handle it all. 100% foreign ownership available in select free zones.</p>
+      <div class="trust-strip animate-fade-up delay-4">
+        <span class="trust-chip"><span class="chip-dot c-red"></span>5,000+ Businesses Assisted</span>
+        <span class="trust-chip"><span class="chip-dot c-green"></span>15+ Free Zone Partners</span>
+        <span class="trust-chip"><span class="chip-dot c-gold"></span>24hr Expert Response</span>
+        <span class="trust-chip"><span class="chip-dot c-white"></span>No Hidden Fees</span>
+      </div>
+      <div class="hero-actions animate-fade-up delay-5">
+        <button class="btn-primary" onclick="openPopup()">
+          <svg viewBox="0 0 24 24"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></svg>
+          Get Free Consultation
+        </button>
+        <a href="https://wa.me/919911738261" target="_blank" class="btn-whatsapp">
+          <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2.546 21l3.927-.921A9.952 9.952 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18a7.95 7.95 0 01-4.073-1.117l-.291-.173-3.024.709.728-2.942-.19-.302A7.957 7.957 0 014 12c0-4.418 3.582-8 8-8s8 3.582 8 8-3.582 8-8 8z"/></svg>
           WhatsApp Now
         </a>
       </div>
     </div>
 
-    <!-- HERO FORM -->
-    <div class="hero-form">
-      <h3>Get Free Consultation</h3>
-      <p class="form-subtitle">🔒 Your information is safe with us</p>
-      <form id="heroForm">
-        <input type="hidden" name="access_key" value="252d3295-8b19-43fd-a1ba-2707a6b82cc9">
-        <div class="form-group"><label>Full Name *</label><input type="text" name="name" placeholder="Your full name" required></div>
-        <div class="form-group"><label>Phone / WhatsApp *</label><input type="tel" name="phone" placeholder="+91 or +971..." required></div>
-        <div class="form-group"><label>Email Address *</label><input type="email" name="email" placeholder="you@email.com" required></div>
-        <div class="form-group">
-          <label>Service Required</label>
-          <select name="service">
-            <option value="">Select a service</option>
-            <option>Mainland Corporate Solutions</option>
-            <option>Free Zone Business Consultation</option>
-            <option>FZCO Company Formation</option>
-            <option>Multi-Activity License Advisory</option>
-            <option>Investor Residency Assistance</option>
-            <option>Employee Residency Processing</option>
-            <option>UAE Residency Consultation</option>
-            <option>Family Sponsorship Advisory</option>
-            <option>Emirates ID Process</option>
-            <option>Residency Renewals</option>
-            <option>Corporate Bank Account Opening</option>
-            <option>Accounting &amp; Bookkeeping</option>
-            <option>VAT Registration</option>
-            <option>Corporate Tax Filing</option>
-            <option>Legal Documentation</option>
-          </select>
-        </div>
-        <button type="submit" class="form-submit" id="heroBtn">Request Free Consultation →</button>
-        <p class="form-note">By submitting you agree to be contacted by UAE SPCZ</p>
-      </form>
+    <!-- Hero Form -->
+    <div class="hero-form-card animate-fade-up delay-6">
+      <div class="form-top">
+        <div class="form-top-label">Free Expert Consultation</div>
+        <h3>Start Your UAE Journey</h3>
+        <p>🔒 Confidential · No obligation · Callback in 24hrs</p>
+      </div>
+      <div class="form-body" id="heroFormBody">
+        <form id="heroForm">
+          <input type="hidden" name="access_key" value="252d3295-8b19-43fd-a1ba-2707a6b82cc9">
+          <div class="fg"><label>Full Name *</label><input type="text" name="name" placeholder="Your full name" required></div>
+          <div class="fg"><label>Phone / WhatsApp *</label><input type="tel" name="phone" placeholder="+91 or +971..." required></div>
+          <div class="fg"><label>Email Address *</label><input type="email" name="email" placeholder="you@email.com" required></div>
+          <div class="fg">
+            <label>Service Required</label>
+            <select name="service">
+              <option value="">Select a service...</option>
+              <option>Mainland Corporate Solutions</option>
+              <option>Free Zone Business Consultation</option>
+              <option>FZCO Company Formation</option>
+              <option>Investor Residency Assistance</option>
+              <option>Employee Residency Processing</option>
+              <option>UAE Residency Consultation</option>
+              <option>Family Sponsorship Advisory</option>
+              <option>Corporate Bank Account Opening</option>
+              <option>VAT Registration</option>
+              <option>Corporate Tax Filing</option>
+              <option>Legal Documentation</option>
+            </select>
+          </div>
+          <button type="submit" class="form-cta" id="heroSubmitBtn">Request Free Consultation →</button>
+          <p class="form-note">🔒 Your information is kept strictly private</p>
+        </form>
+      </div>
       <div class="form-success" id="heroSuccess">
-        <h4>✅ Request Received!</h4>
-        <p>Our team will call you within 24 hours.<br>WhatsApp us anytime: <strong>+91 99117 38261</strong></p>
+        <div class="big-icon">✅</div>
+        <h4>Request Received!</h4>
+        <p>Our team will call you within 24 hours.<br>WhatsApp us anytime:<br><strong style="color:#fff;">+91 99117 38261</strong></p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- STATS -->
+<!-- ═══ STATS ═══ -->
 <div class="stats-bar">
   <div class="stats-inner">
-    <div><div class="stat-num">15+</div><div class="stat-label">UAE Free Zone Partners</div></div>
-    <div><div class="stat-num">100%</div><div class="stat-label">Foreign Ownership (Select Free Zones)</div></div>
-    <div><div class="stat-num">5000+</div><div class="stat-label">Businesses Assisted</div></div>
-    <div><div class="stat-num">24hr</div><div class="stat-label">Response Time</div></div>
+    <div><div class="stat-val">15<span class="accent">+</span></div><div class="stat-lbl">Free Zone Partners</div></div>
+    <div><div class="stat-val">5,000<span class="accent">+</span></div><div class="stat-lbl">Businesses Assisted</div></div>
+    <div><div class="stat-val">100<span class="accent">%</span></div><div class="stat-lbl">Foreign Ownership Available</div></div>
+    <div><div class="stat-val">24<span class="accent">hr</span></div><div class="stat-lbl">Expert Response</div></div>
   </div>
 </div>
 
-<!-- SERVICES -->
-<section id="services">
-  <div class="section-inner">
-    <div class="section-tag">What We Do</div>
+<!-- ═══ IDEAL FOR ═══ -->
+<section class="ideal-section" id="ideal">
+  <div class="sec-wrap">
+    <div class="sec-eyebrow">Who It's For</div>
+    <h2>Ideal for <em>Every Entrepreneur</em></h2>
+    <p class="sec-sub">Whether you're a solo freelancer or a multinational expanding into UAE, we have the right solution for you.</p>
+    <div class="ideal-grid">
+      <div class="ideal-card">
+        <span class="ideal-emoji">🚀</span>
+        <h4>Startup Founders</h4>
+        <p>Launch your startup with 100% ownership and access to UAE's world-class ecosystem and investor network.</p>
+        <span class="ideal-tag">Free Zone Setup</span>
+      </div>
+      <div class="ideal-card">
+        <span class="ideal-emoji">💻</span>
+        <h4>Freelancers & Consultants</h4>
+        <p>Get a professional license and UAE residency to work freely across the region without a local sponsor.</p>
+        <span class="ideal-tag">Freelance License</span>
+      </div>
+      <div class="ideal-card">
+        <span class="ideal-emoji">📦</span>
+        <h4>Trading Companies</h4>
+        <p>Import, export and distribute globally through UAE's strategic free zones with 0% import/export duties.</p>
+        <span class="ideal-tag">Trading License</span>
+      </div>
+      <div class="ideal-card">
+        <span class="ideal-emoji">🏢</span>
+        <h4>Corporate Expansion</h4>
+        <p>Set up a UAE branch or subsidiary with full legal, compliance and tax advisory support from day one.</p>
+        <span class="ideal-tag">Mainland / Branch</span>
+      </div>
+      <div class="ideal-card">
+        <span class="ideal-emoji">💰</span>
+        <h4>Investors</h4>
+        <p>Secure investor residency, manage UAE assets, and access the MENA market with expert guidance.</p>
+        <span class="ideal-tag">Investor Residency</span>
+      </div>
+      <div class="ideal-card">
+        <span class="ideal-emoji">👨‍👩‍👧</span>
+        <h4>Families Relocating</h4>
+        <p>Complete family residency and sponsorship solutions — Emirates ID, medical, and all formalities handled.</p>
+        <span class="ideal-tag">Family Sponsorship</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PACKAGES ═══ -->
+<section id="packages">
+  <div class="sec-wrap">
+    <div class="sec-eyebrow">Pricing Packages</div>
+    <h2>Choose Your <em>Setup Package</em></h2>
+    <p class="sec-sub">Transparent pricing with zero hidden fees. Our advisors help you pick the right structure for your exact goals.</p>
+    <div class="pkg-grid">
+      <div class="pkg-card">
+        <div class="pkg-tier">Starter</div>
+        <div class="pkg-price-wrap"><div class="pkg-price"><sup>AED</sup> 5,750</div></div>
+        <div class="pkg-period">per year · indicative price</div>
+        <p class="pkg-desc" style="margin-top:10px;">For freelancers and solo consultants starting their UAE journey.</p>
+        <div class="pkg-hr"></div>
+        <ul class="pkg-list">
+          <li><span class="check-wrap"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Free Zone License (1 Activity)</li>
+          <li><span class="check-wrap"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>UAE Residency Processing</li>
+          <li><span class="check-wrap"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Emirates ID Assistance</li>
+          <li><span class="check-wrap"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Digital Remote Setup</li>
+          <li><span class="check-wrap"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Document Preparation</li>
+        </ul>
+        <button class="pkg-btn pkg-btn-outline" onclick="openPopup()">Get Started →</button>
+      </div>
+      <div class="pkg-card featured">
+        <div class="pkg-popular">Most Popular</div>
+        <div class="pkg-tier">Professional</div>
+        <div class="pkg-price-wrap"><div class="pkg-price"><sup>AED</sup> 12,500</div></div>
+        <div class="pkg-period">per year · indicative price</div>
+        <p class="pkg-desc" style="margin-top:10px;">Best for growing businesses needing full setup with banking.</p>
+        <div class="pkg-hr"></div>
+        <ul class="pkg-list">
+          <li><span class="check-wrap"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Free Zone or Mainland License</li>
+          <li><span class="check-wrap"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Multi-Activity License Advisory</li>
+          <li><span class="check-wrap"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>2 Residency Processings</li>
+          <li><span class="check-wrap"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Corporate Bank Account Support</li>
+          <li><span class="check-wrap"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>VAT Registration</li>
+          <li><span class="check-wrap"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Legal Documentation</li>
+          <li><span class="check-wrap"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Compliance Advisory</li>
+        </ul>
+        <button class="pkg-btn pkg-btn-red" onclick="openPopup()">Get Started →</button>
+      </div>
+      <div class="pkg-card">
+        <div class="pkg-tier">Enterprise</div>
+        <div class="pkg-price-wrap"><div class="pkg-price" style="font-size:36px;">Custom</div></div>
+        <div class="pkg-period">tailored to your needs</div>
+        <p class="pkg-desc" style="margin-top:10px;">For multi-jurisdiction setups, FZCO structures and large teams.</p>
+        <div class="pkg-hr"></div>
+        <ul class="pkg-list">
+          <li><span class="check-wrap"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>FZCO / Offshore Formation</li>
+          <li><span class="check-wrap"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Unlimited Residency Support</li>
+          <li><span class="check-wrap"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Multi-Bank Account Opening</li>
+          <li><span class="check-wrap"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Corporate Tax Filing</li>
+          <li><span class="check-wrap"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Accounting &amp; Bookkeeping</li>
+          <li><span class="check-wrap"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Dedicated Relationship Manager</li>
+        </ul>
+        <button class="pkg-btn pkg-btn-outline" onclick="openPopup()">Talk to Us →</button>
+      </div>
+    </div>
+    <p style="text-align:center;margin-top:22px;font-size:13px;color:var(--muted);">All prices indicative. Exact cost shared after understanding your requirements. <span style="color:var(--uae-red);font-weight:600;">Zero hidden charges guaranteed.</span></p>
+  </div>
+</section>
+
+<!-- ═══ SERVICES ═══ -->
+<section id="services" style="background:var(--bg2);">
+  <div class="sec-wrap">
+    <div class="sec-eyebrow">What We Do</div>
     <h2>Complete Business Setup <em>Services</em></h2>
-    <p class="section-sub">Everything you need to launch and grow your business in the UAE — under one roof.</p>
-    <div class="services-grid">
-      <div class="service-card">
-        <div class="service-icon"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg></div>
-        <h4>Company Setup Services</h4>
-        <p>End-to-end company formation guidance for Mainland, Free Zone and Offshore structures.</p>
-        <ul class="service-items">
-          <li>100% Foreign Ownership Guidance</li><li>Multi-Activity License Advisory</li>
-          <li>Digital Company Formation Support</li><li>FZCO Company Formation</li>
-          <li>No Local Sponsor Required (Free Zones)</li><li>UAE Corporate Tax Consultation</li>
-        </ul>
+    <p class="sec-sub">Everything under one roof — from your first license to ongoing compliance support.</p>
+    <div class="svc-grid">
+      <div class="svc-card">
+        <div class="svc-icon-wrap" style="background:rgba(239,51,64,0.08);color:var(--uae-red);"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg></div>
+        <div class="svc-info">
+          <h4>Company Setup</h4>
+          <p>Mainland, Free Zone and Offshore — end-to-end company formation guidance with full legal support.</p>
+          <div class="svc-tags"><span class="svc-tag">100% Foreign Ownership</span><span class="svc-tag">Multi-Activity License</span><span class="svc-tag">FZCO Formation</span><span class="svc-tag">Digital Setup</span></div>
+        </div>
       </div>
-      <div class="service-card">
-        <div class="service-icon"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 9h20"/><path d="M7 15h2"/><path d="M11 15h2"/></svg></div>
-        <h4>Residency &amp; Immigration Advisory</h4>
-        <p>Complete residency and immigration solutions for investors, employees and families.</p>
-        <ul class="service-items">
-          <li>UAE Residency Processing</li><li>Investor Residency Assistance</li>
-          <li>Employee Residency Support</li><li>Family Sponsorship Advisory</li>
-          <li>Emirates ID Process</li><li>Residency Renewals</li>
-        </ul>
+      <div class="svc-card">
+        <div class="svc-icon-wrap" style="background:rgba(0,154,68,0.08);color:var(--uae-green);"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 9h20"/><path d="M7 15h2"/><path d="M11 15h2"/></svg></div>
+        <div class="svc-info">
+          <h4>Residency Advisory</h4>
+          <p>Complete residency and immigration solutions for investors, employees, and entire families.</p>
+          <div class="svc-tags"><span class="svc-tag">Investor Residency</span><span class="svc-tag">Employee Residency</span><span class="svc-tag">Family Sponsorship</span><span class="svc-tag">Emirates ID</span></div>
+        </div>
       </div>
-      <div class="service-card">
-        <div class="service-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
-        <h4>Finance &amp; Corporate Services</h4>
-        <p>Full financial and corporate support to keep your business compliant and growing.</p>
-        <ul class="service-items">
-          <li>Corporate Bank Account Opening</li><li>Accounting &amp; Bookkeeping</li>
-          <li>VAT Registration</li><li>Corporate Tax Filing</li><li>Compliance Support</li>
-        </ul>
+      <div class="svc-card">
+        <div class="svc-icon-wrap" style="background:rgba(201,168,76,0.08);color:var(--gold);"><svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+        <div class="svc-info">
+          <h4>Finance &amp; Banking</h4>
+          <p>Corporate banking, accounting and full financial compliance support for your UAE entity.</p>
+          <div class="svc-tags"><span class="svc-tag">Bank Account Opening</span><span class="svc-tag">Bookkeeping</span><span class="svc-tag">VAT Registration</span><span class="svc-tag">Tax Filing</span></div>
+        </div>
       </div>
-      <div class="service-card">
-        <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
-        <h4>Legal &amp; Documentation Services</h4>
-        <p>Professional legal documentation and compliance management for your UAE entity.</p>
-        <ul class="service-items">
-          <li>POA Preparation</li><li>Signature Witnessing</li>
-          <li>Legal Documentation</li><li>Business Compliance</li><li>Shareholder Documentation</li>
-        </ul>
+      <div class="svc-card">
+        <div class="svc-icon-wrap" style="background:rgba(255,255,255,0.05);color:var(--muted);"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
+        <div class="svc-info">
+          <h4>Legal &amp; Documentation</h4>
+          <p>Professional legal documentation, POA preparation and compliance management for your entity.</p>
+          <div class="svc-tags"><span class="svc-tag">POA Preparation</span><span class="svc-tag">Legal Docs</span><span class="svc-tag">Compliance</span><span class="svc-tag">Shareholder Docs</span></div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- FREE ZONES -->
-<section id="freezones" class="freezone-bg">
-  <div class="section-inner">
-    <div class="section-tag">Registered Partners</div>
+<!-- ═══ FREE ZONES ═══ -->
+<section class="fz-section" id="freezones">
+  <div class="sec-wrap">
+    <div class="sec-eyebrow">Registered Partners</div>
     <h2>Our Partner <em>Free Zones</em></h2>
-    <p class="section-sub">We work with UAE's leading free zones — giving you access to the best jurisdiction for your business needs.</p>
+    <p class="sec-sub">Direct partnerships with 15+ UAE free zones — best jurisdiction, best price, fastest processing time.</p>
     <div class="fz-grid">
-      <div class="fz-tag">ADGM</div><div class="fz-tag">Ajman Free Zone</div>
-      <div class="fz-tag">Creative City Fujairah</div><div class="fz-tag">DAFZ</div>
-      <div class="fz-tag">DIFC</div><div class="fz-tag">DTEC</div>
-      <div class="fz-tag">Dubai Silicon Oasis</div><div class="fz-tag">Dubai South</div>
-      <div class="fz-tag">DWTC Free Zone</div><div class="fz-tag">Hamriyah Free Zone</div>
-      <div class="fz-tag">IFZA</div><div class="fz-tag">RAKEZ</div>
-      <div class="fz-tag">Shams Free Zone</div><div class="fz-tag">SPC Free Zone</div>
-      <div class="fz-tag">JAFZA</div>
+      <div class="fz-pill">ADGM</div><div class="fz-pill">Ajman Free Zone</div>
+      <div class="fz-pill">Creative City</div><div class="fz-pill">DAFZ</div>
+      <div class="fz-pill">DIFC</div><div class="fz-pill">DTEC</div>
+      <div class="fz-pill">Dubai Silicon Oasis</div><div class="fz-pill">Dubai South</div>
+      <div class="fz-pill">DWTC Free Zone</div><div class="fz-pill">Hamriyah FZ</div>
+      <div class="fz-pill">IFZA</div><div class="fz-pill">RAKEZ</div>
+      <div class="fz-pill">Shams Free Zone</div><div class="fz-pill">SPC Free Zone</div>
+      <div class="fz-pill">JAFZA</div>
     </div>
   </div>
 </section>
 
-<!-- WHY US -->
+<!-- ═══ WHY US ═══ -->
 <section id="why">
-  <div class="section-inner">
-    <div class="section-tag">Why Choose UAE SPCZ</div>
+  <div class="sec-wrap">
+    <div class="sec-eyebrow">Why UAE SPCZ</div>
     <h2>The Smarter Way to Set Up in <em>Dubai</em></h2>
-    <div class="why-grid">
-      <ul class="why-list">
-        <li class="why-item"><span class="why-num">01</span><div class="why-text"><h4>One-Stop Solution</h4><p>From trade license to bank account to residency — we handle everything under one roof, saving you time and eliminating confusion.</p></div></li>
-        <li class="why-item"><span class="why-num">02</span><div class="why-text"><h4>100% Digital Process</h4><p>Set up your UAE company remotely from anywhere in the world. No physical presence required for most procedures.</p></div></li>
-        <li class="why-item"><span class="why-num">03</span><div class="why-text"><h4>Registered Free Zone Partners</h4><p>We work directly with 15+ UAE free zones, ensuring you get the best jurisdiction, pricing and fastest processing time.</p></div></li>
-        <li class="why-item"><span class="why-num">04</span><div class="why-text"><h4>No Hidden Fees</h4><p>Transparent pricing with no surprise charges. We tell you the full cost upfront before you commit to anything.</p></div></li>
-        <li class="why-item"><span class="why-num">05</span><div class="why-text"><h4>Expert Legal &amp; Tax Advisory</h4><p>Our in-house advisors keep you compliant with UAE corporate tax, VAT and all regulatory requirements.</p></div></li>
+    <div class="why-layout">
+      <ul class="why-steps">
+        <li class="why-step"><span class="step-num">01</span><div class="step-info"><h4>One-Stop Solution</h4><p>License to bank account to residency — everything under one roof, zero confusion, zero delays.</p></div></li>
+        <li class="why-step"><span class="step-num">02</span><div class="step-info"><h4>100% Digital Process</h4><p>Set up your UAE company remotely from anywhere in the world. No physical presence needed for most procedures.</p></div></li>
+        <li class="why-step"><span class="step-num">03</span><div class="step-info"><h4>Registered Free Zone Partners</h4><p>Direct partnerships with 15+ free zones — best jurisdiction, best pricing, fastest processing guaranteed.</p></div></li>
+        <li class="why-step"><span class="step-num">04</span><div class="step-info"><h4>Zero Hidden Fees</h4><p>Full cost transparency before you commit. No surprises, no add-ons — the price we quote is the price you pay.</p></div></li>
+        <li class="why-step"><span class="step-num">05</span><div class="step-info"><h4>Expert Legal &amp; Tax Advisory</h4><p>In-house advisors for corporate tax, VAT, and all UAE regulatory requirements from day one.</p></div></li>
       </ul>
-      <div>
-        <div class="why-box"><span class="big-num">15+</span><p>Registered UAE Free Zone Partners</p></div>
-        <div class="why-box" style="margin-top:20px;"><span class="big-num">100%</span><p>Foreign Ownership Available in Select Free Zones</p></div>
+      <div class="why-panel">
+        <span class="big-number">5,000<span class="accent">+</span></span>
+        <span class="big-label">Businesses Successfully Assisted</span>
+        <div class="why-divider"></div>
+        <div class="mini-flag"><div class="mf-r"></div><div class="mf-w"></div><div class="mf-b"></div><div class="mf-g"></div></div>
+        <p style="font-size:12px;color:var(--muted);margin-top:14px;line-height:1.6;">Trusted by entrepreneurs from India, UK, USA, Pakistan and 40+ countries worldwide.</p>
+        <div class="why-divider"></div>
+        <button class="btn-primary" style="width:100%;justify-content:center;" onclick="openPopup()">Get Free Consultation →</button>
       </div>
     </div>
   </div>
 </section>
 
-<!-- TESTIMONIALS -->
-<section>
-  <div class="section-inner">
-    <div class="section-tag">Client Reviews</div>
+<!-- ═══ TESTIMONIALS ═══ -->
+<section class="testi-section">
+  <div class="sec-wrap">
+    <div class="sec-eyebrow">Client Reviews</div>
     <h2>What Our <em>Clients Say</em></h2>
-    <p class="section-sub" style="margin-bottom:40px;">Real feedback from businesses we've helped set up in the UAE.</p>
-    <div class="testimonials-grid">
-      <div class="testimonial-card">
-        <div class="stars">★★★★★</div>
-        <p class="testimonial-text">UAE SPCZ made the entire company formation process seamless. From free zone selection to bank account opening — their team handled everything professionally. Highly recommended for anyone looking to set up in Dubai.</p>
-        <div class="testimonial-author"><div class="author-avatar">R</div><div><div class="author-name">Rajesh Mehta</div><div class="author-role">Director, Mumbai — IFZA Setup</div></div></div>
+    <p class="sec-sub" style="margin-bottom:40px;">Real feedback from businesses we've helped set up across the UAE.</p>
+    <div class="testi-grid">
+      <div class="testi-card">
+        <div class="testi-quote-mark">"</div>
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-body">UAE SPCZ made the entire company formation process seamless. From free zone selection to bank account opening — their team handled everything professionally. Highly recommended for anyone looking to set up in Dubai.</p>
+        <div class="testi-footer">
+          <div class="testi-av" style="background:linear-gradient(135deg,var(--uae-red),#8B1418);">R</div>
+          <div><div class="testi-name">Rajesh Mehta</div><div class="testi-role">Director, Mumbai — IFZA Setup</div></div>
+        </div>
       </div>
-      <div class="testimonial-card">
-        <div class="stars">★★★★★</div>
-        <p class="testimonial-text">I was worried about the residency process being complicated from India. The UAE SPCZ team guided me step by step and my investor residency was processed faster than I expected. Outstanding service.</p>
-        <div class="testimonial-author"><div class="author-avatar">P</div><div><div class="author-name">Priya Sharma</div><div class="author-role">Entrepreneur, Delhi — Investor Residency</div></div></div>
+      <div class="testi-card">
+        <div class="testi-quote-mark">"</div>
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-body">I was worried about the residency process being complicated from India. The UAE SPCZ team guided me step by step and my investor residency was processed faster than I expected. Outstanding service.</p>
+        <div class="testi-footer">
+          <div class="testi-av" style="background:linear-gradient(135deg,var(--uae-green),#005C28);">P</div>
+          <div><div class="testi-name">Priya Sharma</div><div class="testi-role">Entrepreneur, Delhi — Investor Residency</div></div>
+        </div>
       </div>
-      <div class="testimonial-card">
-        <div class="stars">★★★★★</div>
-        <p class="testimonial-text">Very transparent process — no hidden fees, no surprises. They helped us choose the right free zone for our trading business and completed the full setup including corporate bank account. 10/10.</p>
-        <div class="testimonial-author"><div class="author-avatar">A</div><div><div class="author-name">Ahmed Al Farsi</div><div class="author-role">CEO, Dubai — RAKEZ Company Setup</div></div></div>
+      <div class="testi-card">
+        <div class="testi-quote-mark">"</div>
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-body">Very transparent — no hidden fees, no surprises. They helped us choose the right free zone for our trading business and completed the full setup including corporate bank account. Absolutely 10/10.</p>
+        <div class="testi-footer">
+          <div class="testi-av" style="background:linear-gradient(135deg,var(--gold),#7A5C1A);">A</div>
+          <div><div class="testi-name">Ahmed Al Farsi</div><div class="testi-role">CEO, Dubai — RAKEZ Company Setup</div></div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- FAQ -->
-<section id="faq" class="freezone-bg">
-  <div class="section-inner">
-    <div class="section-tag">Common Questions</div>
+<!-- ═══ FAQ ═══ -->
+<section id="faq" style="background:var(--bg2);">
+  <div class="sec-wrap">
+    <div class="sec-eyebrow">Common Questions</div>
     <h2>Frequently Asked <em>Questions</em></h2>
-    <p class="section-sub">Everything you need to know before setting up your business in the UAE.</p>
-    <div class="faq-list">
+    <p class="sec-sub">Everything you need to know before setting up your business in the UAE.</p>
+    <div class="faq-container">
       <div class="faq-item">
-        <button class="faq-question" onclick="toggleFaq(this)">Can a foreigner own 100% of a UAE company?<span class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
-        <div class="faq-answer"><div class="faq-answer-inner">Yes. In UAE free zones, foreigners can own 100% of their company without a local sponsor. Since 2021, mainland companies also allow 100% foreign ownership in most business activities. Our team will advise which structure suits your business best.</div></div>
+        <button class="faq-q" onclick="toggleFaq(this)">Can a foreigner own 100% of a UAE company?<span class="faq-ico"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
+        <div class="faq-ans"><div class="faq-ans-body">Yes. In UAE free zones, foreigners can own 100% of their company without a local sponsor. Since 2021, mainland companies also allow 100% foreign ownership in most business activities. Our team advises on the best structure for you.</div></div>
       </div>
       <div class="faq-item">
-        <button class="faq-question" onclick="toggleFaq(this)">How long does UAE company formation take?<span class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
-        <div class="faq-answer"><div class="faq-answer-inner">Free zone company formation typically takes 3–7 working days after all documents are submitted. Mainland company formation may take 7–14 working days depending on the activity and approvals required. Timelines vary by free zone and business type.</div></div>
+        <button class="faq-q" onclick="toggleFaq(this)">How long does UAE company formation take?<span class="faq-ico"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
+        <div class="faq-ans"><div class="faq-ans-body">Free zone formation typically takes 3–7 working days after all documents are submitted. Mainland formation may take 7–14 working days. Timelines vary by free zone and business activity type.</div></div>
       </div>
       <div class="faq-item">
-        <button class="faq-question" onclick="toggleFaq(this)">Do I need to be physically present in UAE for setup?<span class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
-        <div class="faq-answer"><div class="faq-answer-inner">No — most free zone company formations can be completed 100% remotely. For residency processing and Emirates ID biometrics, a short visit to the UAE is required. We coordinate everything to minimize your travel requirements.</div></div>
+        <button class="faq-q" onclick="toggleFaq(this)">Do I need to be physically present in UAE for setup?<span class="faq-ico"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
+        <div class="faq-ans"><div class="faq-ans-body">No — most free zone formations can be completed 100% remotely. For residency processing and Emirates ID biometrics, a short UAE visit is required. We coordinate everything to minimize your travel.</div></div>
       </div>
       <div class="faq-item">
-        <button class="faq-question" onclick="toggleFaq(this)">What is the minimum cost to set up a UAE company?<span class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
-        <div class="faq-answer"><div class="faq-answer-inner">Costs vary by free zone and business activity. Some free zones offer packages starting from AED 5,750 per year. Our consultants will give you a complete cost breakdown based on your specific needs — with no hidden charges.</div></div>
+        <button class="faq-q" onclick="toggleFaq(this)">What is the minimum cost to set up a UAE company?<span class="faq-ico"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
+        <div class="faq-ans"><div class="faq-ans-body">Costs vary by free zone and business activity. Some free zones offer packages starting from AED 5,750/year. Our consultants give you a complete, transparent cost breakdown with zero hidden charges.</div></div>
       </div>
       <div class="faq-item">
-        <button class="faq-question" onclick="toggleFaq(this)">Which UAE free zone is best for my business?<span class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
-        <div class="faq-answer"><div class="faq-answer-inner">It depends on your business activity, budget, and goals. Trading businesses may prefer JAFZA or RAKEZ; tech companies often choose Dubai Silicon Oasis or DTEC; consultants often choose IFZA or SPC Free Zone. We partner with 15+ free zones and help you choose the best fit.</div></div>
+        <button class="faq-q" onclick="toggleFaq(this)">Which UAE free zone is best for my business?<span class="faq-ico"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
+        <div class="faq-ans"><div class="faq-ans-body">It depends on your activity, budget, and goals. Traders often prefer JAFZA or RAKEZ; tech companies choose Dubai Silicon Oasis or DTEC; consultants choose IFZA or SPC Free Zone. We partner with 15+ free zones and help you choose the best fit.</div></div>
       </div>
       <div class="faq-item">
-        <button class="faq-question" onclick="toggleFaq(this)">Can I open a UAE bank account without visiting?<span class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
-        <div class="faq-answer"><div class="faq-answer-inner">Most UAE banks require an in-person visit for corporate account opening. Our team prepares a strong application file and guides you through the complete process to maximize approval chances. We work with multiple banking partners across the UAE.</div></div>
+        <button class="faq-q" onclick="toggleFaq(this)">Can I open a UAE bank account without visiting?<span class="faq-ico"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
+        <div class="faq-ans"><div class="faq-ans-body">Most UAE banks require an in-person visit for corporate account opening. Our team prepares a strong application file and guides you through the process to maximize approval chances. We work with multiple banking partners across UAE.</div></div>
       </div>
       <div class="faq-item">
-        <button class="faq-question" onclick="toggleFaq(this)">What documents are needed for UAE company formation?<span class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
-        <div class="faq-answer"><div class="faq-answer-inner">Typically: valid passport copy, passport-size photograph, and a brief business activity description. For mainland companies, additional approvals may be needed. Our team provides a complete document checklist specific to your chosen structure and free zone.</div></div>
+        <button class="faq-q" onclick="toggleFaq(this)">What documents are needed for company formation?<span class="faq-ico"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
+        <div class="faq-ans"><div class="faq-ans-body">Typically: valid passport copy, passport-size photo, and a brief business activity description. For mainland, additional approvals may be needed. We provide a full document checklist specific to your chosen structure and free zone.</div></div>
       </div>
       <div class="faq-item">
-        <button class="faq-question" onclick="toggleFaq(this)">Do I need to pay VAT or corporate tax in UAE?<span class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
-        <div class="faq-answer"><div class="faq-answer-inner">UAE introduced 5% VAT in 2018 (mandatory if annual turnover exceeds AED 375,000). Corporate Tax at 9% applies to taxable income above AED 375,000 from June 2023 — though most qualifying free zone businesses may benefit from 0% corporate tax under certain conditions. Our tax advisory team guides you fully on compliance.</div></div>
+        <button class="faq-q" onclick="toggleFaq(this)">Do I need to pay VAT or corporate tax in UAE?<span class="faq-ico"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
+        <div class="faq-ans"><div class="faq-ans-body">UAE introduced 5% VAT in 2018 (mandatory if turnover exceeds AED 375,000). Corporate Tax at 9% applies from June 2023 — though most qualifying free zone businesses may benefit from 0% corporate tax under specific conditions. Our tax team guides you fully on compliance.</div></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- FEATURED -->
-<section style="padding:40px 5%;">
-  <div class="section-inner">
-    <div class="featured-row">
-      <span class="featured-label">Featured In</span>
-      <div class="featured-items">
-        <span class="featured-item">Gulf News</span>
-        <span style="color:rgba(255,255,255,0.1)">|</span>
-        <span class="featured-item">Khaleej Times</span>
-        <span style="color:rgba(255,255,255,0.1)">|</span>
-        <span class="featured-item">Gulf Business</span>
-        <span style="color:rgba(255,255,255,0.1)">|</span>
-        <span class="featured-item">Lovin Dubai</span>
-      </div>
+<!-- ═══ FEATURED ═══ -->
+<div class="featured-strip-section">
+  <div class="featured-strip">
+    <span class="featured-lbl">As Seen In</span>
+    <div class="featured-names">
+      <span class="feat-name">Gulf News</span>
+      <span style="color:var(--border);">|</span>
+      <span class="feat-name">Khaleej Times</span>
+      <span style="color:var(--border);">|</span>
+      <span class="feat-name">Gulf Business</span>
+      <span style="color:var(--border);">|</span>
+      <span class="feat-name">Lovin Dubai</span>
     </div>
   </div>
-</section>
+</div>
 
-<!-- CONTACT -->
-<section id="contact" class="freezone-bg">
-  <div class="section-inner">
-    <div class="contact-grid">
-      <div class="contact-info">
-        <div class="section-tag">Get In Touch</div>
+<!-- ═══ CONTACT ═══ -->
+<section class="contact-section" id="contact">
+  <div class="sec-wrap">
+    <div class="contact-layout">
+      <div class="contact-left">
+        <div class="sec-eyebrow">Get In Touch</div>
         <h2>Start Your UAE <em>Journey</em> Today</h2>
-        <p style="color:var(--text-muted);font-size:16px;margin-bottom:32px;line-height:1.7;">Speak with our advisors for a free consultation. We respond within 24 hours.</p>
-        <div class="contact-detail">
-          <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          <a href="mailto:info@uaespcz.com">info@uaespcz.com</a>
+        <p class="sec-sub" style="margin-bottom:28px;">Speak with our advisors for a free, no-obligation consultation. We respond within 24 hours.</p>
+        <div class="contact-item">
+          <div class="contact-ico"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+          <div><span class="contact-info-small">Email</span><div class="contact-info-val"><a href="mailto:info@uaespcz.com">info@uaespcz.com</a></div></div>
         </div>
-        <div class="contact-detail">
-          <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-          <a href="https://wa.me/919911738261" target="_blank">WhatsApp: +91 99117 38261</a>
+        <div class="contact-item">
+          <div class="contact-ico"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+          <div><span class="contact-info-small">WhatsApp</span><div class="contact-info-val"><a href="https://wa.me/919911738261" target="_blank">+91 99117 38261</a></div></div>
         </div>
-        <div class="contact-detail">
-          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-          <span>Mon – Sat: 9:00 AM – 7:00 PM (GST)</span>
+        <div class="contact-item">
+          <div class="contact-ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+          <div><span class="contact-info-small">Office Hours</span><div class="contact-info-val">Mon – Sat: 9:00 AM – 7:00 PM (GST)</div></div>
         </div>
-        <div style="margin-top:32px;display:flex;gap:12px;flex-wrap:wrap;">
-          <a href="https://wa.me/919911738261" class="whatsapp-btn" target="_blank">
-            <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2.546 21l3.927-.921A9.952 9.952 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18a7.95 7.95 0 01-4.073-1.117l-.291-.173-3.024.709.728-2.942-.19-.302A7.957 7.957 0 014 12c0-4.418 3.582-8 8-8s8 3.582 8 8-3.582 8-8 8z"/></svg>
+        <div class="contact-cta-row">
+          <a href="https://wa.me/919911738261" target="_blank" class="btn-whatsapp">
+            <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2.546 21l3.927-.921A9.952 9.952 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18a7.95 7.95 0 01-4.073-1.117l-.291-.173-3.024.709.728-2.942-.19-.302A7.957 7.957 0 014 12c0-4.418 3.582-8 8-8s8 3.582 8 8-3.582 8-8 8z"/></svg>
             Chat on WhatsApp
           </a>
-          <a href="mailto:info@uaespcz.com" class="btn-secondary">Send Email</a>
+          <a href="mailto:info@uaespcz.com" class="btn-ghost">Send Email</a>
         </div>
       </div>
 
-      <!-- CONTACT FORM -->
-      <div class="contact-form-box">
-        <h3>Book a Free Consultation</h3>
-        <form id="contactForm">
-          <input type="hidden" name="access_key" value="252d3295-8b19-43fd-a1ba-2707a6b82cc9">
-          <div class="form-group"><label>Full Name *</label><input type="text" name="name" placeholder="Your full name" required></div>
-          <div class="form-group"><label>Phone / WhatsApp *</label><input type="tel" name="phone" placeholder="+91 or +971..." required></div>
-          <div class="form-group"><label>Email Address *</label><input type="email" name="email" placeholder="your@email.com" required></div>
-          <div class="form-group">
-            <label>Select Service</label>
-            <select name="service">
-              <option value="">Choose a service...</option>
-              <option>Mainland Corporate Solutions</option>
-              <option>Free Zone Business Consultation</option>
-              <option>FZCO Formation</option>
-              <option>Investor Residency Assistance</option>
-              <option>Employee Residency Processing</option>
-              <option>Family Sponsorship Advisory</option>
-              <option>Bank Account Opening</option>
-              <option>VAT / Tax Services</option>
-              <option>Legal &amp; Documentation</option>
-              <option>Other</option>
-            </select>
-          </div>
-          <div class="form-group"><label>Message (Optional)</label><textarea name="message" placeholder="Tell us more about your needs..."></textarea></div>
-          <button type="submit" class="form-submit" id="contactBtn">Submit — Get Free Consultation →</button>
-          <p class="form-note">🔒 Your information is kept private and secure.</p>
-        </form>
-        <div class="form-success" id="contactSuccess">
-          <h4>✅ Thank You!</h4>
-          <p>Our team will contact you within 24 hours.<br>WhatsApp us anytime: <strong>+91 99117 38261</strong></p>
+      <!-- Contact Form -->
+      <div class="cform">
+        <div class="cform-head">
+          <h3>Book a Free Consultation</h3>
+          <p>🔒 Confidential · No obligation · Response within 24 hours</p>
+        </div>
+        <div class="cform-body" id="cformBody">
+          <form id="contactForm">
+            <input type="hidden" name="access_key" value="252d3295-8b19-43fd-a1ba-2707a6b82cc9">
+            <div class="fg"><label>Full Name *</label><input type="text" name="name" placeholder="Your full name" required></div>
+            <div class="fg"><label>Phone / WhatsApp *</label><input type="tel" name="phone" placeholder="+91 or +971..." required></div>
+            <div class="fg"><label>Email Address *</label><input type="email" name="email" placeholder="your@email.com" required></div>
+            <div class="fg">
+              <label>Select Service</label>
+              <select name="service">
+                <option value="">Choose a service...</option>
+                <option>Mainland Corporate Solutions</option>
+                <option>Free Zone Business Consultation</option>
+                <option>FZCO Formation</option>
+                <option>Investor Residency Assistance</option>
+                <option>Employee Residency Processing</option>
+                <option>Family Sponsorship Advisory</option>
+                <option>Bank Account Opening</option>
+                <option>VAT / Tax Services</option>
+                <option>Legal &amp; Documentation</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="fg"><label>Message (Optional)</label><textarea name="message" placeholder="Tell us more about your business needs..."></textarea></div>
+            <button type="submit" class="form-cta" id="contactSubmitBtn">Submit — Get Free Consultation →</button>
+            <p class="form-note">🔒 Your information is kept private and secure</p>
+          </form>
+        </div>
+        <div class="form-success" id="contactSuccess" style="display:none;padding:40px 28px;text-align:center;">
+          <div class="big-icon">✅</div>
+          <h4>Thank You!</h4>
+          <p>Our team will contact you within 24 hours.<br>WhatsApp us anytime:<br><strong style="color:#fff;">+91 99117 38261</strong></p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- FOOTER -->
+<!-- ═══ FOOTER ═══ -->
 <footer>
-  <div class="footer-grid">
-    <div class="footer-brand">
-      <div class="logo">UAE SPCZ<span>Business Setup Consultants</span></div>
-      <p>Your trusted partner for UAE company formation, residency services, and business compliance. Registered partner of 15+ UAE free zones.</p>
-      <p style="color:var(--gold);font-size:14px;margin-top:8px;">📧 info@uaespcz.com<br>📱 WhatsApp: +91 99117 38261</p>
+  <div class="footer-flag-bar"></div>
+  <div class="footer-cols">
+    <div class="footer-brand-col">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:4px;">
+        <div class="brand-icon" style="width:34px;height:34px;font-size:14px;">U</div>
+        <div class="brand-name" style="font-size:17px;">UAE SPCZ</div>
+      </div>
+      <p>Your trusted partner for UAE company formation, residency services and business compliance. Registered partner of 15+ UAE free zones.</p>
+      <div class="footer-contacts">
+        <a href="mailto:info@uaespcz.com">📧 info@uaespcz.com</a>
+        <a href="https://wa.me/919911738261">📱 WhatsApp: +91 99117 38261</a>
+        <span>🕐 Mon–Sat: 9AM – 7PM GST</span>
+      </div>
     </div>
     <div class="footer-col">
       <h5>Company Setup</h5>
-      <a href="#">Mainland Corporate Solutions</a><a href="#">Free Zone Consultation</a>
-      <a href="#">FZCO Formation</a><a href="#">Multi-Activity License Advisory</a>
-      <a href="#">100% Foreign Ownership Guidance</a><a href="#">Offshore Company</a>
+      <a href="#">Mainland Corporate Solutions</a>
+      <a href="#">Free Zone Consultation</a>
+      <a href="#">FZCO Formation</a>
+      <a href="#">Multi-Activity License</a>
+      <a href="#">Foreign Ownership Advisory</a>
+      <a href="#">Offshore Company</a>
     </div>
     <div class="footer-col">
       <h5>Residency Services</h5>
-      <a href="#">Investor Residency Assistance</a><a href="#">Employee Residency Support</a>
-      <a href="#">Family Sponsorship Advisory</a><a href="#">UAE Residency Consultation</a>
-      <a href="#">Emirates ID</a><a href="#">Residency Renewal</a>
+      <a href="#">Investor Residency</a>
+      <a href="#">Employee Residency</a>
+      <a href="#">Family Sponsorship</a>
+      <a href="#">UAE Residency Consultation</a>
+      <a href="#">Emirates ID</a>
+      <a href="#">Residency Renewal</a>
     </div>
     <div class="footer-col">
       <h5>Other Services</h5>
-      <a href="#">Bank Account Opening</a><a href="#">VAT Registration</a>
-      <a href="#">Corporate Tax Filing</a><a href="#">Accounting &amp; Bookkeeping</a>
-      <a href="#">Legal Documentation</a><a href="#">POA Preparation</a>
+      <a href="#">Bank Account Opening</a>
+      <a href="#">VAT Registration</a>
+      <a href="#">Corporate Tax Filing</a>
+      <a href="#">Accounting &amp; Bookkeeping</a>
+      <a href="#">Legal Documentation</a>
+      <a href="#">POA Preparation</a>
     </div>
   </div>
   <div class="footer-bottom">
@@ -544,58 +1316,88 @@ footer{background:var(--dark-2);border-top:1px solid var(--border);padding:52px 
 </footer>
 
 <script>
-// FAQ
-function toggleFaq(btn) {
-  var item = btn.parentElement;
-  var answer = item.querySelector('.faq-answer');
-  var isOpen = item.classList.contains('open');
-  document.querySelectorAll('.faq-item').forEach(function(i) {
-    i.classList.remove('open');
-    i.querySelector('.faq-answer').style.maxHeight = '0';
-  });
-  if (!isOpen) {
-    item.classList.add('open');
-    answer.style.maxHeight = answer.scrollHeight + 'px';
+// ─── NAVBAR SCROLL ───
+window.addEventListener('scroll',function(){
+  var nav=document.getElementById('navbar');
+  if(window.scrollY>60){nav.classList.add('scrolled');}
+  else{nav.classList.remove('scrolled');}
+});
+
+// ─── POPUP ───
+function openPopup(){
+  document.getElementById('popupOverlay').classList.add('active');
+  document.body.style.overflow='hidden';
+}
+function closePopup(){
+  document.getElementById('popupOverlay').classList.remove('active');
+  document.body.style.overflow='';
+}
+document.getElementById('popupOverlay').addEventListener('click',function(e){
+  if(e.target===this)closePopup();
+});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')closePopup();});
+
+// Auto popup after 15 seconds (once per session)
+setTimeout(function(){
+  if(!sessionStorage.getItem('popupSeen')){
+    openPopup();
+    sessionStorage.setItem('popupSeen','1');
   }
+},15000);
+
+// ─── FAQ ───
+function toggleFaq(btn){
+  var item=btn.parentElement;
+  var ans=item.querySelector('.faq-ans');
+  var isOpen=item.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(function(i){
+    i.classList.remove('open');
+    i.querySelector('.faq-ans').style.maxHeight='0';
+  });
+  if(!isOpen){item.classList.add('open');ans.style.maxHeight=ans.scrollHeight+'px';}
 }
 
-// Web3Forms submit
-function setupForm(formId, btnId, successId) {
-  var form = document.getElementById(formId);
-  var btn = document.getElementById(btnId);
-  var successBox = document.getElementById(successId);
-  if (!form) return;
-  form.addEventListener('submit', function(e) {
+// ─── WEB3FORMS ───
+function setupForm(formId,btnId,bodyId,successId){
+  var form=document.getElementById(formId);
+  var btn=document.getElementById(btnId);
+  var body=bodyId?document.getElementById(bodyId):null;
+  var success=document.getElementById(successId);
+  if(!form)return;
+  form.addEventListener('submit',function(e){
     e.preventDefault();
-    var originalText = btn.textContent;
-    btn.disabled = true;
-    btn.textContent = 'Sending...';
-    var data = new FormData(form);
-    data.append('subject', 'New Lead — UAE SPCZ Website');
-    data.append('from_name', 'UAE SPCZ Website');
-    fetch('https://api.web3forms.com/submit', { method: 'POST', body: data })
-      .then(function(r) { return r.json(); })
-      .then(function(json) {
-        if (json.success) {
-          gtag('event', 'conversion', {'send_to': 'AW-18152695280'});
-          form.style.display = 'none';
-          successBox.style.display = 'block';
+    var orig=btn.textContent;
+    btn.disabled=true;
+    btn.textContent='Sending...';
+    var data=new FormData(form);
+    data.append('subject','New Lead — UAE SPCZ Website');
+    data.append('from_name','UAE SPCZ Website');
+    fetch('https://api.web3forms.com/submit',{method:'POST',body:data})
+      .then(function(r){return r.json();})
+      .then(function(j){
+        if(j.success){
+          gtag('event','conversion',{'send_to':'AW-18152695280'});
+          if(body){body.style.display='none';}
+          if(success){success.style.display='block';}
+          if(formId==='popupForm'){
+            document.getElementById('popupFormWrap').style.display='none';
+            document.getElementById('popupSuccess').style.display='block';
+          }
         } else {
-          btn.disabled = false;
-          btn.textContent = originalText;
+          btn.disabled=false;btn.textContent=orig;
           alert('Something went wrong. Please WhatsApp us at +91 99117 38261');
         }
       })
-      .catch(function() {
-        btn.disabled = false;
-        btn.textContent = originalText;
+      .catch(function(){
+        btn.disabled=false;btn.textContent=orig;
         alert('Network error. Please WhatsApp us at +91 99117 38261');
       });
   });
 }
 
-setupForm('heroForm', 'heroBtn', 'heroSuccess');
-setupForm('contactForm', 'contactBtn', 'contactSuccess');
+setupForm('heroForm','heroSubmitBtn','heroFormBody','heroSuccess');
+setupForm('contactForm','contactSubmitBtn','cformBody','contactSuccess');
+setupForm('popupForm','popupSubmitBtn',null,'popupSuccess');
 </script>
 </body>
 </html>
