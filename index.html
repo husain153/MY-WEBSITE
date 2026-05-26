@@ -16,6 +16,23 @@
   gtag('js', new Date());
   gtag('config', 'AW-18181269930');
 </script>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '2149905313072979');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=2149905313072979&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
 <style>
 /* ══════════════════════════════════════
    ROOT & RESET
@@ -690,7 +707,7 @@ footer{background:var(--uae-black);border-top:1px solid var(--border);padding:52
 .popup-success strong{color:var(--uae-white);}
 
 /* ══════════════════════════════════════
-   RESPONSIVE
+   RESPONSIVE — MOBILE FIRST FIXES
 ══════════════════════════════════════ */
 @media(max-width:1100px){
   .pkg-grid{grid-template-columns:1fr 1fr;}
@@ -714,6 +731,8 @@ footer{background:var(--uae-black);border-top:1px solid var(--border);padding:52
   .hero-actions{flex-direction:column;}
   .footer-cols{grid-template-columns:1fr;}
   .ideal-grid{grid-template-columns:1fr;}
+
+  /* Mobile-specific font size fixes */
   .hero-h1{font-size:36px;letter-spacing:0px;}
   .stat-val{font-size:38px;}
   h2{font-size:28px;}
@@ -721,14 +740,26 @@ footer{background:var(--uae-black);border-top:1px solid var(--border);padding:52
   .pkg-price{font-size:38px;}
   .hero-sub{font-size:14px;}
   .sec-sub{font-size:14px;}
+
+  /* Form inputs - prevent zoom on iOS */
   .fg input,.fg select,.fg textarea{font-size:16px;}
+
+  /* Navbar brand fix on small screens */
   .brand-sub{display:none;}
   .nav-btn{padding:8px 14px;font-size:12px;}
+
+  /* Hero padding */
   .hero{padding:90px 4% 50px;}
+
+  /* Stats on mobile */
   .stats-inner{grid-template-columns:1fr 1fr;gap:1rem;}
   .stat-lbl{font-size:10px;}
+
+  /* Section padding */
   section{padding:60px 4%;}
   .featured-strip-section{padding:24px 4%;}
+
+  /* Float WA - slightly smaller on mobile */
   .float-wa{width:50px;height:50px;bottom:20px;right:20px;}
   .float-wa svg{width:22px;height:22px;}
 }
@@ -937,7 +968,7 @@ footer{background:var(--uae-black);border-top:1px solid var(--border);padding:52
       </div>
       <div class="ideal-card">
         <span class="ideal-emoji">💻</span>
-        <h4>Freelancers &amp; Consultants</h4>
+        <h4>Freelancers & Consultants</h4>
         <p>Get a professional license and UAE residency to work freely across the region without a local sponsor.</p>
         <span class="ideal-tag">Freelance License</span>
       </div>
